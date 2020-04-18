@@ -181,6 +181,7 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     margin: 0 auto;
     gap: 16px;
+    padding-top: 48px;
   }
 
   .footer-bottom h4 {

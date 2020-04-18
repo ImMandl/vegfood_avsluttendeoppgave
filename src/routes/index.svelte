@@ -13,11 +13,6 @@
   .oppskrift-rad {
     margin-bottom: 32px;
   }
-
-  .test {
-    height: 200px;
-    width: 100%;
-  }
 </style>
 
 <svelte:head>
@@ -27,14 +22,6 @@
 <Hero />
 
 <Categories {segment} />
-
-<div class="test">
-  {#each oppskrifter as oppskrift}
-    <li>
-      <a rel="prefetch" href="faq/{oppskrift.slug}">{oppskrift.title}</a>
-    </li>
-  {/each}
-</div>
 
 <div class="oppskrift-rad">
   <h3>Nyeste oppskrifter</h3>

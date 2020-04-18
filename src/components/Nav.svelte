@@ -46,6 +46,8 @@
     width: 100%;
     background-color: white;
     margin-bottom: 32px;
+    box-shadow: 0px 0px 4px 0px rgba(209, 209, 209, 1);
+    z-index: 90;
   }
   nav {
     font-weight: 600;

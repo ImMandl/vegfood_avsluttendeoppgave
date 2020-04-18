@@ -1,4 +1,5 @@
 <script>
+  import { Circle } from "svelte-loading-spinners";
   import { onMount } from "svelte";
   import OppskriftTile from "./OppskriftTile.svelte";
 
@@ -37,12 +38,6 @@
     align-items: center;
     width: 160px;
   }
-
-  .loading-icon {
-    height: 100px;
-    width: 80px;
-    justify-self: center;
-  }
 </style>
 
 <div class="oppskrift-grid">
@@ -51,7 +46,7 @@
   {:else}
     <div class="loading-message">
       <p>henter oppskrifter...</p>
-      <img class="loading-icon" src={loadingIcon} alt="crash icon" />
+      <Circle size="60" color="#3DA839" />
     </div>
   {/each}
 </div>
