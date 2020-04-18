@@ -31,7 +31,7 @@
 
   .wrapper {
     max-width: 1440px;
-    padding: 0 32px;
+    padding: 0 64px;
     margin: 0 auto;
   }
 
@@ -75,7 +75,7 @@
     border-radius: 6px;
     box-sizing: border-box;
     font-size: 16px;
-    min-width: 320px;
+    min-width: 300px;
     max-width: 100%;
   }
 
@@ -109,7 +109,7 @@
     align-self: center;
   }
 
-  @media only screen and (max-width: 1160px) {
+  @media only screen and (max-width: 1250px) {
     .footer-top {
       grid-template-columns: 1fr;
     }
@@ -128,6 +128,12 @@
     }
   }
 
+  @media only screen and (max-width: 1024px) {
+    .wrapper {
+      padding: 0 32px;
+    }
+  }
+
   @media only screen and (max-width: 840px) {
     .nyhetsbrev {
       flex-direction: column;
@@ -142,6 +148,12 @@
     }
   }
 
+  @media only screen and (max-width: 768px) {
+    .wrapper {
+      padding: 0 16px;
+    }
+  }
+
   @media only screen and (max-width: 650px) {
     .nyhetsbrev-form {
       flex-direction: column;
@@ -149,6 +161,17 @@
 
     button {
       margin-top: 8px;
+    }
+
+    .nyhetsbrev-form input {
+      width: 100%;
+      min-width: 100px;
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    .wrapper {
+      padding: 0 16px;
     }
   }
 

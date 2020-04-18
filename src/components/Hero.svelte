@@ -36,6 +36,16 @@
       height: 360px;
     }
   }
+
+  @media only screen and (max-width: 580px) {
+    .carousel {
+      height: 240px;
+    }
+
+    .carousel {
+      height: 240px;
+    }
+  }
 </style>
 
 <div class="hero">

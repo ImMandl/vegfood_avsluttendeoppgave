@@ -15,6 +15,8 @@
 <style>
   ul {
     padding-inline-start: 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   }
 
   li {

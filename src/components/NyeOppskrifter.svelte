@@ -25,10 +25,9 @@
 <style>
   .oppskrift-grid {
     display: grid;
-    max-width: 1440px;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    justify-content: space-evenly;
-    gap: 8px;
+    justify-content: space-between;
+    gap: 16px;
   }
 
   .loading-message {

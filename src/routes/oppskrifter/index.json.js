@@ -3,7 +3,7 @@ import oppskrifter from './_recipes.js';
 const contents = JSON.stringify(
 	oppskrifter.map((oppskrift) => {
 		return {
-			title: oppskrift.navn
+			navn: oppskrift.navn
 		};
 	})
 );

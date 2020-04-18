@@ -20,6 +20,11 @@
     text-align: center;
   }
 
+  .big-screen {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
   .small-screen {
     display: none;
   }
@@ -37,63 +42,46 @@
 
 <!-- For big screens (over 1024px) -->
 <div class="wrapper big-screen">
-  <Carousel
-    draggable={false}
-    multipleDrag={true}
-    autoplay={0}
-    dots={false}
-    perPage={5}>
-    <div class="slide-content">
-      <div class="kategori">
-        <a
-          aria-current={segment === 'oppskrift' ? 'page' : undefined}
-          href="oppskrift">
-          <img src={frokost} alt="ikon" />
-          <h3>Frokost</h3>
-        </a>
-      </div>
-    </div>
-    <div class="slide-content">
-      <div class="kategori">
-        <a
-          aria-current={segment === 'oppskrift' ? 'page' : undefined}
-          href="oppskrift">
-          <img src={niste} alt="ikon" />
-          <h3>Niste</h3>
-        </a>
-      </div>
-    </div>
-    <div class="slide-content">
-      <div class="kategori">
-        <a
-          aria-current={segment === 'oppskrift' ? 'page' : undefined}
-          href="oppskrift">
-          <img src={middag} alt="ikon" />
-          <h3>Middag</h3>
-        </a>
-      </div>
-    </div>
-    <div class="slide-content">
-      <div class="kategori">
-        <a
-          aria-current={segment === 'oppskrift' ? 'page' : undefined}
-          href="oppskrift">
-          <img src={dessert} alt="ikon" />
-          <h3>Dessert</h3>
-        </a>
-      </div>
-    </div>
-    <div class="slide-content">
-      <div class="kategori">
-        <a
-          aria-current={segment === 'oppskrift' ? 'page' : undefined}
-          href="oppskrift">
-          <img src={smaaretter} alt="ikon" />
-          <h3>Småretter</h3>
-        </a>
-      </div>
-    </div>
-  </Carousel>
+  <div class="kategori">
+    <a
+      aria-current={segment === 'oppskrift' ? 'page' : undefined}
+      href="oppskrift">
+      <img src={frokost} alt="ikon" />
+      <h3>Frokost</h3>
+    </a>
+  </div>
+  <div class="kategori">
+    <a
+      aria-current={segment === 'oppskrift' ? 'page' : undefined}
+      href="oppskrift">
+      <img src={niste} alt="ikon" />
+      <h3>Niste</h3>
+    </a>
+  </div>
+  <div class="kategori">
+    <a
+      aria-current={segment === 'oppskrift' ? 'page' : undefined}
+      href="oppskrift">
+      <img src={middag} alt="ikon" />
+      <h3>Middag</h3>
+    </a>
+  </div>
+  <div class="kategori">
+    <a
+      aria-current={segment === 'oppskrift' ? 'page' : undefined}
+      href="oppskrift">
+      <img src={dessert} alt="ikon" />
+      <h3>Dessert</h3>
+    </a>
+  </div>
+  <div class="kategori">
+    <a
+      aria-current={segment === 'oppskrift' ? 'page' : undefined}
+      href="oppskrift">
+      <img src={smaaretter} alt="ikon" />
+      <h3>Småretter</h3>
+    </a>
+  </div>
 </div>
 
 <!-- For screens under 1024px -->
@@ -103,7 +91,7 @@
     multipleDrag={true}
     autoplay={0}
     dots={false}
-    perPage={{ 1024: 5, 700: 3, 500: 2 }}>
+    perPage={{ 675: 4, 375: 2, 320: 1 }}>
     <span class="control" slot="left-control">
       <ChevronLeftIcon />
     </span>

@@ -53,10 +53,10 @@
 </style>
 
 <svelte:head>
-  <title>{oppskrift.title}</title>
+  <title>{oppskrift.navn}</title>
 </svelte:head>
 
-<h1>{oppskrift.title}</h1>
+<h1>{oppskrift.navn}</h1>
 
 <div class="breadcrumb ">
   <a
@@ -65,7 +65,7 @@
     Spørsmål og svar
   </a>
   <img src="https://image.flaticon.com/icons/svg/271/271228.svg" alt="" />
-  <p>{oppskrift.title}</p>
+  <p>{oppskrift.navn}</p>
 </div>
 
 <div class="container">

@@ -17,6 +17,16 @@
   .slide-content img {
     width: 100%;
   }
+
+  @media only screen and (max-width: 580px) {
+    .wrapper {
+      height: 240px;
+    }
+
+    .slide-content {
+      height: 240px;
+    }
+  }
 </style>
 
 <div class="wrapper">

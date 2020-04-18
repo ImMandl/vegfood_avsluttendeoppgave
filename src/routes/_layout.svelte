@@ -6,10 +6,15 @@
 </script>
 
 <style>
+  .wrapper {
+    /* keeps the footer at the bottom of the screen despite the amount of content */
+    min-height: 71vh;
+    background-color: #fafafa;
+  }
   main {
     position: relative;
     max-width: 100%;
-    padding: 32px 64px;
+    margin: 0 64px;
     background-color: #fafafa;
     margin: 0 auto;
     box-sizing: border-box;
@@ -23,23 +28,23 @@
 
   @media only screen and (max-width: 1024px) {
     main {
-      padding: 32px 32px;
+      margin: 0 32px;
     }
   }
 
   @media only screen and (max-width: 1768px) {
     main {
-      padding: 16px;
+      margin: 0 16px;
     }
   }
 </style>
 
-<Nav {segment} />
-
-<main>
-  <div class="inner-main">
-    <slot />
-  </div>
-</main>
-
+<div class="wrapper">
+  <Nav {segment} />
+  <main>
+    <div class="inner-main">
+      <slot />
+    </div>
+  </main>
+</div>
 <Footer {segment} />
