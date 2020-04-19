@@ -1,9 +1,10 @@
-import oppskrifter from './_recipes.js';
+import oppskrifter from './_oppskrifter.js';
 
 const contents = JSON.stringify(
 	oppskrifter.map((oppskrift) => {
 		return {
-			navn: oppskrift.navn
+			title: oppskrift.title,
+			slug: oppskrift.slug
 		};
 	})
 );

@@ -3,7 +3,7 @@ const faqs = [
 		title: 'Hvem lager oppskriftene?',
 		slug: 'hvem-lager-oppskriftene',
 		html: `
-			<p>Proin vulputate sodales vulputate. Vestibulum tincidunt vel leo ut auctor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus a facilisis nisi. Pellentesque vestibulum commodo tortor eget tempor. </p>'
+			<p>Proin vulputate sodales vulputate. Vestibulum tincidunt vel leo ut auctor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus a facilisis nisi. Pellentesque vestibulum commodo tortor eget tempor. </p>
 		`
 	},
 

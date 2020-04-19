@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "compression": "^1.7.1",
-    "firebase": "^7.14.1",
+    "firebase": "^7.14.0-canary.537350ee",
     "polka": "next",
     "rxfire": "^3.12.1",
     "rxjs": "^6.5.5",

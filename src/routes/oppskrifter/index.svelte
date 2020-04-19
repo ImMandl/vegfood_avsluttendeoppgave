@@ -15,6 +15,8 @@
 <style>
   ul {
     padding-inline-start: 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   }
 
   li {
@@ -42,7 +44,7 @@
 </style>
 
 <svelte:head>
-  <title>Spørsmål og svar</title>
+  <title>Oppskrifter</title>
 </svelte:head>
 
 <h1>Ofte stilte spørsmål</h1>

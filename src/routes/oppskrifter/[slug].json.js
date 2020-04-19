@@ -1,4 +1,4 @@
-import oppskrifter from './_recipes.js';
+import oppskrifter from './_oppskrifter.js';
 
 const lookup = new Map();
 oppskrifter.forEach((oppskrift) => {

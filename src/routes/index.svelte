@@ -4,7 +4,7 @@
   import NyeOppskrifter from "../components/NyeOppskrifter.svelte";
   import Search from "../components/search.svelte";
 
-  import oppskrifter from "./oppskrifter/_recipes.js";
+  import oppskrifter from "./oppskrifter/_oppskrifter.js";
 
   export let segment;
 </script>

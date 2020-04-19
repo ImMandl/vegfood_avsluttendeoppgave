@@ -1,6 +1,6 @@
 <script context="module">
   export async function preload({ params, query }) {
-    const res = await this.fetch(`oppskrifter/${params.slug}.json`);
+    const res = await this.fetch(`oppskrift/${params.slug}.json`);
     const data = await res.json();
 
     if (res.status === 200) {
@@ -30,6 +30,11 @@
     padding: 0;
   }
 
+  .content :global(iframe) {
+    width: 100%;
+    height: 300px;
+  }
+
   /* .breadcrumb */
   .breadcrumb {
     display: flex;
@@ -53,10 +58,10 @@
 </style>
 
 <svelte:head>
-  <title>{oppskrift.navn}</title>
+  <title>{oppskrift.title}</title>
 </svelte:head>
 
-<h1>{oppskrift.navn}</h1>
+<h1>{oppskrift.title}</h1>
 
 <div class="breadcrumb ">
   <a
@@ -65,7 +70,7 @@
     Spørsmål og svar
   </a>
   <img src="https://image.flaticon.com/icons/svg/271/271228.svg" alt="" />
-  <p>{oppskrift.navn}</p>
+  <p>{oppskrift.title}</p>
 </div>
 
 <div class="container">

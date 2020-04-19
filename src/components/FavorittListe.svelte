@@ -22,6 +22,8 @@
       grad: "enkel"
     }
   ];
+
+  export let segment;
 </script>
 
 <style>
@@ -88,7 +90,11 @@
         <td>{favoritt.tid}</td>
         <td>{favoritt.grad}</td>
         <td class="handlinger">
-          <a href="">Gå til</a>
+          <a
+            aria-current={segment === 'oppskrifter' ? 'page' : undefined}
+            href="oppskrifter">
+            Gå til
+          </a>
           <button>Slett</button>
         </td>
       </tr>

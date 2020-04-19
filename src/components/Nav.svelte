@@ -258,7 +258,9 @@
         </a>
       </li>
       <li>
-        <a aria-current={segment === 'about' ? 'page' : undefined} href="about">
+        <a
+          aria-current={segment === 'oppskrifter' ? 'page' : undefined}
+          href="oppskrifter">
           Oppskrifter
           <img class="nav-ikon" src={recipeIcon} alt="recipe icon" />
         </a>
