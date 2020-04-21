@@ -1,31 +1,11 @@
-<script context="module">
-  export function preload({ params, query }) {
-    return this.fetch(`recipe.json`)
-      .then(r => r.json())
-      .then(recipes => {
-        return { recipes };
-      });
-  }
-</script>
-
 <script>
   import { Circle } from "svelte-loading-spinners";
-  export let recipes;
-  export let segment;
+  import recipes from "../routes/recipe/_recipes.js";
 </script>
 
-<svelte:head>
-  <title>Oppskrifter</title>
-</svelte:head>
-
-<div class="breadcrumb ">
-  <a aria-current={segment === undefined ? 'page' : undefined} href=".">Hjem</a>
-  <img src="https://image.flaticon.com/icons/svg/271/271228.svg" alt="" />
-  <p>Oppskrifter</p>
-</div>
-
 <div class="oppskrift-grid">
-  {#each recipes as recipe}
+  <!-- slice to only get 4 recipes -->
+  {#each recipes.slice(0, 4) as recipe}
     <a rel="prefetch" href="recipe/{recipe.slug}">
       <div class="oppskrift-tile">
         <img src={recipe.bilde} alt="bilde" />
@@ -43,7 +23,6 @@
   {:else}
     <div class="loading-message">
       <p>henter oppskrifter...</p>
-      <Circle size="60" color="#3DA839" />
     </div>
   {/each}
 </div>

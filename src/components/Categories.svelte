@@ -12,6 +12,9 @@
 </script>
 
 <style>
+  .wrapper {
+    margin-bottom: 42px;
+  }
   .slide-content {
     padding-bottom: 24px;
   }

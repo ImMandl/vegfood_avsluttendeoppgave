@@ -90,6 +90,78 @@ button:focus {
 	}
 }
 
+/* oppskrift tile */
+.oppskrift-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+	justify-content: space-between;
+	gap: 16px;
+}
+
+.loading-message {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 160px;
+}
+
+.oppskrift-tile {
+	height: 395px;
+	justify-self: stretch;
+	min-width: 256px;
+	overflow: hidden;
+	object-fit: cover;
+	background-color: #d1d1d1;
+	position: relative;
+}
+
+.oppskrift-tile img {
+	height: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+.oppskrift-tile-innhold {
+	display: inline-flex;
+	flex-direction: column;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	color: white;
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(27, 27, 27));
+	width: 100%;
+	padding: 8px 16px 32px 16px;
+}
+
+.oppskrift-tile-innhold h2 {
+	color: white;
+}
+
+@media only screen and (max-width: 1369px) {
+	.oppskrift-grid {
+		grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+	}
+}
+
+@media only screen and (max-width: 1124px) {
+	.oppskrift-grid {
+		grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+	}
+}
+
+@media only screen and (max-width: 850px) {
+	.oppskrift-grid {
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.oppskrift-grid {
+		grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+	}
+}
+
 /* kategori */
 .kategori {
 	background-color: #fff;

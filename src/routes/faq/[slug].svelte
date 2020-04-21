@@ -34,27 +34,6 @@
     width: 100%;
     height: 300px;
   }
-
-  /* .breadcrumb */
-  .breadcrumb {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 24px;
-  }
-
-  .breadcrumb img {
-    height: 12px;
-    margin: 0 8px;
-  }
-
-  .breadcrumb a {
-    color: #333;
-  }
-
-  .breadcrumb a:hover {
-    color: #1d4374;
-  }
 </style>
 
 <svelte:head>

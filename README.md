@@ -1,12 +1,17 @@
 # vegfood_avsluttendeoppgave
  
-This site is built using <a href="https://sapper.svelte.dev/">sapper</a>. 
+This site is built using <a href="https://sapper.svelte.dev/">sapper</a>. Sapper is a framework for building extremely high-performance web apps based on <a href="https://svelte.dev//">svelte</a>
 
 
 ## Structure
 
-firebase.js in /routes is holding the firebase web app's firebase configuration and initializes firebase
+Files in ./src/route uses component from ./src/components to hold their content. The route files containt minimal html and css, exception can be made for files in ./src/route/recipes and ./src/route/faqs.
 
 This site...
-- uses <a href="https://github.com/Schum123/svelte-loading-spinners#svelte-loading-spinners">svelte-loading-spinners</a> to show when items is loading
-- uses <a href="https://github.com/beyonk-adventures/svelte-carousel#svelte-carousel">svelte Carousel</a> 
+- uses <a href="hhttps://firebase.google.com/docs/auth">Firebase Authentication</a> for log in
+- uses <a href="https://github.com/Schum123/svelte-loading-spinners#svelte-loading-spinners">Svelte-loading-spinners</a> to show when items is loading
+- uses <a href="https://github.com/beyonk-adventures/svelte-carousel#svelte-carousel">Svelte Carousel</a> for image carousels. This is used for both the heading on the frontpage and for the categories.
+
+## Styling
+
+In ./static there is a global css file. If important css is used in several places it will be placed here.

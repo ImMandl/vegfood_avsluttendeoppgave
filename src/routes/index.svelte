@@ -1,8 +1,8 @@
 <script>
   import Hero from "../components/Hero.svelte";
   import Categories from "../components/Categories.svelte";
-  import NyeOppskrifter from "../components/NyeOppskrifter.svelte";
   import Search from "../components/search.svelte";
+  import RecipeTile from "../components/RecipeTile.svelte";
 
   export let segment;
 </script>
@@ -22,16 +22,8 @@
 <Categories {segment} />
 
 <div class="oppskrift-rad">
-  <h3>Test</h3>
-</div>
-
-<div class="oppskrift-rad">
   <h3>Nyeste oppskrifter</h3>
-  <NyeOppskrifter />
-</div>
-
-<div class="oppskrift-rad">
-  <h3>Anbefalte oppskrifter</h3>
+  <RecipeTile />
 </div>
 
 <div>
