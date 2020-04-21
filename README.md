@@ -1,7 +1,17 @@
 # vegfood_avsluttendeoppgave
  
-This site is built using <a href="https://sapper.svelte.dev/">sapper</a>. Sapper is a framework for building extremely high-performance web apps based on <a href="https://svelte.dev//">svelte</a>.
+VegFood is a website full of vegeterian and vegan recipes. It's  built using <a href="https://sapper.svelte.dev/">sapper</a>. Sapper is a framework for building extremely high-performance web apps based on <a href="https://svelte.dev//">svelte</a>. Svelte is a compiler that takes your declarative components and converts them into efficient JavaScript that surgically updates the DOM.
 
+## Setup
+
+### Demo
+Go to <a href="#">demo</a>
+
+### Download
+Clone or download the file, then run:
+```bash
+npm run dev
+```
 
 ## Structure
 
