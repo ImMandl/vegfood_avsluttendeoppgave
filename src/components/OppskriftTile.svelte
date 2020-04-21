@@ -5,10 +5,16 @@
 </script>
 
 <style>
+  /*   @media only screen and (min-width: 1380px) {
+    .oppskrift-tile {
+      min-width: 320px;
+    }
+  } */
+
   .oppskrift-tile {
     height: 395px;
     justify-self: stretch;
-    min-width: 320px;
+    min-width: 256px;
     overflow: hidden;
     object-fit: cover;
     background-color: #d1d1d1;
@@ -58,26 +64,31 @@
     border: 1px solid #247c3b;
     color: #247c3b;
   }
+
+  /*   @media only screen and (max-width: 1124px) {
+    .oppskrift-tile {
+      min-width: 256px;
+    }
+  } */
+
+  @media only screen and (max-width: 850px) {
+    .oppskrift-tile {
+      min-width: 220px;
+    }
+  }
 </style>
 
 <div>
-  {#if data.kategori == 'vegetar'}
-    <div class="oppskrift-tile">
-      <img src={data.url} alt="bilde" />
-      <div class="oppskrift-tile-innhold">
+  <div class="oppskrift-tile">
+    <img src={data.url} alt="bilde" />
+    <div class="oppskrift-tile-innhold">
+      {#if data.kategori == 'vegetar'}
         <p class="kategori vegetar">{data.kategori}</p>
-        <h2>{data.navn}</h2>
-        <p>Laget av {data.forfatter}</p>
-      </div>
-    </div>
-  {:else}
-    <div class="oppskrift-tile">
-      <img src={data.url} alt="bilde" />
-      <div class="oppskrift-tile-innhold">
+      {:else}
         <p class="kategori vegan">{data.kategori}</p>
-        <h2>{data.navn}</h2>
-        <p>Laget av {data.forfatter}</p>
-      </div>
+      {/if}
+      <h2>{data.navn}</h2>
+      <p>Laget av {data.forfatter}</p>
     </div>
-  {/if}
+  </div>
 </div>

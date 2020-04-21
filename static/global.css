@@ -89,3 +89,47 @@ button:focus {
 		grid-template-columns: 1fr;
 	}
 }
+
+/* kategori */
+.kategori {
+	background-color: #fff;
+	font-size: 14px;
+	font-weight: 500;
+	border-radius: 18px;
+	padding: 4px 12px;
+	margin-bottom: 8px;
+	text-align: center;
+}
+
+.vegetar {
+	max-width: 74px;
+	border: 1px solid #b35900;
+	color: #b35900;
+}
+
+.vegan {
+	max-width: 65px;
+	border: 1px solid #247c3b;
+	color: #247c3b;
+}
+
+/* .breadcrumb */
+.breadcrumb {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 24px;
+}
+
+.breadcrumb img {
+	height: 12px;
+	margin: 0 8px;
+}
+
+.breadcrumb a {
+	color: #333;
+}
+
+.breadcrumb a:hover {
+	color: #1d4374;
+}

@@ -67,14 +67,13 @@
   <a
     aria-current={segment === 'oppskrift' ? 'page' : undefined}
     href="oppskrift">
-    Spørsmål og svar
+    Oppskrifter
   </a>
   <img src="https://image.flaticon.com/icons/svg/271/271228.svg" alt="" />
   <p>{oppskrift.title}</p>
 </div>
 
 <div class="container">
-  <h3>Vårt svar:</h3>
   <div class="content">
     {@html oppskrift.html}
   </div>

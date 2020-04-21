@@ -45,7 +45,7 @@
   .wrapper {
     width: 100%;
     background-color: white;
-    margin-bottom: 32px;
+    margin-bottom: 48px;
     box-shadow: 0px 0px 4px 0px rgba(209, 209, 209, 1);
     z-index: 90;
   }
@@ -259,8 +259,8 @@
       </li>
       <li>
         <a
-          aria-current={segment === 'oppskrifter' ? 'page' : undefined}
-          href="oppskrifter">
+          aria-current={segment === 'recipe' ? 'page' : undefined}
+          href="recipe">
           Oppskrifter
           <img class="nav-ikon" src={recipeIcon} alt="recipe icon" />
         </a>

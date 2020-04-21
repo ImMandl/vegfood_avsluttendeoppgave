@@ -47,7 +47,6 @@
   <title>Oppskrifter</title>
 </svelte:head>
 
-<h1>Ofte stilte spørsmål</h1>
 <div class="container">
   <ul>
     {#each oppskrifter as oppskrift}

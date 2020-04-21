@@ -12,8 +12,8 @@
 </script>
 
 <style>
-  .wrapper {
-    margin-bottom: 24px;
+  .slide-content {
+    padding-bottom: 24px;
   }
 
   .kategori {

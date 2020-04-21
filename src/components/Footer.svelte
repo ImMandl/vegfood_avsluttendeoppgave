@@ -12,7 +12,7 @@
 <style>
   footer {
     background-color: #fafafa;
-    padding: 16px 0 42px 0;
+    padding: 62px 0 16px 0;
   }
 
   hr {
@@ -234,16 +234,16 @@
       </div>
       <div class="social row">
         <p>Følg oss på:</p>
-        <a aria-current={segment === 'about' ? 'page' : undefined} href="about">
+        <a href="https://www.facebook.com/" target="_blank">
           <img src={fb} alt="facebook ikon" />
         </a>
-        <a aria-current={segment === 'about' ? 'page' : undefined} href="about">
+        <a href="https://www.instagram.com/" target="_blank">
           <img src={instagram} alt="instagram ikon" />
         </a>
-        <a aria-current={segment === 'about' ? 'page' : undefined} href="about">
+        <a href="https://www.twitter.com/" target="_blank">
           <img src={twitter} alt="twitter ikon" />
         </a>
-        <a aria-current={segment === 'about' ? 'page' : undefined} href="about">
+        <a href="https://www.youtube.com/" target="_blank">
           <img src={yt} alt="youtube ikon" />
         </a>
       </div>

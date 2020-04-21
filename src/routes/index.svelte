@@ -4,8 +4,6 @@
   import NyeOppskrifter from "../components/NyeOppskrifter.svelte";
   import Search from "../components/search.svelte";
 
-  import oppskrifter from "./oppskrifter/_oppskrifter.js";
-
   export let segment;
 </script>
 
@@ -22,6 +20,10 @@
 <Hero />
 
 <Categories {segment} />
+
+<div class="oppskrift-rad">
+  <h3>Test</h3>
+</div>
 
 <div class="oppskrift-rad">
   <h3>Nyeste oppskrifter</h3>

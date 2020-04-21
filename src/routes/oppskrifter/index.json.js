@@ -4,7 +4,9 @@ const contents = JSON.stringify(
 	oppskrifter.map((oppskrift) => {
 		return {
 			title: oppskrift.title,
-			slug: oppskrift.slug
+			slug: oppskrift.slug,
+			tid: oppskrift.tid,
+			forfatter: oppskrift.forfatter
 		};
 	})
 );

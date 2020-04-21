@@ -20,7 +20,7 @@
   }
 </style>
 
-<div class="container">
+<div>
   <h1>Personvern</h1>
   <h3>
     [

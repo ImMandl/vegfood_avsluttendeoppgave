@@ -38,6 +38,30 @@
     align-items: center;
     width: 160px;
   }
+
+  @media only screen and (max-width: 1369px) {
+    .oppskrift-grid {
+      grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+    }
+  }
+
+  @media only screen and (max-width: 1124px) {
+    .oppskrift-grid {
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+  }
+
+  @media only screen and (max-width: 850px) {
+    .oppskrift-grid {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    .oppskrift-grid {
+      grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+    }
+  }
 </style>
 
 <div class="oppskrift-grid">

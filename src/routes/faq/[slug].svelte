@@ -64,6 +64,8 @@
 <h1>{faq.title}</h1>
 
 <div class="breadcrumb ">
+  <a aria-current={segment === undefined ? 'page' : undefined} href=".">Hjem</a>
+  <img src="https://image.flaticon.com/icons/svg/271/271228.svg" alt="" />
   <a aria-current={segment === 'faq' ? 'page' : undefined} href="faq">
     Spørsmål og svar
   </a>

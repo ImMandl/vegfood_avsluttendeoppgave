@@ -14,27 +14,32 @@ const database = async () => {
 	});
 };
 
-database();
-
-oppskrifter.forEach((oppskrift) => {
-	oppskrift.html = oppskrift.html.replace(/^\t{3}/gm, '');
-}); */
+database(); */
 
 const oppskrifter = [
 	{
-		title: 'Hvem lager oppskriftene?',
-		slug: 'hvem-lager-oppskriftene',
+		title: 'Muffin frokokst',
+		slug: 'muffin-frokost',
+		kategori: 'vegetar',
+		tid: '09.05, 21.04.2020',
+		forfatter: 'Amund Bjørnstad',
 		html: `
+			<p>Vegetar</p>
+			<hr>
 			<p>Proin vulputate sodales vulputate. Vestibulum tincidunt vel leo ut auctor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus a facilisis nisi. Pellentesque vestibulum commodo tortor eget tempor. </p>
 		`
 	},
-
 	{
-		title: 'Hvorfor mener dere at vi ikke skal spise kjøtt?',
-		slug: 'hvorfor-mener-dere-at-vi-ikke-skal-spise-kjøtt',
+		title: 'Frisk sommersalat',
+		slug: 'frisk-sommersalat',
+		kategori: 'vegan',
+		tid: '08.32, 22.04.2020',
+		forfatter: 'Ola Nordmann',
 		html: `
-			<p>Vestibulum vel venenatis purus. Cras pulvinar ante condimentum, commodo felis eget, vestibulum lacus. Etiam nec malesuada metus. Praesent feugiat, risus sit amet commodo pretium, leo enim facilisis quam, eu dapibus felis metus eu libero.</p>
-	`
+			<p>Vegan</p>
+			<hr>
+			<p>Proin vulputate sodales vulputate. Vestibulum tincidunt vel leo ut auctor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus a facilisis nisi. Pellentesque vestibulum commodo tortor eget tempor. </p>
+		`
 	}
 ];
 
