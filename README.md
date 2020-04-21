@@ -1,11 +1,13 @@
 # vegfood_avsluttendeoppgave
  
-This site is built using <a href="https://sapper.svelte.dev/">sapper</a>. Sapper is a framework for building extremely high-performance web apps based on <a href="https://svelte.dev//">svelte</a>
+This site is built using <a href="https://sapper.svelte.dev/">sapper</a>. Sapper is a framework for building extremely high-performance web apps based on <a href="https://svelte.dev//">svelte</a>.
 
 
 ## Structure
 
 Files in ./src/route uses component from ./src/components to hold their content. The route files containt minimal html and css, exception can be made for files in ./src/route/recipes and ./src/route/faqs.
+
+Images, graphics, fonts and other such items are kept in their own folders inside ./static Exception is the favicon wish is based in at the top level of ./static.
 
 This site...
 - uses <a href="hhttps://firebase.google.com/docs/auth">Firebase Authentication</a> for log in
