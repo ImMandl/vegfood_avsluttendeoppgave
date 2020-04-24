@@ -143,24 +143,6 @@
     cursor: pointer;
   }
 
-  /* SEARCH BAR */
-  .search-container {
-    position: relative;
-  }
-
-  .search-container img {
-    position: absolute;
-    left: 0;
-    padding: 10px 8px 9px 18px;
-    height: 14px;
-  }
-
-  input {
-    padding: 8px 20px 8px 32px;
-    margin: 0 8px;
-    width: 95%;
-  }
-
   /* BRUKERMENY */
   .bruker-wrapper {
     position: relative;
@@ -188,40 +170,9 @@
     padding: 8px 4px;
   }
 
-  /* responsivitet */
-  .small-screen {
-    display: none;
-  }
-
-  .small-logo {
-    display: none;
-  }
-
   @media only screen and (max-width: 1024px) {
     nav {
       padding: 0 32px;
-    }
-  }
-
-  @media only screen and (max-width: 824px) {
-    .big-screen {
-      display: none;
-    }
-
-    .small-screen {
-      border-top: 1px solid #d1d1d1;
-      display: block;
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-    }
-
-    .search-li {
-      width: 100%;
-    }
-
-    a {
-      padding-left: 0;
     }
   }
 
@@ -235,21 +186,13 @@
     nav {
       padding: 0 16px;
     }
-
-    .small-logo {
-      display: block;
-    }
-
-    .big-logo {
-      display: none;
-    }
   }
 </style>
 
 <div class="wrapper">
   <nav>
     <ul>
-      <li class="logo-link big-screen">
+      <li class="logo-link">
         <a
           class="logo-container "
           aria-current={segment === undefined ? 'page' : undefined}
@@ -266,15 +209,7 @@
         </a>
       </li>
       <!-- Right side of navbar -->
-      <li class="right">
-        <form class="big-screen">
-          <div class="search-container">
-            <img src={searchIcon} alt="search icon" />
-            <input type="text" placeholder="Søk etter oppskrifter" />
-          </div>
-        </form>
-      </li>
-      <li class="bruker-wrapper">
+      <li class="bruker-wrapper right">
         {#if user}
           <!-- når bruker er logget inn -->
           <div>
@@ -288,12 +223,14 @@
               <div class="brukermeny">
                 <a
                   aria-current={segment === 'minbruker' ? 'page' : undefined}
-                  href="minbruker">
+                  href="minbruker"
+                  on:click={toggleUserMenu}>
                   Min bruker
                 </a>
                 <a
                   aria-current={segment === 'favoritter' ? 'page' : undefined}
-                  href="favoritter">
+                  href="favoritter"
+                  on:click={toggleUserMenu}>
                   Mine favoritter
                 </a>
                 <hr />
@@ -305,33 +242,6 @@
           <!-- Når bruker ikke er logget inn -->
           <button class="logginn" on:click={login}>Logg inn</button>
         {/if}
-      </li>
-    </ul>
-    <ul class="small-screen">
-      <!-- oppsett for mindre skjermstørrelser -->
-      <li class="logo-link big-logo">
-        <a
-          class="logo-container "
-          aria-current={segment === undefined ? 'page' : undefined}
-          href=".">
-          <img class="logo" src={logo} alt="Vegfood logo" />
-        </a>
-      </li>
-      <li class="logo-link small-logo">
-        <a
-          class="logo-container "
-          aria-current={segment === undefined ? 'page' : undefined}
-          href=".">
-          <img class="logo" src={logoIcon} alt="Vegfood logo" />
-        </a>
-      </li>
-      <li class="search-li">
-        <form>
-          <div class="search-container">
-            <img src={searchIcon} alt="search icon" />
-            <input type="text" placeholder="Søk etter oppskrifter" />
-          </div>
-        </form>
       </li>
     </ul>
   </nav>

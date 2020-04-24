@@ -22,6 +22,16 @@
   let enkel = "./graphics/icons-difficulty-easy.svg";
   let medium = "./graphics/icons-difficulty-medium.svg";
   let hard = "./graphics/icons-difficulty-hard.svg";
+  let heart = "./graphics/heart.svg";
+  let fullheart = "./graphics/fullheart.svg";
+
+  import { favorittArray } from "../../store.js";
+
+  const leggTilFavoritt = () => {
+    $favorittArray.push(recipe);
+    alert("Denne oppskrifter har blitt lagt til i dine favoritter!");
+    console.log(favorittArray);
+  };
 </script>
 
 <style>
@@ -93,6 +103,23 @@
     color: #247c3b;
   }
 
+  /* legg til som favoritt / heart icon */
+  .heart-icon {
+    height: 32px;
+    width: 32px;
+    object-fit: contain;
+    margin-left: auto;
+  }
+
+  .heart-icon img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .heart-icon:hover {
+    cursor: pointer;
+  }
+
   /* content on right / side content */
   .sidebar {
     width: 100%;
@@ -155,11 +182,16 @@
   <div class="grid">
     <div class="main-content">
       <img src={recipe.bilde} alt="bilde" />
-      {#if recipe.kategori == 'Vegetar'}
-        <p class="kategori vegetar">{recipe.kategori}</p>
-      {:else}
-        <p class="kategori vegan">{recipe.kategori}</p>
-      {/if}
+      <div class="row">
+        {#if recipe.kategori == 'Vegetar'}
+          <p class="kategori vegetar">{recipe.kategori}</p>
+        {:else}
+          <p class="kategori vegan">{recipe.kategori}</p>
+        {/if}
+        <div class="heart-icon">
+          <img on:click={leggTilFavoritt} src={heart} alt="" />
+        </div>
+      </div>
       <h1>{recipe.title}</h1>
       <div class="row info">
         <div class="row icon">

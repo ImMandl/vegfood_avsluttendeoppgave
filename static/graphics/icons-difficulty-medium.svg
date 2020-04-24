@@ -1,1 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g transform="translate(17308 8973)"><g transform="translate(-17308 -8973)" fill="none"><path d="M16,0A16,16,0,1,1,0,16,16,16,0,0,1,16,0Z" stroke="none"/><path d="M 16 3 C 12.5275707244873 3 9.262990951538086 4.352239608764648 6.807609558105469 6.807609558105469 C 4.352239608764648 9.262990951538086 3 12.5275707244873 3 16 C 3 19.47243118286133 4.352239608764648 22.73701095581055 6.807609558105469 25.19239044189453 C 9.262990951538086 27.64776039123535 12.5275707244873 29 16 29 C 19.47243118286133 29 22.73701095581055 27.64776039123535 25.19239044189453 25.19239044189453 C 27.64776039123535 22.73701095581055 29 19.47243118286133 29 16 C 29 12.5275707244873 27.64776039123535 9.262990951538086 25.19239044189453 6.807609558105469 C 22.73701095581055 4.352239608764648 19.47243118286133 3 16 3 M 16 0 C 24.8365592956543 0 32 7.163440704345703 32 16 C 32 24.8365592956543 24.8365592956543 32 16 32 C 7.163440704345703 32 0 24.8365592956543 0 16 C 0 7.163440704345703 7.163440704345703 0 16 0 Z" stroke="none" fill="#444"/></g><path d="M3,16H0A16,16,0,0,1,16,0V3A13.016,13.016,0,0,0,3,16Z" transform="translate(-17276 -8973) rotate(90)" fill="#0087d5"/><text transform="translate(-17301 -8950)" fill="#0087d5" font-size="18" font-family="Montserrat-SemiBold, Montserrat" font-weight="600" letter-spacing="0.032em"><tspan x="0" y="0">M</tspan></text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="icons_difficulty_medium" data-name="icons/difficulty/medium" transform="translate(17308 8932)">
+    <g id="Ellipse_23" data-name="Ellipse 23" transform="translate(-17308 -8914)" fill="#0087d5" stroke="#333" stroke-width="2">
+      <circle cx="7" cy="7" r="7" stroke="none"/>
+      <circle cx="7" cy="7" r="6" fill="none"/>
+    </g>
+    <g id="Ellipse_24" data-name="Ellipse 24" transform="translate(-17290 -8914)" fill="none" stroke="#333" stroke-width="2">
+      <circle cx="7" cy="7" r="7" stroke="none"/>
+      <circle cx="7" cy="7" r="6" fill="none"/>
+    </g>
+    <g id="Ellipse_25" data-name="Ellipse 25" transform="translate(-17299 -8932)" fill="#0087d5" stroke="#333" stroke-width="2">
+      <circle cx="7" cy="7" r="7" stroke="none"/>
+      <circle cx="7" cy="7" r="6" fill="none"/>
+    </g>
+  </g>
+</svg>

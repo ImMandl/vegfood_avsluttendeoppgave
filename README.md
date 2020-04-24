@@ -20,10 +20,13 @@ Files in ./src/route uses component from ./src/components to hold their content.
 Images, graphics, fonts and other such items are kept in their own folders inside ./static Exception is the favicon wish is based in at the top level of ./static.
 
 This site...
-- uses <a href="hhttps://firebase.google.com/docs/auth">Firebase Authentication</a> for log in
-- uses <a href="https://github.com/Schum123/svelte-loading-spinners#svelte-loading-spinners">Svelte-loading-spinners</a> to show when items is loading
+- uses <a href="hhttps://firebase.google.com/docs/auth">Firebase Authentication</a> for log in.
+- uses <a href="https://openweathermap.org/">OpenWeather</a> to fetch data on weather forecast.
+- uses <a href="https://svelte.dev/docs#onMount">OnMount</a> when fetching data from firebase and weather api.
+- uses <a href="https://svelte.dev/docs#svelte_store">Svelte store</a> to keep favorited recipes.
+- uses <a href="https://github.com/Schum123/svelte-loading-spinners#svelte-loading-spinners">Svelte-loading-spinners</a> to show when items is loading.
 - uses <a href="https://github.com/beyonk-adventures/svelte-carousel#svelte-carousel">Svelte Carousel</a> for image carousels. This is used for both the heading on the frontpage and for the categories.
 
-## Styling
+### Styling
 
 In ./static there is a global css file. If important css is used in several places it will be placed here.

@@ -78,6 +78,10 @@ button:focus {
 	background-color: #fff;
 }
 
+.display-none {
+	display: none;
+}
+
 /* Brukerside */
 .bruker-nav {
 	display: grid;

@@ -23,6 +23,7 @@
   {:else}
     <div class="loading-message">
       <p>henter oppskrifter...</p>
+      {Circle}
     </div>
   {/each}
 </div>

@@ -75,7 +75,7 @@
     <div class="poster-tekst-img">
       <img src={telescope} alt="" />
     </div>
-    <a aria-current={segment === 'about' ? 'page' : undefined} href="about">
+    <a aria-current={segment === 'search' ? 'page' : undefined} href="search">
       Utforsk
     </a>
   </div>

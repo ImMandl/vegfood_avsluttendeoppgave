@@ -12,7 +12,7 @@
 <style>
   footer {
     background-color: #fafafa;
-    padding: 62px 0 16px 0;
+    padding: 62px 0 42px 0;
   }
 
   hr {
@@ -181,7 +181,7 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     margin: 0 auto;
     gap: 16px;
-    padding-top: 48px;
+    padding-top: 16px;
   }
 
   .footer-bottom h4 {
@@ -263,10 +263,19 @@
         <a aria-current={segment === undefined ? 'page' : undefined} href=".">
           Forside
         </a>
-        <a aria-current={segment === 'about' ? 'page' : undefined} href="about">
+        <a
+          aria-current={segment === 'search' ? 'page' : undefined}
+          href="search">
           Finn oppskrifter
         </a>
-        <a aria-current={segment === 'about' ? 'page' : undefined} href="about">
+        <a
+          aria-current={segment === 'minbruker' ? 'page' : undefined}
+          href="minbruker">
+          Mine side
+        </a>
+        <a
+          aria-current={segment === 'favoritter' ? 'page' : undefined}
+          href="favoritter">
           Mine favoritter
         </a>
       </div>
@@ -279,16 +288,16 @@
           Spørsmål og svar
         </a>
         <a aria-current={segment === 'about' ? 'page' : undefined} href="about">
-          Samarbeidspartnere
+          Om oss
         </a>
       </div>
       <div class="greit-aa-vite column">
         <h4>Greit å vite</h4>
         <a aria-current={segment === 'about' ? 'page' : undefined} href="about">
-          Kampanjer
+          Artikler
         </a>
         <a aria-current={segment === 'about' ? 'page' : undefined} href="about">
-          Om oss
+          Forskning
         </a>
       </div>
     </div>

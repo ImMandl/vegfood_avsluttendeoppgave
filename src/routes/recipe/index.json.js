@@ -3,6 +3,7 @@ import recipes from './_recipes.js';
 const contents = JSON.stringify(
 	recipes.map((recipe) => {
 		return {
+			id: recipe.id,
 			title: recipe.title,
 			slug: recipe.slug,
 			kategori: recipe.kategori,

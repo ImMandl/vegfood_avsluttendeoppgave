@@ -21,6 +21,7 @@
 
   .kategori {
     text-align: center;
+    background-color: #fafafa;
   }
 
   .big-screen {

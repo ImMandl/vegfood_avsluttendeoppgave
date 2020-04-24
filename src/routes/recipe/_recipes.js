@@ -1,12 +1,13 @@
 const recipes = [
 	{
+		id: '1',
 		title: 'Muffin frokokst',
 		slug: 'muffin-frokost',
 		kategori: 'Vegetar',
 		lengde: '45 minutter',
 		grad: 'Medium',
 		type: 'dessert',
-		tid: '09.05, 21.04.2020',
+		tid: '21.04.2020',
 		forfatter: 'Amund Bjørnstad',
 		prdukter: [
 			{
@@ -58,13 +59,14 @@ const recipes = [
 		`
 	},
 	{
+		id: '2',
 		title: 'Frisk sommersalat',
 		slug: 'frisk-sommersalat',
 		kategori: 'Vegan',
 		lengde: '20 minutter',
 		grad: 'Enkel',
 		type: 'smårett',
-		tid: '09.05, 21.04.2020',
+		tid: '21.04.2020',
 		forfatter: 'Ola Nordmann',
 		prdukter: [
 			{
@@ -107,7 +109,7 @@ const recipes = [
 					'Pynt muffinsene med melisglasur, gjerne farget med konditorfarge, og pynt med nøtter, kakepynt eller godteri som for eksempel Nonstop.'
 			}
 		],
-		tops:
+		tips:
 			'Lag en stor porsjon med deig som du deler og tilsetter ulike smaksvarianter. Så får barna litt av hvert å velge mellom.',
 		bilde:
 			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/anna-pelzer-IGfIGP5ONV0-unsplash.jpg?alt=media&token=032fe696-149e-48f7-a053-1e32f9714c60',
@@ -116,13 +118,14 @@ const recipes = [
 		`
 	},
 	{
+		id: '3',
 		title: 'Frisk sommersalat',
 		slug: 'frisk-sommersalat',
 		kategori: 'Vegan',
 		lengde: '20 minutter',
 		grad: 'Enkel',
 		type: 'smårett',
-		tid: '09.05, 21.04.2020',
+		tid: '21.04.2020',
 		forfatter: 'Ola Nordmann',
 		prdukter: [
 			{
@@ -165,7 +168,7 @@ const recipes = [
 					'Pynt muffinsene med melisglasur, gjerne farget med konditorfarge, og pynt med nøtter, kakepynt eller godteri som for eksempel Nonstop.'
 			}
 		],
-		tops:
+		tips:
 			'Lag en stor porsjon med deig som du deler og tilsetter ulike smaksvarianter. Så får barna litt av hvert å velge mellom.',
 		bilde:
 			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/anna-pelzer-IGfIGP5ONV0-unsplash.jpg?alt=media&token=032fe696-149e-48f7-a053-1e32f9714c60',
@@ -174,13 +177,14 @@ const recipes = [
 		`
 	},
 	{
+		id: '4',
 		title: 'Frisk sommersalat',
 		slug: 'frisk-sommersalat',
 		kategori: 'Vegan',
 		lengde: '20 minutter',
 		grad: 'Enkel',
 		type: 'smårett',
-		tid: '09.05, 21.04.2020',
+		tid: '21.04.2020',
 		forfatter: 'Ola Nordmann',
 		prdukter: [
 			{
@@ -223,7 +227,7 @@ const recipes = [
 					'Pynt muffinsene med melisglasur, gjerne farget med konditorfarge, og pynt med nøtter, kakepynt eller godteri som for eksempel Nonstop.'
 			}
 		],
-		tops:
+		tips:
 			'Lag en stor porsjon med deig som du deler og tilsetter ulike smaksvarianter. Så får barna litt av hvert å velge mellom.',
 		bilde:
 			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/anna-pelzer-IGfIGP5ONV0-unsplash.jpg?alt=media&token=032fe696-149e-48f7-a053-1e32f9714c60',
@@ -232,13 +236,14 @@ const recipes = [
 		`
 	},
 	{
+		id: '5',
 		title: 'Frisk sommersalat',
 		slug: 'frisk-sommersalat',
 		kategori: 'Vegan',
 		lengde: '20 minutter',
 		grad: 'Enkel',
 		type: 'smårett',
-		tid: '09.05, 21.04.2020',
+		tid: '21.04.2020',
 		forfatter: 'Ola Nordmann',
 		prdukter: [
 			{
@@ -281,7 +286,7 @@ const recipes = [
 					'Pynt muffinsene med melisglasur, gjerne farget med konditorfarge, og pynt med nøtter, kakepynt eller godteri som for eksempel Nonstop.'
 			}
 		],
-		tops:
+		tips:
 			'Lag en stor porsjon med deig som du deler og tilsetter ulike smaksvarianter. Så får barna litt av hvert å velge mellom.',
 		bilde:
 			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/anna-pelzer-IGfIGP5ONV0-unsplash.jpg?alt=media&token=032fe696-149e-48f7-a053-1e32f9714c60',

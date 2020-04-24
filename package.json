@@ -12,6 +12,8 @@
     "test": "run-p --race dev cy:run"
   },
   "dependencies": {
+    "@sveltejs/svelte-virtual-list": "^3.0.1",
+    "axios": "^0.19.2",
     "compression": "^1.7.1",
     "firebase": "^7.14.0-canary.537350ee",
     "polka": "next",
