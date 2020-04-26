@@ -43,8 +43,13 @@ a {
 	text-decoration: none;
 }
 
+a:hover {
+	color: #3da839;
+}
+
 button {
 	white-space: nowrap;
+	font-family: 'Montserrat', sans-serif;
 }
 
 button:hover {

@@ -5,7 +5,6 @@
   let db; // ref til firestore
   let auth; // authentication
   let googleProvider; // Google innlogging
-  let login; // logg inn
   let logout; // logg ut
   let showUserMenu = false; // viser ikke logout automatisk
   let toggleUserMenu; // viser logout etter trykt profilnavn
@@ -16,10 +15,6 @@
     db = firebase.firestore();
     auth = firebase.auth();
     googleProvider = new firebase.auth.GoogleAuthProvider();
-
-    login = () => {
-      auth.signInWithPopup(googleProvider);
-    };
 
     logout = () => {
       auth.signOut();
@@ -124,7 +119,16 @@
         {/each}
       {/if}
     {:else}
-      <h2>logg inn for å se informasjon om din bruker</h2>
+      <h2>
+        <a
+          style="text-decoration: underline;"
+          class="logginn"
+          aria-current={segment === 'logginn' ? 'page' : undefined}
+          href="logginn">
+          Logg inn
+        </a>
+        for å se informasjon om din bruker
+      </h2>
     {/if}
   </table>
 </div>

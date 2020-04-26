@@ -26,6 +26,7 @@ This site...
 - uses <a href="https://svelte.dev/docs#svelte_store">Svelte store</a> to keep favorited recipes.
 - uses <a href="https://github.com/Schum123/svelte-loading-spinners#svelte-loading-spinners">Svelte-loading-spinners</a> to show when items is loading.
 - uses <a href="https://github.com/beyonk-adventures/svelte-carousel#svelte-carousel">Svelte Carousel</a> for image carousels. This is used for both the heading on the frontpage and for the categories.
+- uses <a href="https://github.com/joeattardi/svelte-tabs#svelte-tabs">Svelte tabs</a> on the login page to seperate login and registration.
 
 ### Styling
 

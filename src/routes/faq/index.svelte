@@ -38,10 +38,6 @@
     background-repeat: no-repeat;
     padding-right: 8px;
   }
-
-  a:hover {
-    color: #3da839;
-  }
 </style>
 
 <svelte:head>

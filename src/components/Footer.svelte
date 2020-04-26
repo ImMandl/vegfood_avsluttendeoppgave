@@ -281,23 +281,27 @@
       </div>
       <div class="info column">
         <h4>Informasjon</h4>
-        <a aria-current={segment === 'gdpr' ? 'page' : undefined} href="gdpr">
-          Personopplysninger
+        <a aria-current={segment === 'about' ? 'page' : undefined} href="about">
+          Om oss
+        </a>
+        <a
+          aria-current={segment === 'teamet' ? 'page' : undefined}
+          href="teamet">
+          Teamet
         </a>
         <a aria-current={segment === 'faq' ? 'page' : undefined} href="faq">
           Spørsmål og svar
         </a>
-        <a aria-current={segment === 'about' ? 'page' : undefined} href="about">
-          Om oss
+        <a aria-current={segment === 'gdpr' ? 'page' : undefined} href="gdpr">
+          Personopplysninger
         </a>
       </div>
       <div class="greit-aa-vite column">
         <h4>Greit å vite</h4>
-        <a aria-current={segment === 'about' ? 'page' : undefined} href="about">
-          Artikler
-        </a>
-        <a aria-current={segment === 'about' ? 'page' : undefined} href="about">
-          Forskning
+        <a
+          aria-current={segment === 'forskning' ? 'page' : undefined}
+          href="forskning">
+          Forskning og artikler
         </a>
       </div>
     </div>

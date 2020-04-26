@@ -1,4 +1,5 @@
 <script>
+  export let segment;
   import { onMount } from "svelte";
   import { authState } from "rxfire/auth";
   let db; // ref til firestore
@@ -94,6 +95,15 @@
       </div>
     </div>
   {:else}
-    <h2>logg inn for å se informasjon om din bruker</h2>
+    <h2>
+      <a
+        style="text-decoration: underline;"
+        class="logginn"
+        aria-current={segment === 'logginn' ? 'page' : undefined}
+        href="logginn">
+        Logg inn
+      </a>
+      for å se informasjon om din bruker
+    </h2>
   {/if}
 </div>

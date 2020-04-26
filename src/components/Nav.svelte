@@ -12,8 +12,6 @@
   import { authState } from "rxfire/auth";
   let db; // ref til firestore
   let auth; // authentication
-  let googleProvider; // Google innlogging
-  let login; // logg inn
   let logout; // logg ut
   let showUserMenu = false; // viser ikke logout automatisk
   let toggleUserMenu; // viser logout etter trykt profilnavn
@@ -23,11 +21,6 @@
   onMount(() => {
     db = firebase.firestore();
     auth = firebase.auth();
-    googleProvider = new firebase.auth.GoogleAuthProvider();
-
-    login = () => {
-      auth.signInWithPopup(googleProvider);
-    };
 
     logout = () => {
       auth.signOut();
@@ -102,7 +95,7 @@
   .logginn {
     background-color: #3da839;
     border: none;
-    border-radius: 16px;
+    border-radius: 18px;
     padding: 8px 32px;
     color: #fff;
     font-size: 16px;
@@ -113,6 +106,7 @@
   .logginn:hover {
     background-color: #258d22;
     cursor: pointer;
+    color: white;
   }
 
   .loggut {
@@ -240,7 +234,12 @@
           </div>
         {:else}
           <!-- Når bruker ikke er logget inn -->
-          <button class="logginn" on:click={login}>Logg inn</button>
+          <a
+            class="logginn"
+            aria-current={segment === 'logginn' ? 'page' : undefined}
+            href="logginn">
+            Logg inn
+          </a>
         {/if}
       </li>
     </ul>

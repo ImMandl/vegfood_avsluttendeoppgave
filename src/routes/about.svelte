@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-  <title>About</title>
+  <title>Om VegFood</title>
 </svelte:head>
 
 <About />
