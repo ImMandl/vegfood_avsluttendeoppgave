@@ -21,11 +21,10 @@ Images, graphics, fonts and other such items are kept in their own folders insid
 
 This site...
 - uses <a href="https://firebase.google.com/docs/auth">Firebase Authentication</a> for log in.
-- uses <a href="https://openweathermap.org/">OpenWeather</a> to fetch data on weather forecast.
 - uses <a href="https://svelte.dev/docs#onMount">OnMount</a> when fetching data from firebase and weather api.
 - uses <a href="https://svelte.dev/docs#svelte_store">Svelte store</a> to keep favorited recipes.
 - uses <a href="https://github.com/Schum123/svelte-loading-spinners#svelte-loading-spinners">Svelte-loading-spinners</a> to show when items is loading.
-- uses <a href="https://github.com/beyonk-adventures/svelte-carousel#svelte-carousel">Svelte Carousel</a> for image carousels. This is used for both the heading on the frontpage and for the categories.
+- uses <a href="https://github.com/beyonk-adventures/svelte-carousel#svelte-carousel">Svelte Carousel</a>. Is used for categories on frontpage to help make the site easily responive.
 - uses <a href="https://github.com/joeattardi/svelte-tabs#svelte-tabs">Svelte tabs</a> on the login page to seperate login and registration.
 
 ### Styling
