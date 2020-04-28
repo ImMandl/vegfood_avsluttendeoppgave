@@ -9,6 +9,12 @@ const recipes = [
 		type: 'dessert',
 		tid: '21.04.2020',
 		forfatter: 'Amund Bjørnstad',
+		tags: [
+			{
+				kategori: 'vegetar',
+				maaltid: 'frokost'
+			}
+		],
 		prdukter: [
 			{
 				title: 'Tinemelk',
@@ -68,6 +74,12 @@ const recipes = [
 		type: 'smårett',
 		tid: '22.04.2020',
 		forfatter: 'Ola Nordmann',
+		tags: [
+			{
+				kategori: 'vegan',
+				maaltid: 'smårett'
+			}
+		],
 		prdukter: [
 			{
 				title: 'Tinemelk',

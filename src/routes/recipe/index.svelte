@@ -24,9 +24,14 @@
   let dropdownRightArrow = "graphics/icons-dropdown-right-arrow.svg";
   let showKategori = true; // starter som åpen
   let showIngredienser = true; // starter som åpen
+  let showMåltid = true; // starter som åpen
 
   const toggleKategori = () => {
     showKategori = !showKategori;
+  };
+
+  const toggleMåltid = () => {
+    showMåltid = !showMåltid;
   };
 
   const toggleIngredienser = () => {
@@ -123,6 +128,41 @@
         <div class="row">
           <input type="checkbox" id="vegan" />
           <label for="vegan">Vegan</label>
+        </div>
+      </div>
+    {/if}
+    {#if showMåltid == true}
+      <button on:click={toggleMåltid}>
+        Måltider
+        <img src={dropdownArrow} alt="icon" />
+      </button>
+    {:else}
+      <button on:click={toggleMåltid}>
+        Måltider
+        <img src={dropdownRightArrow} alt="icon" />
+      </button>
+    {/if}
+    {#if showIngredienser}
+      <div class="ingrediens-wrapper">
+        <div class="row">
+          <input type="checkbox" id="frokost" />
+          <label for="frokost">Frokost</label>
+        </div>
+        <div class="row">
+          <input type="checkbox" id="niste" />
+          <label for="niste">Niste</label>
+        </div>
+        <div class="row">
+          <input type="checkbox" id="middag" />
+          <label for="middag">Middag</label>
+        </div>
+        <div class="row">
+          <input type="checkbox" id="dessert" />
+          <label for="dessert">Dessert</label>
+        </div>
+        <div class="row">
+          <input type="checkbox" id="smaaretter" />
+          <label for="smaaretter">Småretter</label>
         </div>
       </div>
     {/if}
