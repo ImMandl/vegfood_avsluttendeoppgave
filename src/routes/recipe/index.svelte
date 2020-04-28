@@ -11,11 +11,9 @@
     return this.fetch(`recipe.json`)
       .then(r => r.json())
       .then(recipes => {
-        return { recipes, vegetar };
+        return { recipes };
       });
   }
-
-  let vegetar = [];
 </script>
 
 <script>
