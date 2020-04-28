@@ -11,7 +11,7 @@ const recipes = [
 		forfatter: 'Amund Bjørnstad',
 		tags: [
 			{
-				kategori: 'vegetar',
+				type: 'vegetar',
 				maaltid: 'frokost'
 			}
 		],
@@ -76,7 +76,7 @@ const recipes = [
 		forfatter: 'Ola Nordmann',
 		tags: [
 			{
-				kategori: 'vegan',
+				type: 'vegan',
 				maaltid: 'smårett'
 			}
 		],

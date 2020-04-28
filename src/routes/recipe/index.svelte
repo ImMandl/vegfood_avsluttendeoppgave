@@ -22,7 +22,6 @@
 <script>
   export let recipes;
   export let segment;
-  let vgtr;
 
   let dropdownArrow = "graphics/icons-dropdown-arrow.svg";
   let dropdownRightArrow = "graphics/icons-dropdown-right-arrow.svg";
@@ -41,6 +40,8 @@
   const toggleIngredienser = () => {
     showIngredienser = !showIngredienser;
   };
+
+  let yes = false;
 </script>
 
 <style>
@@ -149,7 +150,7 @@
     {#if showMåltid}
       <div class="ingrediens-wrapper">
         <div class="row">
-          <input type="checkbox" id="frokost" />
+          <input type="checkbox" id="frokost" bind:checked={yes} />
           <label for="frokost">Frokost</label>
         </div>
         <div class="row">
