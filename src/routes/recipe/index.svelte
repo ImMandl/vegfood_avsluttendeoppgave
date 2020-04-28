@@ -1,12 +1,4 @@
 <script context="module">
-  /*   export function preload({ params, query }) {
-    return this.fetch(`recipe.json`)
-      .then(r => r.json())
-      .then(recipes => {
-        return { recipes };
-      });
-  } */
-
   export function preload({ params, query }) {
     return this.fetch(`recipe.json`)
       .then(r => r.json())
@@ -14,6 +6,15 @@
         return { recipes };
       });
   }
+
+  /*   export function preload({ params, query }) {
+    return this.fetch(`recipe.json`)
+      .then(r => r.json())
+      .then(recipes => {
+        vgtr = recipes.filter(art => art.tags.kategori == "vegetar");
+        return { vgtr };
+      });
+  } */
 </script>
 
 <script>

@@ -11,6 +11,7 @@ const contents = JSON.stringify(
 			grad: recipe.grad,
 			tid: recipe.tid,
 			forfatter: recipe.forfatter,
+			tags: recipe.tags,
 			bilde: recipe.bilde,
 			produkter: recipe.produkter,
 			ingredienser: recipe.ingredienser,
