@@ -20,7 +20,7 @@ Files in ./src/route uses component from ./src/components to hold their content.
 Images, graphics, fonts and other such items are kept in their own folders inside ./static Exception is the favicon wish is based in at the top level of ./static.
 
 This site...
-- uses <a href="hhttps://firebase.google.com/docs/auth">Firebase Authentication</a> for log in.
+- uses <a href="https://firebase.google.com/docs/auth">Firebase Authentication</a> for log in.
 - uses <a href="https://openweathermap.org/">OpenWeather</a> to fetch data on weather forecast.
 - uses <a href="https://svelte.dev/docs#onMount">OnMount</a> when fetching data from firebase and weather api.
 - uses <a href="https://svelte.dev/docs#svelte_store">Svelte store</a> to keep favorited recipes.
