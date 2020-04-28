@@ -1,28 +1,28 @@
 <script context="module">
-  import FirestoreParser from "firestore-parser";
-  /*   export function preload({ params, query }) {
+  export function preload({ params, query }) {
     return this.fetch(`recipe.json`)
       .then(r => r.json())
       .then(recipes => {
         return { recipes };
       });
-  } */
+  }
 
-  export function preload({ params, query }) {
+  /*   export function preload({ params, query }) {
     return this.fetch(`recipe.json`)
       .then(r => r.json())
-      .then(parsed => {
-        vgtr = parsed.documents.filter(art => art.tags.kategori == "vegetar");
+      .then(recipes => {
+        vgtr = recipes.filter(rec => rec.tags == "vegetar");
       })
       .then(vgtr => {
         return { vgtr };
       });
-  }
+  } */
 </script>
 
 <script>
   export let recipes;
   export let segment;
+  let vgtr;
 
   let dropdownArrow = "graphics/icons-dropdown-arrow.svg";
   let dropdownRightArrow = "graphics/icons-dropdown-right-arrow.svg";
@@ -146,7 +146,7 @@
         <img src={dropdownRightArrow} alt="icon" />
       </button>
     {/if}
-    {#if showIngredienser}
+    {#if showMåltid}
       <div class="ingrediens-wrapper">
         <div class="row">
           <input type="checkbox" id="frokost" />
