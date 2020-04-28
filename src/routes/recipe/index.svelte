@@ -1,20 +1,29 @@
 <script context="module">
-  export function preload({ params, query }) {
+  /*   export function preload({ params, query }) {
     return this.fetch(`recipe.json`)
       .then(r => r.json())
       .then(recipes => {
         return { recipes };
       });
+  } */
+
+  export function preload({ params, query }) {
+    return this.fetch(`recipe.json`)
+      .then(r => r.json())
+      .then(recipes => {
+        return { recipes, vegetar };
+      });
   }
+
+  let vegetar = [];
 </script>
 
 <script>
-  import { Circle } from "svelte-loading-spinners";
-
   export let recipes;
   export let segment;
 
   let dropdownArrow = "graphics/icons-dropdown-arrow.svg";
+  let dropdownRightArrow = "graphics/icons-dropdown-right-arrow.svg";
   let showKategori = true; // starter som åpen
   let showIngredienser = true; // starter som åpen
 
@@ -54,6 +63,13 @@
     text-align: left;
     font-size: 16px;
     margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+  }
+
+  .filter-wrapper button img {
+    margin-left: auto;
+    padding-right: 16px;
   }
 
   .kategori-wrapper,
@@ -89,10 +105,17 @@
 
 <div class="content-wrapper">
   <div class="filter-wrapper">
-    <button on:click={toggleKategori}>
-      Kategori
-      <img src={dropdownArrow} alt="icon" />
-    </button>
+    {#if showKategori == true}
+      <button on:click={toggleKategori}>
+        Kategori
+        <img src={dropdownArrow} alt="icon" />
+      </button>
+    {:else}
+      <button on:click={toggleKategori}>
+        Kategori
+        <img src={dropdownRightArrow} alt="icon" />
+      </button>
+    {/if}
     {#if showKategori}
       <div class="kategori-wrapper">
         <div class="row">
@@ -105,10 +128,17 @@
         </div>
       </div>
     {/if}
-    <button on:click={toggleIngredienser}>
-      Ingredienser
-      <img src={dropdownArrow} alt="icon" />
-    </button>
+    {#if showIngredienser == true}
+      <button on:click={toggleIngredienser}>
+        Ingredienser
+        <img src={dropdownArrow} alt="icon" />
+      </button>
+    {:else}
+      <button on:click={toggleIngredienser}>
+        Ingredienser
+        <img src={dropdownRightArrow} alt="icon" />
+      </button>
+    {/if}
     {#if showIngredienser}
       <div class="ingrediens-wrapper">
         <div class="row">
@@ -150,7 +180,6 @@
     {:else}
       <div class="loading-message">
         <p>henter oppskrifter...</p>
-        <Circle size="60" color="#3DA839" />
       </div>
     {/each}
   </div>

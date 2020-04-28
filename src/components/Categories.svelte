@@ -47,9 +47,7 @@
 <!-- For big screens (over 1024px) -->
 <div class="wrapper big-screen">
   <div class="kategori">
-    <a
-      aria-current={segment === 'oppskrift' ? 'page' : undefined}
-      href="oppskrift">
+    <a aria-current={segment === 'frokost' ? 'page' : undefined} href="frokost">
       <img src={frokost} alt="ikon" />
       <h3>Frokost</h3>
     </a>

@@ -54,6 +54,12 @@
     alert("Denne oppskrifter har blitt lagt til i dine favoritter!");
     console.log($favorittArray);
   };
+
+  const fjernFavoritt = () => {
+    $favorittArray.splice(favorittArray.id, 1);
+    alert("Denne oppskrifter har blitt fjernet fra dine favoritter!");
+    console.log($favorittArray);
+  };
 </script>
 
 <style>
@@ -212,8 +218,8 @@
         {/if}
         {#if user}
           <div class="heart-icon">
-            {#if $favorittArray.includes(recipe)}
-              <img src={fullheart} alt="" />
+            {#if $favorittArray.includes(favorittArray.id)}
+              <img on:click={fjernFavoritt} src={fullheart} alt="" />
             {:else}
               <img on:click={leggTilFavoritt} src={heart} alt="" />
             {/if}

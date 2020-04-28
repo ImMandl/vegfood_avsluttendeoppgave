@@ -109,11 +109,15 @@
   .handlinger button:hover {
     background-color: #b8b8b8;
   }
+
+  .row {
+    align-items: center;
+  }
 </style>
 
 <h2>Mine favoritter</h2>
 <div class="value-list">
-  <span>
+  <span class="row">
     Viser
     <button on:click={toggleValueList}>
       {value}
