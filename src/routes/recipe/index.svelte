@@ -1,20 +1,23 @@
 <script context="module">
-  export function preload({ params, query }) {
+  import FirestoreParser from "firestore-parser";
+  /*   export function preload({ params, query }) {
     return this.fetch(`recipe.json`)
       .then(r => r.json())
       .then(recipes => {
         return { recipes };
       });
-  }
+  } */
 
-  /*   export function preload({ params, query }) {
+  export function preload({ params, query }) {
     return this.fetch(`recipe.json`)
       .then(r => r.json())
-      .then(recipes => {
-        vgtr = recipes.filter(art => art.tags.kategori == "vegetar");
+      .then(parsed => {
+        vgtr = parsed.documents.filter(art => art.tags.kategori == "vegetar");
+      })
+      .then(vgtr => {
         return { vgtr };
       });
-  } */
+  }
 </script>
 
 <script>
