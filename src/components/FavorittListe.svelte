@@ -10,6 +10,7 @@
   let toggleUserMenu; // viser logout etter trykt profilnavn
   let user; // bruker
   let unsubscribe;
+  let dropdownArrow = "graphics/icons-dropdown-arrow.svg";
 
   onMount(() => {
     db = firebase.firestore();
@@ -26,9 +27,39 @@
   import { favorittArray } from "../store.js";
 
   const fjernFavoritt = () => {
-    $favorittArray.splice(favorittArray);
+    $favorittArray.splice(favorittArray.id, 1);
     alert("Denne oppskrifter har blitt fjernet fra dine favoritter!");
-    console.log(favorittArray);
+    console.log($favorittArray);
+  };
+
+  // hvor mange favoritter som vises samtidig
+  let valueList;
+  let toggleValueList = false;
+  let value = 30;
+
+  const valueFive = () => {
+    value = 5;
+    valueList = !valueList;
+  };
+  const valueTen = () => {
+    value = 10;
+    valueList = !valueList;
+  };
+  const valueTwenty = () => {
+    value = 20;
+    valueList = !valueList;
+  };
+  const valueThirty = () => {
+    value = 30;
+    valueList = !valueList;
+  };
+  const valueAll = () => {
+    value = $favorittArray.length;
+    valueList = !valueList;
+  };
+
+  toggleValueList = () => {
+    valueList = !valueList;
   };
 </script>
 
@@ -81,6 +112,25 @@
 </style>
 
 <h2>Mine favoritter</h2>
+<div class="value-list">
+  <span>
+    Viser
+    <button on:click={toggleValueList}>
+      {value}
+      <img src={dropdownArrow} alt="icon" />
+    </button>
+    favoritter
+  </span>
+  {#if valueList}
+    <div class="value-list-inner">
+      <button on:click={valueFive}>Vis 5 favoritter</button>
+      <button on:click={valueTen}>Vis 10 favoritter</button>
+      <button on:click={valueTwenty}>Vis 20 favoritter</button>
+      <button on:click={valueThirty}>Vis 30 favoritter</button>
+      <button on:click={valueAll}>Vis alle favoritter</button>
+    </div>
+  {/if}
+</div>
 <div class="container">
   <table class="favoritt-table">
     {#if user}
@@ -105,7 +155,7 @@
           <th>Forfatter</th>
           <th>Handlinger</th>
         </tr>
-        {#each $favorittArray as favoritt}
+        {#each $favorittArray.slice(0, value) as favoritt}
           <tr>
             <td>{favoritt.title}</td>
             <td>{favoritt.kategori}</td>

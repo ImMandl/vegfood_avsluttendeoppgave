@@ -1,8 +1,8 @@
 <script>
-  import Hero from "../components/Hero.svelte";
   import Categories from "../components/Categories.svelte";
   import Search from "../components/search.svelte";
-  import RecipeTile from "../components/RecipeTile.svelte";
+  import RecipeTileRandom from "../components/RecipeTileRandom.svelte";
+  import RecipeTileNewest from "../components/RecipeTileNewest.svelte";
 
   export let segment;
 </script>
@@ -17,16 +17,16 @@
   <title>Velkommen til Vegfood!</title>
 </svelte:head>
 
-<Hero />
+<Search />
 
 <Categories {segment} />
 
 <div class="oppskrift-rad">
   <h3>Nyeste oppskrifter</h3>
-  <RecipeTile />
+  <RecipeTileNewest />
 </div>
 
-<div>
-  <h3>Søk på oppskrifter</h3>
-  <Search />
+<div class="oppskrift-rad">
+  <h3>Utvalgte oppskrifter</h3>
+  <RecipeTileRandom />
 </div>

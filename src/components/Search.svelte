@@ -125,7 +125,7 @@
 <div class="search">
   <div class="search-wrapper">
     <div class="search-container">
-      <h4>Alle oppskrifter</h4>
+      <h4>Norges største kjøttfrie oppskriftbank</h4>
       <h1>Finn dagens middag</h1>
       <form>
         <div class="search-bar-container">

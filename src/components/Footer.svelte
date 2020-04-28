@@ -264,11 +264,6 @@
           Forside
         </a>
         <a
-          aria-current={segment === 'search' ? 'page' : undefined}
-          href="search">
-          Finn oppskrifter
-        </a>
-        <a
           aria-current={segment === 'minbruker' ? 'page' : undefined}
           href="minbruker">
           Mine side

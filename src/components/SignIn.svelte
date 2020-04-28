@@ -1,8 +1,7 @@
 <script>
-  import Hero from "./Hero.svelte";
   import Categories from "./Categories.svelte";
   import Search from "./search.svelte";
-  import RecipeTile from "./RecipeTile.svelte";
+  import RecipeTileRandom from "./RecipeTileRandom.svelte";
   export let segment;
 
   let SignInImage = "images/signinimage.jpg";
@@ -226,18 +225,13 @@
 
 {#if user}
 
-  <Hero />
+  <Search />
 
   <Categories {segment} />
 
   <div class="oppskrift-rad">
     <h3>Nyeste oppskrifter</h3>
-    <RecipeTile />
-  </div>
-
-  <div>
-    <h3>Søk på oppskrifter</h3>
-    <Search />
+    <RecipeTileRandom />
   </div>
 {:else}
 

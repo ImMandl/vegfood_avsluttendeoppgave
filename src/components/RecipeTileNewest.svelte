@@ -4,11 +4,11 @@
 </script>
 
 <div class="oppskrift-grid">
-  <!-- slice to only get 4 recipes -->
-  {#each recipes.slice(0, 4) as recipe}
+  <!--    slice and sort to only get the newest 4 recipes   -->
+  {#each recipes.slice(0, 4).sort(recipes.tid) as recipe}
     <a rel="prefetch" href="recipe/{recipe.slug}">
       <div class="oppskrift-tile">
-        <img src={recipe.bilde} alt="bilde" />
+        <img class="oppskrift-bilde" src={recipe.bilde} alt="bilde" />
         <div class="oppskrift-tile-innhold">
           {#if recipe.kategori == 'Vegetar'}
             <p class="kategori vegetar">{recipe.kategori}</p>

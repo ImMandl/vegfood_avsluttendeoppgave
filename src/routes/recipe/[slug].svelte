@@ -12,6 +12,9 @@
 </script>
 
 <script>
+  import { onMount } from "svelte";
+  import { authState } from "rxfire/auth";
+  import { favorittArray } from "../../store.js";
   export let recipe;
   export let segment;
 
@@ -25,12 +28,31 @@
   let heart = "./graphics/heart.svg";
   let fullheart = "./graphics/fullheart.svg";
 
-  import { favorittArray } from "../../store.js";
+  let db; // ref til firestore
+  let auth; // authentication
+  let googleProvider; // Google innlogging
+  let logout; // logg ut
+  let showUserMenu = false; // viser ikke logout automatisk
+  let toggleUserMenu; // viser logout etter trykt profilnavn
+  let user; // bruker
+  let unsubscribe;
+
+  onMount(() => {
+    db = firebase.firestore();
+    auth = firebase.auth();
+    googleProvider = new firebase.auth.GoogleAuthProvider();
+
+    logout = () => {
+      auth.signOut();
+    };
+
+    unsubscribe = authState(auth).subscribe(u => (user = u));
+  });
 
   const leggTilFavoritt = () => {
     $favorittArray.push(recipe);
     alert("Denne oppskrifter har blitt lagt til i dine favoritter!");
-    console.log(favorittArray);
+    console.log($favorittArray);
   };
 </script>
 
@@ -188,9 +210,23 @@
         {:else}
           <p class="kategori vegan">{recipe.kategori}</p>
         {/if}
-        <div class="heart-icon">
-          <img on:click={leggTilFavoritt} src={heart} alt="" />
-        </div>
+        {#if user}
+          <div class="heart-icon">
+            {#if $favorittArray.includes(recipe)}
+              <img src={fullheart} alt="" />
+            {:else}
+              <img on:click={leggTilFavoritt} src={heart} alt="" />
+            {/if}
+          </div>
+        {:else}
+          <div class="heart-icon">
+            <a
+              aria-current={segment === 'logginn' ? 'page' : undefined}
+              href="logginn">
+              <img src={heart} alt="" />
+            </a>
+          </div>
+        {/if}
       </div>
       <h1>{recipe.title}</h1>
       <div class="row info">
