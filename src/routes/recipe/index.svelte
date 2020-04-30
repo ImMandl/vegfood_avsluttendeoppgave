@@ -34,10 +34,14 @@
   };
 
   let funnet = false;
-  const oppskriftTags = recipes.filter(recipes => {
+  const oppskriftTags = recipes.filter(recipe => {
+    funnet = false;
     for (const selected of selection) {
-      if (recipes.kategori.includes(selected)) {
+      if (recipe.kategori.includes(selected)) {
         funnet = true;
+      } else {
+        funnet = false;
+        return;
       }
     }
 
@@ -252,7 +256,7 @@
 
   <div class="oppskrift-grid">
     {#if funnet === true}
-      {#each oppskriftTags as recipe}
+      {#each recipes as recipe}
         <a rel="prefetch" href="recipe/{recipe.slug}">
           <div class="oppskrift-tile">
             <img src={recipe.bilde} alt="bilde" />

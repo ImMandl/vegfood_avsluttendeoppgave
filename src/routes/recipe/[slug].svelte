@@ -15,6 +15,7 @@
   import { onMount } from "svelte";
   import { authState } from "rxfire/auth";
   import { favorittArray } from "../../store.js";
+  import { count } from "../../store.js";
   export let recipe;
   export let segment;
 
@@ -27,8 +28,8 @@
   let hard = "./graphics/icons-difficulty-hard.svg";
   let heart = "./graphics/heart.svg";
   let fullheart = "./graphics/fullheart.svg";
-  let increment = "./graphics/plus.svg";
-  let decrement = "./graphics/minus.svg";
+  let incrementIcon = "./graphics/plus.svg";
+  let decrementIcon = "./graphics/minus.svg";
 
   let db; // ref til firestore
   let auth; // authentication
@@ -38,6 +39,7 @@
   let toggleUserMenu; // viser logout etter trykt profilnavn
   let user; // bruker
   let unsubscribe;
+  let count_value;
 
   onMount(() => {
     db = firebase.firestore();
@@ -62,6 +64,18 @@
     alert("Denne oppskrifter har blitt fjernet fra dine favoritter!");
     console.log($favorittArray);
   };
+
+  const decrement = () => {
+    count.update(n => n - 1);
+  };
+
+  const increment = () => {
+    count.update(n => n + 1);
+  };
+
+  const unsubscribeCount = count.subscribe(value => {
+    count_value = value;
+  });
 </script>
 
 <style>
@@ -287,15 +301,17 @@
         <hr />
         {@html recipe.html}
         <div class="row multipliable-btn">
-          <img src={decrement} alt="" />
-          <p>number</p>
-          <img src={increment} alt="" />
+          <img src={decrementIcon} alt="" on:click={decrement} />
+          <p>{count_value}</p>
+          <img src={incrementIcon} alt="" on:click={increment} />
         </div>
         {#each recipe.ingredienser as ingrediens}
           <div class="row ingredients">
             <p>{ingrediens.title}</p>
             <div class="row ingredients-amount">
-              <p style="margin-right: 8px;">{ingrediens.antall}</p>
+              <p style="margin-right: 8px;">
+                {ingrediens.antall * count_value}
+              </p>
               <p>{ingrediens.mengde}</p>
             </div>
           </div>
