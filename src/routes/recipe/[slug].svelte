@@ -27,6 +27,8 @@
   let hard = "./graphics/icons-difficulty-hard.svg";
   let heart = "./graphics/heart.svg";
   let fullheart = "./graphics/fullheart.svg";
+  let increment = "./graphics/plus.svg";
+  let decrement = "./graphics/minus.svg";
 
   let db; // ref til firestore
   let auth; // authentication
@@ -148,6 +150,36 @@
     cursor: pointer;
   }
 
+  /* ingredients */
+  .multipliable-btn {
+    padding: 8px;
+    border: 1px solid #d1d1d1;
+    border-radius: 32px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .multipliable-btn img {
+    margin: 0 4px;
+  }
+
+  .multipliable-btn img:hover {
+    cursor: pointer;
+  }
+
+  .ingredients {
+    width: 200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 1px solid #d1d1d1;
+    padding-bottom: 4px;
+    margin-top: 8px;
+  }
+
+  .ingredients-amount {
+    justify-self: end;
+  }
+
   /* content on right / side content */
   .sidebar {
     width: 100%;
@@ -254,11 +286,18 @@
       <div class="content">
         <hr />
         {@html recipe.html}
+        <div class="row multipliable-btn">
+          <img src={decrement} alt="" />
+          <p>number</p>
+          <img src={increment} alt="" />
+        </div>
         {#each recipe.ingredienser as ingrediens}
-          <div class="row">
-            <hp>{ingrediens.title}</hp>
-            <hp>{ingrediens.antall}</hp>
-            <hp>{ingrediens.mengde}</hp>
+          <div class="row ingredients">
+            <p>{ingrediens.title}</p>
+            <div class="row ingredients-amount">
+              <p style="margin-right: 8px;">{ingrediens.antall}</p>
+              <p>{ingrediens.mengde}</p>
+            </div>
           </div>
         {/each}
         {#each recipe.oppskrift as steg}

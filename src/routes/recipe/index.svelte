@@ -6,17 +6,6 @@
         return { recipes };
       });
   }
-
-  /*   export function preload({ params, query }) {
-    return this.fetch(`recipe.json`)
-      .then(r => r.json())
-      .then(recipes => {
-        vgtr = recipes.filter(rec => rec.tags == "vegetar");
-      })
-      .then(vgtr => {
-        return { vgtr };
-      });
-  } */
 </script>
 
 <script>
@@ -28,6 +17,9 @@
   let showKategori = true; // starter som åpen
   let showIngredienser = true; // starter som åpen
   let showMåltid = true; // starter som åpen
+  let yes = false; // starter ikke på
+  let group = undefined; // group binded checkboxes
+  let selection = []; // filter array
 
   const toggleKategori = () => {
     showKategori = !showKategori;
@@ -41,7 +33,16 @@
     showIngredienser = !showIngredienser;
   };
 
-  let yes = false;
+  let funnet = false;
+  const oppskriftTags = recipes.filter(recipes => {
+    for (const selected of selection) {
+      if (recipes.kategori.includes(selected)) {
+        funnet = true;
+      }
+    }
+
+    return funnet;
+  });
 </script>
 
 <style>
@@ -109,6 +110,7 @@
   <a aria-current={segment === undefined ? 'page' : undefined} href=".">Hjem</a>
   <img src="https://image.flaticon.com/icons/svg/271/271228.svg" alt="" />
   <p>Oppskrifter</p>
+  <h3>Checkboxes: {selection.join(', ')}</h3>
 </div>
 
 <div class="content-wrapper">
@@ -127,11 +129,19 @@
     {#if showKategori}
       <div class="kategori-wrapper">
         <div class="row">
-          <input type="checkbox" id="vegetar" />
+          <input
+            type="checkbox"
+            id="vegetar"
+            bind:group={selection}
+            value={'vegetar'} />
           <label for="vegetar">Vegetar</label>
         </div>
         <div class="row">
-          <input type="checkbox" id="vegan" />
+          <input
+            type="checkbox"
+            id="vegan"
+            bind:group={selection}
+            value={'vegan'} />
           <label for="vegan">Vegan</label>
         </div>
       </div>
@@ -150,23 +160,43 @@
     {#if showMåltid}
       <div class="ingrediens-wrapper">
         <div class="row">
-          <input type="checkbox" id="frokost" bind:checked={yes} />
+          <input
+            type="checkbox"
+            id="frokost"
+            bind:group={selection}
+            value={'frokost'} />
           <label for="frokost">Frokost</label>
         </div>
         <div class="row">
-          <input type="checkbox" id="niste" />
+          <input
+            type="checkbox"
+            id="niste"
+            bind:group={selection}
+            value={'niste'} />
           <label for="niste">Niste</label>
         </div>
         <div class="row">
-          <input type="checkbox" id="middag" />
+          <input
+            type="checkbox"
+            id="middag"
+            bind:group={selection}
+            value={'middag'} />
           <label for="middag">Middag</label>
         </div>
         <div class="row">
-          <input type="checkbox" id="dessert" />
+          <input
+            type="checkbox"
+            id="dessert"
+            bind:group={selection}
+            value={'dessert'} />
           <label for="dessert">Dessert</label>
         </div>
         <div class="row">
-          <input type="checkbox" id="smaaretter" />
+          <input
+            type="checkbox"
+            id="smaaretter"
+            bind:group={selection}
+            value={'smårett'} />
           <label for="smaaretter">Småretter</label>
         </div>
       </div>
@@ -185,19 +215,35 @@
     {#if showIngredienser}
       <div class="ingrediens-wrapper">
         <div class="row">
-          <input type="checkbox" id="soya" />
+          <input
+            type="checkbox"
+            id="soya"
+            bind:group={selection}
+            value={'soya'} />
           <label for="soya">Soya</label>
         </div>
         <div class="row">
-          <input type="checkbox" id="tofu" />
+          <input
+            type="checkbox"
+            id="tofu"
+            bind:group={selection}
+            value={'tofu'} />
           <label for="tofu">Tofu</label>
         </div>
         <div class="row">
-          <input type="checkbox" id="egg" />
+          <input
+            type="checkbox"
+            id="egg"
+            bind:group={selection}
+            value={'egg'} />
           <label for="egg">Egg</label>
         </div>
         <div class="row">
-          <input type="checkbox" id="potet" />
+          <input
+            type="checkbox"
+            id="potet"
+            bind:group={selection}
+            value={'potet'} />
           <label for="potet">Potet</label>
         </div>
       </div>
@@ -205,25 +251,48 @@
   </div>
 
   <div class="oppskrift-grid">
-    {#each recipes as recipe}
-      <a rel="prefetch" href="recipe/{recipe.slug}">
-        <div class="oppskrift-tile">
-          <img src={recipe.bilde} alt="bilde" />
-          <div class="oppskrift-tile-innhold">
-            {#if recipe.kategori == 'Vegetar'}
-              <p class="kategori vegetar">{recipe.kategori}</p>
-            {:else}
-              <p class="kategori vegan">{recipe.kategori}</p>
-            {/if}
-            <h2>{recipe.title}</h2>
-            <p>Laget av {recipe.forfatter}</p>
+    {#if funnet === true}
+      {#each oppskriftTags as recipe}
+        <a rel="prefetch" href="recipe/{recipe.slug}">
+          <div class="oppskrift-tile">
+            <img src={recipe.bilde} alt="bilde" />
+            <div class="oppskrift-tile-innhold">
+              {#if recipe.kategori == 'Vegetar'}
+                <p class="kategori vegetar">{recipe.kategori}</p>
+              {:else}
+                <p class="kategori vegan">{recipe.kategori}</p>
+              {/if}
+              <h2>{recipe.title}</h2>
+              <p>Laget av {recipe.forfatter}</p>
+            </div>
           </div>
+        </a>
+      {:else}
+        <div class="loading-message">
+          <p>henter oppskrifter...</p>
         </div>
-      </a>
+      {/each}
     {:else}
-      <div class="loading-message">
-        <p>henter oppskrifter...</p>
-      </div>
-    {/each}
+      {#each recipes as recipe}
+        <a rel="prefetch" href="recipe/{recipe.slug}">
+          <div class="oppskrift-tile">
+            <img src={recipe.bilde} alt="bilde" />
+            <div class="oppskrift-tile-innhold">
+              {#if recipe.kategori == 'Vegetar'}
+                <p class="kategori vegetar">{recipe.kategori}</p>
+              {:else}
+                <p class="kategori vegan">{recipe.kategori}</p>
+              {/if}
+              <h2>{recipe.title}</h2>
+              <p>Laget av {recipe.forfatter}</p>
+            </div>
+          </div>
+        </a>
+      {:else}
+        <div class="loading-message">
+          <p>henter oppskrifter...</p>
+        </div>
+      {/each}
+    {/if}
   </div>
 </div>

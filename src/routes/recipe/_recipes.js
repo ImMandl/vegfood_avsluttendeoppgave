@@ -6,15 +6,10 @@ const recipes = [
 		kategori: 'Vegetar',
 		lengde: '45 minutter',
 		grad: 'Medium',
-		type: 'dessert',
+		type: 'frokost',
 		tid: '21.04.2020',
 		forfatter: 'Amund Bjørnstad',
-		tags: [
-			{
-				type: 'vegetar',
-				maaltid: 'frokost'
-			}
-		],
+		stikkord: [ 'vegetar', 'frokost' ],
 		prdukter: [
 			{
 				title: 'Tinemelk',
@@ -74,12 +69,7 @@ const recipes = [
 		type: 'smårett',
 		tid: '22.04.2020',
 		forfatter: 'Ola Nordmann',
-		tags: [
-			{
-				type: 'vegan',
-				maaltid: 'smårett'
-			}
-		],
+		stikkord: [ 'vegan', 'smårett' ],
 		prdukter: [
 			{
 				title: 'Tinemelk',
@@ -136,9 +126,10 @@ const recipes = [
 		kategori: 'Vegan',
 		lengde: '20 minutter',
 		grad: 'Enkel',
-		type: 'smårett',
+		type: 'frokost',
 		tid: '18.04.2020',
 		forfatter: 'Ola Nordmann',
+		stikkord: [ 'vegetar', 'frokost' ],
 		prdukter: [
 			{
 				title: 'Tinemelk',
@@ -195,9 +186,10 @@ const recipes = [
 		kategori: 'Vegan',
 		lengde: '20 minutter',
 		grad: 'Enkel',
-		type: 'smårett',
+		type: 'middag',
 		tid: '28.03.2020',
 		forfatter: 'Ola Nordmann',
+		stikkord: [ 'vegan', 'middag' ],
 		prdukter: [
 			{
 				title: 'Tinemelk',
@@ -254,9 +246,10 @@ const recipes = [
 		kategori: 'Vegetar',
 		lengde: '20 minutter',
 		grad: 'Enkel',
-		type: 'smårett',
+		type: 'dessert',
 		tid: '02.01.2020',
 		forfatter: 'Ola Nordmann',
+		stikkord: [ 'vegetar', 'dessert' ],
 		prdukter: [
 			{
 				title: 'Tinemelk',
@@ -316,6 +309,7 @@ const recipes = [
 		type: 'smårett',
 		tid: '27.04.2020',
 		forfatter: 'Ola Nordmann',
+		stikkord: [ 'vegetar', 'smårett' ],
 		prdukter: [
 			{
 				title: 'Tinemelk',
@@ -375,6 +369,7 @@ const recipes = [
 		type: 'smårett',
 		tid: '04.02.2020',
 		forfatter: 'Ola Nordmann',
+		stikkord: [ 'vegetar', 'smårett' ],
 		prdukter: [
 			{
 				title: 'Tinemelk',
@@ -431,9 +426,10 @@ const recipes = [
 		kategori: 'Vegan',
 		lengde: '20 minutter',
 		grad: 'Enkel',
-		type: 'smårett',
+		type: 'niste',
 		tid: '12.01.2020',
 		forfatter: 'Ola Nordmann',
+		stikkord: [ 'vegan', 'niste' ],
 		prdukter: [
 			{
 				title: 'Tinemelk',
@@ -489,10 +485,11 @@ const recipes = [
 		slug: 'smaa-dessert-kaker',
 		kategori: 'Vegan',
 		lengde: '20 minutter',
-		grad: 'Enkel',
+		grad: 'dessert',
 		type: 'smårett',
 		tid: '14.01.2020',
 		forfatter: 'Ola Nordmann',
+		stikkord: [ 'vegan', 'dessert' ],
 		prdukter: [
 			{
 				title: 'Tinemelk',
@@ -549,9 +546,10 @@ const recipes = [
 		kategori: 'Vegetar',
 		lengde: '20 minutter',
 		grad: 'Enkel',
-		type: 'smårett',
+		type: 'frokost',
 		tid: '21.04.2020',
 		forfatter: 'Ola Nordmann',
+		stikkord: [ 'vegetar', 'frokost' ],
 		prdukter: [
 			{
 				title: 'Tinemelk',
