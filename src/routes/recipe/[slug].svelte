@@ -14,7 +14,7 @@
 <script>
   import { onMount } from "svelte";
   import { authState } from "rxfire/auth";
-  import { favorittArray, count } from "../../store.js";
+  import { favorittArray, count, favorites } from "../../store.js";
   export let recipe;
   export let segment;
 
@@ -52,18 +52,25 @@
     unsubscribe = authState(auth).subscribe(u => (user = u));
   });
 
+  // legg til og fjerning av favoritter
   const leggTilFavoritt = () => {
     $favorittArray.push(recipe);
+    favorites.toggleFavorite(recipe.id);
     alert("Denne oppskrifter har blitt lagt til i dine favoritter!");
     console.log($favorittArray);
   };
 
   const fjernFavoritt = () => {
     $favorittArray.splice(favorittArray.id, 1);
+    favorites.toggleFavorite(recipe.id);
     alert("fjernet");
     console.log($favorittArray);
   };
 
+  let isFavorited = undefined;
+  $: isFavorited;
+
+  // Ganging for ingredienser
   const decrement = () => {
     count.update(n => n - 1);
   };
@@ -78,6 +85,19 @@
 </script>
 
 <style>
+  .heart-div {
+    background-image: url("./graphics/heart.svg");
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+  }
+
+  .fav {
+    background-image: url("./graphics/fullheart.svg");
+    background-repeat: no-repeat;
+    height: 52px;
+    width: 52px;
+  }
   .content :global(pre) {
     padding: 0.5em;
     border-radius: 2px;
@@ -303,14 +323,27 @@
         {/if}
         {#if user}
           <div class="heart-icon">
-            {#if $favorittArray.includes(recipe.id)}
+            {#if isFavorited == true}
               <img
+                class:fav={isFavorited}
+                isFavorited={$favorites.has(recipe.id)}
                 on:click={fjernFavoritt}
                 src={fullheart}
-                alt="full heart icon" />
+                alt="heart icon" />
             {:else}
-              <img on:click={leggTilFavoritt} src={heart} alt="heart icon" />
+              <img
+                class:fav={isFavorited}
+                isFavorited={$favorites.has(recipe.id)}
+                on:click={leggTilFavoritt}
+                src={heart}
+                alt="heart icon" />
             {/if}
+            <div
+              class="heart-div"
+              class:fav={isFavorited}
+              isFavorited={$favorites.has(recipe.id)}
+              on:click={leggTilFavoritt}
+              alt="heart icon" />
           </div>
         {:else}
           <div class="heart-icon">

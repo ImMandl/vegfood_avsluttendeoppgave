@@ -7,22 +7,26 @@ VegFood is a website with vegeterian and vegan recipes. It's  built using <a hre
 ### Demo
 Go to <a href="#">demo</a>
 
+N.B. If you are having trouble with firestore authentication when viewing the page try refreshing the it.
+
+
 ### Download
 Clone or download the file, then run:
 ```bash
 npm run dev
 ```
 
+
 ## Structure
 
-Files in ./src/route uses component from ./src/components to hold their content. The route files contain minimal html and css, exception can be made for files in ./src/route/recipes and ./src/route/faqs.
+Files in ./src/route uses component from ./src/components to hold their content. The route files contain minimal html and css, exception are made for files in ./src/route/recipes and ./src/route/faqs.
 
-Images, graphics, fonts and other such items are kept in their own folders inside ./static. Exception is the favicon wish is based in at the top level of ./static.
+Images, graphics, fonts and other such items are kept in their own folders inside ./static. Exception is the favicon wish is based in at the top level of ./static. A few images are fetched by url. All images for recipes are fetched with url from firestore.
 
 This site...
 - uses <a href="https://firebase.google.com/docs/auth">Firebase Authentication</a> for log in.
 - uses <a href="https://svelte.dev/docs#onMount">OnMount</a> when fetching data from firebase and weather api.
-- uses <a href="https://svelte.dev/docs#svelte_store">Svelte store</a> to keep favorited recipes and multiply ingredients on the detail page for recipes. Favorited recipes is not kept, but will reset if you refresh the page.
+- uses <a href="https://svelte.dev/docs#svelte_store">Svelte store</a> to keep favorited recipes and multiply ingredients on the detail page for recipes. Favorited recipes will reset if you refresh the page.
 - uses <a href="https://github.com/Schum123/svelte-loading-spinners#svelte-loading-spinners">Svelte-loading-spinners</a> to show when items is loading.
 - uses <a href="https://github.com/beyonk-adventures/svelte-carousel#svelte-carousel">Svelte Carousel</a>. Is used for categories on frontpage to help make the site easily responive.
 
