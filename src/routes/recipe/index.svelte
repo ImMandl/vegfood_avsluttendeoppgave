@@ -14,12 +14,12 @@
 
   let dropdownArrow = "graphics/icons-dropdown-arrow.svg";
   let dropdownRightArrow = "graphics/icons-dropdown-right-arrow.svg";
-  let showKategori = true; // starter som åpen
-  let showIngredienser = true; // starter som åpen
-  let showMåltid = true; // starter som åpen
+  let showKategori = false; // starter som lukket
+  let showMåltid = false; // starter som lukket
   let yes = false; // starter ikke på
   let group = undefined; // group binded checkboxes
-  let selection = []; // filter array
+  let selection = [...recipes]; // filter array
+  let current = ""; // current active for filter buttons
 
   const toggleKategori = () => {
     showKategori = !showKategori;
@@ -33,20 +33,77 @@
     showIngredienser = !showIngredienser;
   };
 
-  let funnet = false;
-  const oppskriftTags = recipes.filter(recipe => {
-    funnet = false;
-    for (const selected of selection) {
-      if (recipe.kategori.includes(selected)) {
-        funnet = true;
-      } else {
-        funnet = false;
-        return;
-      }
-    }
+  const oppskriftToggle = () => {
+    current = "alle";
+    notFiltered();
+  };
 
-    return funnet;
-  });
+  const vegetarToggle = () => {
+    current = "vegetar";
+    filteredVegetar();
+  };
+
+  const veganToggle = () => {
+    current = "vegan";
+    filteredVegan();
+  };
+
+  const frokostToggle = () => {
+    current = "frokost";
+    filteredFrokost();
+  };
+
+  const nisteToggle = () => {
+    current = "niste";
+    filteredNiste();
+  };
+
+  const middagToggle = () => {
+    current = "middag";
+    filteredMiddag();
+  };
+
+  const dessertToggle = () => {
+    current = "dessert";
+    filteredDessert();
+  };
+
+  const smaarettToggle = () => {
+    current = "smaarett";
+    filteredSmaaretter();
+  };
+
+  let notFiltered = () => {
+    selection = [...recipes];
+  };
+
+  let filteredVegetar = () => {
+    selection = recipes.filter(recipe => recipe.stikkord.includes("vegetar"));
+  };
+
+  const filteredVegan = () => {
+    selection = recipes.filter(recipe => recipe.stikkord.includes("vegan"));
+  };
+
+  const filteredFrokost = () => {
+    selection = recipes.filter(recipe => recipe.stikkord.includes("frokost"));
+  };
+
+  const filteredNiste = () => {
+    selection = recipes.filter(recipe => recipe.stikkord.includes("niste"));
+  };
+
+  const filteredMiddag = () => {
+    selection = recipes.filter(recipe => recipe.stikkord.includes("middag"));
+  };
+
+  const filteredDessert = () => {
+    selection = recipes.filter(recipe => recipe.stikkord.includes("dessert"));
+  };
+
+  const filteredSmaaretter = () => {
+    selection = recipes.filter(recipe => recipe.stikkord.includes("smårett"));
+  };
 </script>
 
 <style>
@@ -75,9 +132,14 @@
     border: none;
     text-align: left;
     font-size: 16px;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     display: flex;
     align-items: center;
+    font-weight: 600;
+  }
+
+  .filter-wrapper button:hover {
+    color: #247c3b;
   }
 
   .filter-wrapper button img {
@@ -85,19 +147,16 @@
     padding-right: 16px;
   }
 
-  .kategori-wrapper,
-  .ingrediens-wrapper {
-    margin-bottom: 16px;
+  .active {
+    color: #247c3b;
+    font-weight: 500;
   }
 
-  .filter-wrapper input {
-    width: auto;
-    margin-right: 8px;
-  }
-
-  .row {
-    align-items: center;
-    margin-left: 24px;
+  .kategori-wrapper button,
+  .ingrediens-wrapper button {
+    padding: 0 0 4px 16px;
+    font-weight: 400;
+    display: block;
   }
 
   /* produkt grid */
@@ -114,189 +173,84 @@
   <a aria-current={segment === undefined ? 'page' : undefined} href=".">Hjem</a>
   <img src="https://image.flaticon.com/icons/svg/271/271228.svg" alt="" />
   <p>Oppskrifter</p>
-  <h3>Checkboxes: {selection.join(', ')}</h3>
+
 </div>
 
 <div class="content-wrapper">
   <div class="filter-wrapper">
-    {#if showKategori == true}
-      <button on:click={toggleKategori}>
-        Kategori
+    <button class="filter-dropdown-btn" on:click={toggleKategori}>
+      Kategori
+      {#if showKategori == true}
         <img src={dropdownArrow} alt="icon" />
-      </button>
-    {:else}
-      <button on:click={toggleKategori}>
-        Kategori
+      {:else}
         <img src={dropdownRightArrow} alt="icon" />
-      </button>
-    {/if}
+      {/if}
+    </button>
     {#if showKategori}
       <div class="kategori-wrapper">
-        <div class="row">
-          <input
-            type="checkbox"
-            id="vegetar"
-            bind:group={selection}
-            value={'vegetar'} />
-          <label for="vegetar">Vegetar</label>
-        </div>
-        <div class="row">
-          <input
-            type="checkbox"
-            id="vegan"
-            bind:group={selection}
-            value={'vegan'} />
-          <label for="vegan">Vegan</label>
-        </div>
+        <button class:active={current === 'vegetar'} on:click={vegetarToggle}>
+          Vegetar
+        </button>
+        <button class:active={current === 'vegan'} on:click={veganToggle}>
+          Vegan
+        </button>
+        <button class:active={current === 'alle'} on:click={oppskriftToggle}>
+          Vis alle
+        </button>
       </div>
     {/if}
-    {#if showMåltid == true}
-      <button on:click={toggleMåltid}>
-        Måltider
+    <button class="filter-dropdown-btn" on:click={toggleMåltid}>
+      Måltider
+      {#if showMåltid == true}
         <img src={dropdownArrow} alt="icon" />
-      </button>
-    {:else}
-      <button on:click={toggleMåltid}>
-        Måltider
+      {:else}
         <img src={dropdownRightArrow} alt="icon" />
-      </button>
-    {/if}
+      {/if}
+    </button>
     {#if showMåltid}
       <div class="ingrediens-wrapper">
-        <div class="row">
-          <input
-            type="checkbox"
-            id="frokost"
-            bind:group={selection}
-            value={'frokost'} />
-          <label for="frokost">Frokost</label>
-        </div>
-        <div class="row">
-          <input
-            type="checkbox"
-            id="niste"
-            bind:group={selection}
-            value={'niste'} />
-          <label for="niste">Niste</label>
-        </div>
-        <div class="row">
-          <input
-            type="checkbox"
-            id="middag"
-            bind:group={selection}
-            value={'middag'} />
-          <label for="middag">Middag</label>
-        </div>
-        <div class="row">
-          <input
-            type="checkbox"
-            id="dessert"
-            bind:group={selection}
-            value={'dessert'} />
-          <label for="dessert">Dessert</label>
-        </div>
-        <div class="row">
-          <input
-            type="checkbox"
-            id="smaaretter"
-            bind:group={selection}
-            value={'smårett'} />
-          <label for="smaaretter">Småretter</label>
-        </div>
-      </div>
-    {/if}
-    {#if showIngredienser == true}
-      <button on:click={toggleIngredienser}>
-        Ingredienser
-        <img src={dropdownArrow} alt="icon" />
-      </button>
-    {:else}
-      <button on:click={toggleIngredienser}>
-        Ingredienser
-        <img src={dropdownRightArrow} alt="icon" />
-      </button>
-    {/if}
-    {#if showIngredienser}
-      <div class="ingrediens-wrapper">
-        <div class="row">
-          <input
-            type="checkbox"
-            id="soya"
-            bind:group={selection}
-            value={'soya'} />
-          <label for="soya">Soya</label>
-        </div>
-        <div class="row">
-          <input
-            type="checkbox"
-            id="tofu"
-            bind:group={selection}
-            value={'tofu'} />
-          <label for="tofu">Tofu</label>
-        </div>
-        <div class="row">
-          <input
-            type="checkbox"
-            id="egg"
-            bind:group={selection}
-            value={'egg'} />
-          <label for="egg">Egg</label>
-        </div>
-        <div class="row">
-          <input
-            type="checkbox"
-            id="potet"
-            bind:group={selection}
-            value={'potet'} />
-          <label for="potet">Potet</label>
-        </div>
+        <button class:active={current === 'frokost'} on:click={frokostToggle}>
+          Frokost
+        </button>
+        <button class:active={current === 'niste'} on:click={nisteToggle}>
+          Niste
+        </button>
+        <button class:active={current === 'middag'} on:click={middagToggle}>
+          Middag
+        </button>
+        <button class:active={current === 'dessert'} on:click={dessertToggle}>
+          Dessert
+        </button>
+        <button class:active={current === 'smaarett'} on:click={smaarettToggle}>
+          Småretter
+        </button>
+        <button class:active={current === 'alle'} on:click={oppskriftToggle}>
+          Vis alle
+        </button>
       </div>
     {/if}
   </div>
 
   <div class="oppskrift-grid">
-    {#if funnet === true}
-      {#each recipes as recipe}
-        <a rel="prefetch" href="recipe/{recipe.slug}">
-          <div class="oppskrift-tile">
-            <img src={recipe.bilde} alt="bilde" />
-            <div class="oppskrift-tile-innhold">
-              {#if recipe.kategori == 'Vegetar'}
-                <p class="kategori vegetar">{recipe.kategori}</p>
-              {:else}
-                <p class="kategori vegan">{recipe.kategori}</p>
-              {/if}
-              <h2>{recipe.title}</h2>
-              <p>Laget av {recipe.forfatter}</p>
-            </div>
+    {#each selection as recipe}
+      <a rel="prefetch" href="recipe/{recipe.slug}">
+        <div class="oppskrift-tile">
+          <img src={recipe.bilde} alt="bilde" />
+          <div class="oppskrift-tile-innhold">
+            {#if recipe.kategori == 'Vegetar'}
+              <p class="kategori vegetar">{recipe.kategori}</p>
+            {:else}
+              <p class="kategori vegan">{recipe.kategori}</p>
+            {/if}
+            <h2>{recipe.title}</h2>
+            <p>Laget av {recipe.forfatter}</p>
           </div>
-        </a>
-      {:else}
-        <div class="loading-message">
-          <p>henter oppskrifter...</p>
         </div>
-      {/each}
+      </a>
     {:else}
-      {#each recipes as recipe}
-        <a rel="prefetch" href="recipe/{recipe.slug}">
-          <div class="oppskrift-tile">
-            <img src={recipe.bilde} alt="bilde" />
-            <div class="oppskrift-tile-innhold">
-              {#if recipe.kategori == 'Vegetar'}
-                <p class="kategori vegetar">{recipe.kategori}</p>
-              {:else}
-                <p class="kategori vegan">{recipe.kategori}</p>
-              {/if}
-              <h2>{recipe.title}</h2>
-              <p>Laget av {recipe.forfatter}</p>
-            </div>
-          </div>
-        </a>
-      {:else}
-        <div class="loading-message">
-          <p>henter oppskrifter...</p>
-        </div>
-      {/each}
-    {/if}
+      <div class="loading-message">
+        <p>henter oppskrifter...</p>
+      </div>
+    {/each}
   </div>
 </div>

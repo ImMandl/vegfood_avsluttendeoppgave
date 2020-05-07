@@ -11,11 +11,14 @@
   let toggleUserMenu; // viser logout etter trykt profilnavn
   let user; // bruker
   let unsubscribe;
+  let nyhetsbrev; // ref til collection i firestore
+  let slettNyhetsbrev; // avmelder bruker fra nyhetsbrev / sletter brukerens mail fra nyhetsbrev databsen
 
   onMount(() => {
     db = firebase.firestore();
     auth = firebase.auth();
     googleProvider = new firebase.auth.GoogleAuthProvider();
+    nyhetsbrev = db.collection("nyhetsbrev");
 
     login = () => {
       auth.signInWithPopup(googleProvider);
@@ -26,6 +29,12 @@
     };
 
     unsubscribe = authState(auth).subscribe(u => (user = u));
+
+    // sletter mail fra databsaen
+    slettNyhetsbrev = () => {
+      nyhetsbrev.doc(user.email).delete();
+      alert("Du er nå avmeldt vårt ukentlige nyhetsbrev");
+    };
   });
 </script>
 
@@ -91,7 +100,12 @@
       <div class="divider" />
       <div class="section">
         <h3>Nyhetsbrev</h3>
-        <p>Du har ikke abonnert på et nyhetsbrev enda</p>
+        {#if nyhetsbrev.doc() == user.email}
+          <p>Du er meldt på vårt ukentlige nyhetsbrev</p>
+          <button on:click={slettNyhetsbrev}>Meld meg av</button>
+        {:else}
+          <p>Du har ikke abonnert på et nyhetsbrev enda</p>
+        {/if}
       </div>
     </div>
   {:else}

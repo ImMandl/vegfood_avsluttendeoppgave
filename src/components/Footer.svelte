@@ -4,9 +4,27 @@
   let instagram = "graphics/instagram-icon.svg";
   let twitter = "graphics/twitter-icon.svg";
   let yt = "graphics/yt-icon.svg";
-  let mail = "graphics/icons-email.svg";
+  let mailIcon = "graphics/icons-email.svg";
 
   export let segment;
+  import { onMount } from "svelte";
+
+  let db; // ref til firestore
+  let auth; // authentication
+  let mail = ""; // mail adresse for
+  let nyhetsbrev; // ref til collection i firestore
+
+  onMount(() => {
+    db = firebase.firestore();
+    nyhetsbrev = db.collection("nyhetsbrev");
+  });
+
+  // laster opp mail
+  const registrerEpost = () => {
+    nyhetsbrev.doc(mail).set({ mail });
+    mail = "";
+    alert("Du er nå meldt på vårt ukentlige nyhetsbrev!");
+  };
 </script>
 
 <style>
@@ -224,12 +242,17 @@
     <div class="footer-top row">
       <div class="nyhetsbrev">
         <p>Meld deg på nyhetsbrevet</p>
-        <form class="nyhetsbrev-form row">
+        <form
+          class="nyhetsbrev-form row"
+          on:submit|preventDefault={registrerEpost}>
           <div class="main-input-container">
-            <img src={mail} alt="mail icon" />
-            <input type="text" placeholder="Din mail adresse her" />
+            <img src={mailIcon} alt="mail icon" />
+            <input
+              type="text"
+              bind:value={mail}
+              placeholder="Din mail adresse her" />
           </div>
-          <button>Ja, meld meg på nyhetsbrevet</button>
+          <button type="submit">Ja, meld meg på nyhetsbrevet</button>
         </form>
       </div>
       <div class="social row">

@@ -53,33 +53,27 @@
     </a>
   </div>
   <div class="kategori">
-    <a
-      aria-current={segment === 'oppskrift' ? 'page' : undefined}
-      href="oppskrift">
+    <a aria-current={segment === 'niste' ? 'page' : undefined} href="niste">
       <img src={niste} alt="ikon" />
       <h3>Niste</h3>
     </a>
   </div>
   <div class="kategori">
-    <a
-      aria-current={segment === 'oppskrift' ? 'page' : undefined}
-      href="oppskrift">
+    <a aria-current={segment === 'middag' ? 'page' : undefined} href="middag">
       <img src={middag} alt="ikon" />
       <h3>Middag</h3>
     </a>
   </div>
   <div class="kategori">
-    <a
-      aria-current={segment === 'oppskrift' ? 'page' : undefined}
-      href="oppskrift">
+    <a aria-current={segment === 'dessert' ? 'page' : undefined} href="dessert">
       <img src={dessert} alt="ikon" />
       <h3>Dessert</h3>
     </a>
   </div>
   <div class="kategori">
     <a
-      aria-current={segment === 'oppskrift' ? 'page' : undefined}
-      href="oppskrift">
+      aria-current={segment === 'smaarett' ? 'page' : undefined}
+      href="smaarett">
       <img src={smaaretter} alt="ikon" />
       <h3>Småretter</h3>
     </a>
@@ -100,8 +94,8 @@
     <div class="slide-content">
       <div class="kategori">
         <a
-          aria-current={segment === 'oppskrift' ? 'page' : undefined}
-          href="oppskrift">
+          aria-current={segment === 'frokost' ? 'page' : undefined}
+          href="frokost">
           <img src={frokost} alt="ikon" />
           <h3>Frokost</h3>
         </a>
@@ -109,9 +103,7 @@
     </div>
     <div class="slide-content">
       <div class="kategori">
-        <a
-          aria-current={segment === 'oppskrift' ? 'page' : undefined}
-          href="oppskrift">
+        <a aria-current={segment === 'niste' ? 'page' : undefined} href="niste">
           <img src={niste} alt="ikon" />
           <h3>Niste</h3>
         </a>
@@ -120,8 +112,8 @@
     <div class="slide-content">
       <div class="kategori">
         <a
-          aria-current={segment === 'oppskrift' ? 'page' : undefined}
-          href="oppskrift">
+          aria-current={segment === 'middag' ? 'page' : undefined}
+          href="middag">
           <img src={middag} alt="ikon" />
           <h3>Middag</h3>
         </a>
@@ -130,8 +122,8 @@
     <div class="slide-content">
       <div class="kategori">
         <a
-          aria-current={segment === 'oppskrift' ? 'page' : undefined}
-          href="oppskrift">
+          aria-current={segment === 'dessert' ? 'page' : undefined}
+          href="dessert">
           <img src={dessert} alt="ikon" />
           <h3>Dessert</h3>
         </a>
@@ -140,8 +132,8 @@
     <div class="slide-content">
       <div class="kategori">
         <a
-          aria-current={segment === 'oppskrift' ? 'page' : undefined}
-          href="oppskrift">
+          aria-current={segment === 'smaarett' ? 'page' : undefined}
+          href="smaarett">
           <img src={smaaretter} alt="ikon" />
           <h3>Småretter</h3>
         </a>

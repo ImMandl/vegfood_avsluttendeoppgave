@@ -4,8 +4,8 @@
 </script>
 
 <div class="oppskrift-grid">
-  <!--    slice and sort to only get the newest 4 recipes   -->
-  {#each recipes.slice(0, 4).sort(recipes.tid) as recipe}
+
+  {#each recipes.slice(0, 4) as recipe}
     <a rel="prefetch" href="recipe/{recipe.slug}">
       <div class="oppskrift-tile">
         <img class="oppskrift-bilde" src={recipe.bilde} alt="bilde" />

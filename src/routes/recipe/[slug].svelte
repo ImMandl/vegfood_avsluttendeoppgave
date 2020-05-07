@@ -14,8 +14,7 @@
 <script>
   import { onMount } from "svelte";
   import { authState } from "rxfire/auth";
-  import { favorittArray } from "../../store.js";
-  import { count } from "../../store.js";
+  import { favorittArray, count } from "../../store.js";
   export let recipe;
   export let segment;
 
@@ -61,7 +60,7 @@
 
   const fjernFavoritt = () => {
     $favorittArray.splice(favorittArray.id, 1);
-    alert("Denne oppskrifter har blitt fjernet fra dine favoritter!");
+    alert("fjernet");
     console.log($favorittArray);
   };
 
@@ -165,20 +164,41 @@
   }
 
   /* ingredients */
-  .multipliable-btn {
-    padding: 8px;
-    border: 1px solid #d1d1d1;
-    border-radius: 32px;
-    display: inline-flex;
-    align-items: center;
-  }
-
-  .multipliable-btn img {
-    margin: 0 4px;
-  }
-
-  .multipliable-btn img:hover {
+  span {
     cursor: pointer;
+  }
+  .number {
+    margin: 4px 0 24px;
+    display: inline-block;
+    border: 1px solid #d1d1d1;
+    border-radius: 26px;
+    padding: 4px;
+  }
+  .minus,
+  .plus {
+    width: 24px;
+    height: 24px;
+    background: #f2f2f2;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid #d1d1d1;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 16px;
+  }
+  .value {
+    height: 16px;
+    width: 100px;
+    text-align: center;
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    border: none;
+  }
+
+  .ingrediens-title {
+    margin-top: 32px;
   }
 
   .ingredients {
@@ -192,6 +212,25 @@
 
   .ingredients-amount {
     justify-self: end;
+  }
+
+  /* steg */
+  .steg-container {
+    margin: 24px 0;
+  }
+
+  .steg {
+    margin: 24px 0;
+    border-bottom: 1px solid #d1d1d1;
+    padding-bottom: 4px;
+  }
+
+  /* stikkord/tags */
+  .tips-container {
+    padding: 12px 20px;
+    background-color: #f6f4f0;
+    color: #2158a5;
+    font-size: 16px;
   }
 
   /* content on right / side content */
@@ -264,10 +303,13 @@
         {/if}
         {#if user}
           <div class="heart-icon">
-            {#if $favorittArray.includes(favorittArray.id)}
-              <img on:click={fjernFavoritt} src={fullheart} alt="" />
+            {#if $favorittArray.includes(recipe.id)}
+              <img
+                on:click={fjernFavoritt}
+                src={fullheart}
+                alt="full heart icon" />
             {:else}
-              <img on:click={leggTilFavoritt} src={heart} alt="" />
+              <img on:click={leggTilFavoritt} src={heart} alt="heart icon" />
             {/if}
           </div>
         {:else}
@@ -300,10 +342,11 @@
       <div class="content">
         <hr />
         {@html recipe.html}
-        <div class="row multipliable-btn">
-          <img src={decrementIcon} alt="" on:click={decrement} />
-          <p>{count_value}</p>
-          <img src={incrementIcon} alt="" on:click={increment} />
+        <h3 class="ingrediens-title">Ingredienser</h3>
+        <div class="number">
+          <span class="minus" on:click={decrement}>-</span>
+          <input class="value" type="number" bind:value={count_value} />
+          <span class="plus" on:click={increment}>+</span>
         </div>
         {#each recipe.ingredienser as ingrediens}
           <div class="row ingredients">
@@ -316,9 +359,20 @@
             </div>
           </div>
         {/each}
-        {#each recipe.oppskrift as steg}
-          <p>{steg.steg}</p>
-        {/each}
+        <div class="steg-container">
+          <h3>Steg</h3>
+          {#each recipe.oppskrift as steg}
+            <div class="steg">
+              <p>{steg.steg}</p>
+            </div>
+          {/each}
+        </div>
+        <div class="tips-container">
+          <p>
+            <b>Tips:</b>
+            {recipe.tips}
+          </p>
+        </div>
       </div>
     </div>
     <div class="sidebar">

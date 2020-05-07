@@ -16,6 +16,10 @@
   }
 </style>
 
+<svelte:head>
+  <title>Favoritter</title>
+</svelte:head>
+
 <div class="bruker-nav">
   <div>
     <BrukerNav />

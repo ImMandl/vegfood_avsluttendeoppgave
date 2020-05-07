@@ -16,6 +16,10 @@
   }
 </style>
 
+<svelte:head>
+  <title>Profil</title>
+</svelte:head>
+
 <div class="bruker-nav">
   <div>
     <BrukerNav />

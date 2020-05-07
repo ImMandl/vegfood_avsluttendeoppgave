@@ -1,7 +1,7 @@
 <script>
   import { Circle } from "svelte-loading-spinners";
   import recipes from "../routes/recipe/_recipes.js";
-  let selection = recipes.filter(recipe => recipe.stikkord.includes("frokost"));
+  let selection = recipes.filter(recipe => recipe.stikkord.includes("dessert"));
 </script>
 
 <style>
@@ -17,10 +17,11 @@
 </style>
 
 <div class="heading">
-  <h1>Frokost oppskrifter</h1>
+  <h1>Dessert oppskrifter</h1>
   <h3>
-    Man sier at frokost er dagens viktigste måltid. Så hvorfor ikke gjøre den
-    ordentlig?
+    Ønsker du noe godt til kaffen? Eller skal du ha en liten feiring? Da trenger
+    du ikke se lengre! Vi har mange lekre, søte og gode desserter utvalgt for
+    deg!
   </h3>
 </div>
 <div class="oppskrift-grid">

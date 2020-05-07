@@ -40,7 +40,7 @@ const recipes = [
 			},
 			{
 				steg:
-					'Visp egg og sukker til lett og porøs eggedosis. Smelt smøret og bland det med melken. Ha det i eggedosisen. Bland det tørre og ha det i deigen til slutt.'
+					'Vips egg og sukker til lett og porøs eggedosis. Smelt smøret og bland det med melken. Ha det i eggedosisen. Bland det tørre og ha det i deigen til slutt.'
 			},
 			{
 				steg:
@@ -100,7 +100,7 @@ const recipes = [
 			},
 			{
 				steg:
-					'Visp egg og sukker til lett og porøs eggedosis. Smelt smøret og bland det med melken. Ha det i eggedosisen. Bland det tørre og ha det i deigen til slutt.'
+					'Vips egg og sukker til lett og porøs eggedosis. Smelt smøret og bland det med melken. Ha det i eggedosisen. Bland det tørre og ha det i deigen til slutt.'
 			},
 			{
 				steg:
@@ -129,7 +129,7 @@ const recipes = [
 		type: 'frokost',
 		tid: '18.04.2020',
 		forfatter: 'Ola Nordmann',
-		stikkord: [ 'vegetar', 'frokost' ],
+		stikkord: [ 'vegan', 'frokost' ],
 		prdukter: [
 			{
 				title: 'Tinemelk',
@@ -160,7 +160,7 @@ const recipes = [
 			},
 			{
 				steg:
-					'Visp egg og sukker til lett og porøs eggedosis. Smelt smøret og bland det med melken. Ha det i eggedosisen. Bland det tørre og ha det i deigen til slutt.'
+					'Vips egg og sukker til lett og porøs eggedosis. Smelt smøret og bland det med melken. Ha det i eggedosisen. Bland det tørre og ha det i deigen til slutt.'
 			},
 			{
 				steg:
@@ -220,7 +220,7 @@ const recipes = [
 			},
 			{
 				steg:
-					'Visp egg og sukker til lett og porøs eggedosis. Smelt smøret og bland det med melken. Ha det i eggedosisen. Bland det tørre og ha det i deigen til slutt.'
+					'Vips egg og sukker til lett og porøs eggedosis. Smelt smøret og bland det med melken. Ha det i eggedosisen. Bland det tørre og ha det i deigen til slutt.'
 			},
 			{
 				steg:
@@ -280,7 +280,7 @@ const recipes = [
 			},
 			{
 				steg:
-					'Visp egg og sukker til lett og porøs eggedosis. Smelt smøret og bland det med melken. Ha det i eggedosisen. Bland det tørre og ha det i deigen til slutt.'
+					'Vips egg og sukker til lett og porøs eggedosis. Smelt smøret og bland det med melken. Ha det i eggedosisen. Bland det tørre og ha det i deigen til slutt.'
 			},
 			{
 				steg:
@@ -309,7 +309,7 @@ const recipes = [
 		type: 'smårett',
 		tid: '27.04.2020',
 		forfatter: 'Ola Nordmann',
-		stikkord: [ 'vegetar', 'smårett' ],
+		stikkord: [ 'vegan', 'smårett' ],
 		prdukter: [
 			{
 				title: 'Tinemelk',
@@ -340,7 +340,7 @@ const recipes = [
 			},
 			{
 				steg:
-					'Visp egg og sukker til lett og porøs eggedosis. Smelt smøret og bland det med melken. Ha det i eggedosisen. Bland det tørre og ha det i deigen til slutt.'
+					'Vips egg og sukker til lett og porøs eggedosis. Smelt smøret og bland det med melken. Ha det i eggedosisen. Bland det tørre og ha det i deigen til slutt.'
 			},
 			{
 				steg:
@@ -400,7 +400,7 @@ const recipes = [
 			},
 			{
 				steg:
-					'Visp egg og sukker til lett og porøs eggedosis. Smelt smøret og bland det med melken. Ha det i eggedosisen. Bland det tørre og ha det i deigen til slutt.'
+					'Vips egg og sukker til lett og porøs eggedosis. Smelt smøret og bland det med melken. Ha det i eggedosisen. Bland det tørre og ha det i deigen til slutt.'
 			},
 			{
 				steg:
@@ -460,7 +460,7 @@ const recipes = [
 			},
 			{
 				steg:
-					'Visp egg og sukker til lett og porøs eggedosis. Smelt smøret og bland det med melken. Ha det i eggedosisen. Bland det tørre og ha det i deigen til slutt.'
+					'Vips egg og sukker til lett og porøs eggedosis. Smelt smøret og bland det med melken. Ha det i eggedosisen. Bland det tørre og ha det i deigen til slutt.'
 			},
 			{
 				steg:
@@ -520,7 +520,7 @@ const recipes = [
 			},
 			{
 				steg:
-					'Visp egg og sukker til lett og porøs eggedosis. Smelt smøret og bland det med melken. Ha det i eggedosisen. Bland det tørre og ha det i deigen til slutt.'
+					'Vips egg og sukker til lett og porøs eggedosis. Smelt smøret og bland det med melken. Ha det i eggedosisen. Bland det tørre og ha det i deigen til slutt.'
 			},
 			{
 				steg:
@@ -580,7 +580,7 @@ const recipes = [
 			},
 			{
 				steg:
-					'Visp egg og sukker til lett og porøs eggedosis. Smelt smøret og bland det med melken. Ha det i eggedosisen. Bland det tørre og ha det i deigen til slutt.'
+					'Vips egg og sukker til lett og porøs eggedosis. Smelt smøret og bland det med melken. Ha det i eggedosisen. Bland det tørre og ha det i deigen til slutt.'
 			},
 			{
 				steg:

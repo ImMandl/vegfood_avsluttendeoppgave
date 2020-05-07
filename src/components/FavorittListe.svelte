@@ -26,13 +26,14 @@
 
   import { favorittArray } from "../store.js";
 
+  let favorittListe = [...$favorittArray];
+  $: favorittListe;
+
   const fjernFavoritt = () => {
-    $favorittArray.splice(favorittArray.id, 1);
-    alert("Denne oppskrifter har blitt fjernet fra dine favoritter!");
-    console.log($favorittArray);
+    favorittListe = $favorittArray.splice(favorittArray.id, 1);
   };
 
-  // hvor mange favoritter som vises samtidig
+  /* bestemmer hvor mange favoritter som vises på en gang */
   let valueList;
   let toggleValueList = false;
   let value = 30;
@@ -159,7 +160,7 @@
           <th>Forfatter</th>
           <th>Handlinger</th>
         </tr>
-        {#each $favorittArray.slice(0, value) as favoritt}
+        {#each favorittListe.slice(0, value) as favoritt}
           <tr>
             <td>{favoritt.title}</td>
             <td>{favoritt.kategori}</td>
