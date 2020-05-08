@@ -100,7 +100,7 @@
       <div class="divider" />
       <div class="section">
         <h3>Nyhetsbrev</h3>
-        {#if nyhetsbrev.doc() == user.email}
+        {#if nyhetsbrev.includes(user.email)}
           <p>Du er meldt på vårt ukentlige nyhetsbrev</p>
           <button on:click={slettNyhetsbrev}>Meld meg av</button>
         {:else}

@@ -57,14 +57,12 @@
     $favorittArray.push(recipe);
     favorites.toggleFavorite(recipe.id);
     alert("Denne oppskrifter har blitt lagt til i dine favoritter!");
-    console.log($favorittArray);
   };
 
   const fjernFavoritt = () => {
     $favorittArray.splice(favorittArray.id, 1);
     favorites.toggleFavorite(recipe.id);
     alert("fjernet");
-    console.log($favorittArray);
   };
 
   let isFavorited = undefined;
@@ -85,10 +83,6 @@
 </script>
 
 <style>
-  .fav {
-    background-color: red;
-  }
-
   .content :global(pre) {
     padding: 0.5em;
     border-radius: 2px;
@@ -315,19 +309,9 @@
         {#if user}
           <div class="heart-icon">
             {#if $favorites.has(recipe.id)}
-              <img
-                class:fav={isFavorited}
-                isFavorited={$favorites.has(recipe.id)}
-                on:click={fjernFavoritt}
-                src={fullheart}
-                alt="heart icon" />
+              <img on:click={fjernFavoritt} src={fullheart} alt="heart icon" />
             {:else}
-              <img
-                class:fav={isFavorited}
-                isFavorited={$favorites.has(recipe.id)}
-                on:click={leggTilFavoritt}
-                src={heart}
-                alt="heart icon" />
+              <img on:click={leggTilFavoritt} src={heart} alt="heart icon" />
             {/if}
           </div>
         {:else}
