@@ -56,13 +56,11 @@
   const leggTilFavoritt = () => {
     $favorittArray.push(recipe);
     favorites.toggleFavorite(recipe.id);
-    alert("Denne oppskrifter har blitt lagt til i dine favoritter!");
   };
 
   const fjernFavoritt = () => {
     $favorittArray.splice(favorittArray.id, 1);
     favorites.toggleFavorite(recipe.id);
-    alert("fjernet");
   };
 
   let isFavorited = undefined;

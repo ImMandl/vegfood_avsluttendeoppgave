@@ -12,15 +12,23 @@
   export let recipes;
   export let segment;
 
+  import { Circle } from "svelte-loading-spinners";
+  import { paginate, LightPaginationNav } from "svelte-paginate";
+
   let dropdownArrow = "graphics/icons-dropdown-arrow.svg";
   let dropdownRightArrow = "graphics/icons-dropdown-right-arrow.svg";
   let showKategori = false; // starter som lukket
   let showMåltid = false; // starter som lukket
   let yes = false; // starter ikke på
   let group = undefined; // group binded checkboxes
-  let selection = [...recipes]; // filter array
   let current = ""; // current active for filter buttons
+  // pagination
+  let items = [...recipes];
+  let currentPage = 1;
+  let pageSize = 8;
+  $: paginatedItems = paginate({ items, pageSize, currentPage });
 
+  /* filter */
   const toggleKategori = () => {
     showKategori = !showKategori;
   };
@@ -74,35 +82,35 @@
   };
 
   let notFiltered = () => {
-    selection = [...recipes];
+    items = [...recipes];
   };
 
   let filteredVegetar = () => {
-    selection = recipes.filter(recipe => recipe.stikkord.includes("vegetar"));
+    items = recipes.filter(recipe => recipe.stikkord.includes("vegetar"));
   };
 
   const filteredVegan = () => {
-    selection = recipes.filter(recipe => recipe.stikkord.includes("vegan"));
+    items = recipes.filter(recipe => recipe.stikkord.includes("vegan"));
   };
 
   const filteredFrokost = () => {
-    selection = recipes.filter(recipe => recipe.stikkord.includes("frokost"));
+    items = recipes.filter(recipe => recipe.stikkord.includes("frokost"));
   };
 
   const filteredNiste = () => {
-    selection = recipes.filter(recipe => recipe.stikkord.includes("niste"));
+    items = recipes.filter(recipe => recipe.stikkord.includes("niste"));
   };
 
   const filteredMiddag = () => {
-    selection = recipes.filter(recipe => recipe.stikkord.includes("middag"));
+    items = recipes.filter(recipe => recipe.stikkord.includes("middag"));
   };
 
   const filteredDessert = () => {
-    selection = recipes.filter(recipe => recipe.stikkord.includes("dessert"));
+    items = recipes.filter(recipe => recipe.stikkord.includes("dessert"));
   };
 
   const filteredSmaaretter = () => {
-    selection = recipes.filter(recipe => recipe.stikkord.includes("smårett"));
+    items = recipes.filter(recipe => recipe.stikkord.includes("smårett"));
   };
 </script>
 
@@ -162,6 +170,21 @@
   /* produkt grid */
   .oppskrift-grid {
     grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+  }
+
+  /* pagination */
+  /*   .your-nav :global(.pagination-nav): The navigation container element.
+.your-nav :global(.option): Each option in the navigation (including ellipsis, next and prev buttons).
+.your-nav :global(.option.active): The currently active page number.
+.your-nav :global(.option.ellipsis): The ellipsis option.
+.your-nav :global(.option.number): Only page numbers.
+.your-nav :global(.option.prev): The prev option.
+.your-nav :global(.option.next): The next option.
+.your-nav :global(.option.disabled): Targets the prev and next options when they are disabled (when you're on the first or last page). */
+  .your-nav :global(.pagination-nav) {
+    background-color: transparent;
+    box-shadow: none;
+    margin-top: 16px;
   }
 </style>
 
@@ -230,9 +253,8 @@
       </div>
     {/if}
   </div>
-
   <div class="oppskrift-grid">
-    {#each selection as recipe}
+    {#each paginatedItems as recipe}
       <a rel="prefetch" href="recipe/{recipe.slug}">
         <div class="oppskrift-tile">
           <img src={recipe.bilde} alt="bilde" />
@@ -250,7 +272,18 @@
     {:else}
       <div class="loading-message">
         <p>henter oppskrifter...</p>
+        {Circle}
       </div>
     {/each}
   </div>
+</div>
+
+<div class="your-nav">
+  <LightPaginationNav
+    totalItems={items.length}
+    {pageSize}
+    {currentPage}
+    limit={1}
+    showStepOptions={true}
+    on:setPage={e => (currentPage = e.detail.page)} />
 </div>

@@ -10,6 +10,7 @@
   let toggleUserMenu; // viser logout etter trykt profilnavn
   let user; // bruker
   let unsubscribe;
+  let visible = true;
   let dropdownArrow = "graphics/icons-dropdown-arrow.svg";
 
   onMount(() => {
@@ -36,7 +37,7 @@
   /* bestemmer hvor mange favoritter som vises på en gang */
   let valueList;
   let toggleValueList = false;
-  let value = 30;
+  let value = $favorittArray.length;
 
   const valueFive = () => {
     value = 5;
@@ -124,7 +125,9 @@
       {value}
       <img src={dropdownArrow} alt="icon" />
     </button>
-    favoritter
+    {#if $favorittArray.length <= 1}
+      favoritt av {$favorittArray.length}
+    {:else}favoritter av {$favorittArray.length}{/if}
   </span>
   {#if valueList}
     <div class="value-list-inner">

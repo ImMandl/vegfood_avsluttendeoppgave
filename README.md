@@ -29,7 +29,18 @@ This site...
 - uses <a href="https://svelte.dev/docs#svelte_store">Svelte store</a> to keep favorited recipes and multiply ingredients on the detail page for recipes. Favorited recipes will reset if you refresh the page.
 - uses <a href="https://github.com/Schum123/svelte-loading-spinners#svelte-loading-spinners">Svelte-loading-spinners</a> to show when items is loading.
 - uses <a href="https://github.com/beyonk-adventures/svelte-carousel#svelte-carousel">Svelte Carousel</a>. Is used for categories on frontpage to help make the site easily responive.
+- uses <a href="https://github.com/TahaSh/svelte-paginate">Svelte-paginate</a> to limit the amount of recipes shown per page.
 
 ### Styling
 
 In ./static there is a global css file. If important css is used in several places it will be placed here.
+
+## Tip for sapper
+
+If you want to use external components in sapper use npm i -D name-of-plugin. This install the package to devDependencies instead of dependencies which will cause it to get bundled (and therefore compiled) with your app. 
+
+```bash
+npm install -D @sveltejs/svelte-virtual-list
+```
+
+Explained well <a href="https://github.com/sveltejs/sapper-template#using-external-components">here</a>
