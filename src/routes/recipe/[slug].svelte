@@ -85,19 +85,10 @@
 </script>
 
 <style>
-  .heart-div {
-    background-image: url("./graphics/heart.svg");
-    background-repeat: no-repeat;
-    height: 32px;
-    width: 32px;
+  .fav {
+    background-color: red;
   }
 
-  .fav {
-    background-image: url("./graphics/fullheart.svg");
-    background-repeat: no-repeat;
-    height: 52px;
-    width: 52px;
-  }
   .content :global(pre) {
     padding: 0.5em;
     border-radius: 2px;
@@ -323,7 +314,7 @@
         {/if}
         {#if user}
           <div class="heart-icon">
-            {#if isFavorited == true}
+            {#if $favorites.has(recipe.id)}
               <img
                 class:fav={isFavorited}
                 isFavorited={$favorites.has(recipe.id)}
@@ -338,12 +329,6 @@
                 src={heart}
                 alt="heart icon" />
             {/if}
-            <div
-              class="heart-div"
-              class:fav={isFavorited}
-              isFavorited={$favorites.has(recipe.id)}
-              on:click={leggTilFavoritt}
-              alt="heart icon" />
           </div>
         {:else}
           <div class="heart-icon">
