@@ -12,14 +12,34 @@ const recipes = [
 		stikkord: [ 'vegetar', 'frokost' ],
 		prdukter: [
 			{
-				title: 'Tinemelk',
+				title: 'TINE Meierismør',
 				bilde:
-					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Ftinemelk.png?alt=media&token=8059dd39-437e-45c9-bb5d-2b7784dc3a7f'
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fmeierism%C3%B8r.jpeg?alt=media&token=9f1b220f-5d41-47b8-87aa-4e8b0088ced5'
 			},
 			{
-				title: 'TINE Kremgo ananas',
+				title: 'Prior frokostegg',
 				bilde:
-					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fkremgo.png?alt=media&token=55f37516-0e7b-4e76-9610-a853c1e9b637'
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fegg.jpeg?alt=media&token=0fb650ee-c70f-4879-8640-80a675eb884e'
+			},
+			{
+				title: 'TINE Helmelk',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fhelmelk.jpeg?alt=media&token=1aaf6942-833e-4470-8d7b-09c16751fc89'
+			},
+			{
+				title: 'Siktet hvetemel',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fhvetemel.jpeg?alt=media&token=63df36d4-b0cf-496d-8399-fdd1478ad09d'
+			},
+			{
+				title: 'Bakepulver',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fbakepulver.jpeg?alt=media&token=4e0b8be6-20f2-456d-98bc-fb410d46f78a'
+			},
+			{
+				title: 'Vaniljekrem',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fvaniljekrem.jpeg?alt=media&token=ad9eeccb-3a54-4738-8816-fe9bda283312'
 			}
 		],
 		ingredienser: [
@@ -686,6 +706,958 @@ const recipes = [
 			'Lag en stor porsjon med deig som du deler og tilsetter ulike smaksvarianter. Så får barna litt av hvert å velge mellom.',
 		bilde:
 			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/RecipePhotos%2Fpannekaker.jpg?alt=media&token=46c63efc-2781-4b50-96d2-d09cc5352920',
+		html: `
+			<p>Gjør frokosten til en fest med disse deilige muffinsene. Oppskriften er enkel så du trenger ikke å være en proff på kjøkkenet. Disse passer perfekt til en hyggelig morgen for familien.</p>
+		`
+	},
+	{
+		id: '11',
+		title: 'Pasta Alfredo',
+		slug: 'pasta-alfredo',
+		kategori: 'Vegetar',
+		lengde: '20 minutter',
+		grad: 'Enkel',
+		type: 'middag',
+		tid: '21.04.2020',
+		forfatter: 'Ola Nordmann',
+		stikkord: [ 'vegetar', 'middag' ],
+		prdukter: [
+			{
+				title: 'Tinemelk',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Ftinemelk.png?alt=media&token=8059dd39-437e-45c9-bb5d-2b7784dc3a7f'
+			},
+			{
+				title: 'TINE Kremgo ananas',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fkremgo.png?alt=media&token=55f37516-0e7b-4e76-9610-a853c1e9b637'
+			}
+		],
+		ingredienser: [
+			{
+				title: 'Meierismør',
+				antall: 100,
+				mengde: 'g'
+			},
+			{
+				title: 'Egg',
+				antall: 3,
+				mengde: 'stk'
+			},
+			{
+				title: 'Helmelk',
+				antall: 2,
+				mengde: 'dl'
+			},
+			{
+				title: 'Hvetemel',
+				antall: 4,
+				mengde: 'dl'
+			}
+		],
+		oppskrift: [
+			{
+				steg: 'Kok opp vann i en stor kjele.'
+			},
+			{
+				steg:
+					'Smelt smør i en middels stor kjele. Hell i fløte, og kok sakte opp. La dette koke på lav temperatur i rundt fem minutter. Rør av og til.'
+			},
+			{
+				steg: 'Ha litt salt i kokevannet, og kok pasta som anvist på pakken. Hell vannet av pastaen.'
+			},
+			{
+				steg:
+					'Ha parmesan i fløtesausen, og smak til med salt og pepper. Bland den nykokte pastaen inn i sausen, og server. Topp gjerne med ekstra parmesan og frisk basilikum.'
+			}
+		],
+		tips: 'Legg gjerne noen skiver spekeskinke på retten rett før servering.',
+		bilde:
+			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/RecipePhotos%2Fpasta-alfredo.jpg?alt=media&token=9763c398-2b9a-4c36-9df6-c7a1f2b6e4bd',
+		html: `
+			<p>Gjør frokosten til en fest med disse deilige muffinsene. Oppskriften er enkel så du trenger ikke å være en proff på kjøkkenet. Disse passer perfekt til en hyggelig morgen for familien.</p>
+		`
+	},
+	{
+		id: '12',
+		title: 'Grønnsakslasagne',
+		slug: 'gronnsakslasagne',
+		kategori: 'Vegetar',
+		lengde: '45 minutter',
+		grad: 'Enkel',
+		type: 'middag',
+		tid: '21.04.2020',
+		forfatter: 'Ola Nordmann',
+		stikkord: [ 'vegetar', 'middag' ],
+		prdukter: [
+			{
+				title: 'Tinemelk',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Ftinemelk.png?alt=media&token=8059dd39-437e-45c9-bb5d-2b7784dc3a7f'
+			},
+			{
+				title: 'TINE Kremgo ananas',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fkremgo.png?alt=media&token=55f37516-0e7b-4e76-9610-a853c1e9b637'
+			}
+		],
+		ingredienser: [
+			{
+				title: 'Meierismør',
+				antall: 100,
+				mengde: 'g'
+			},
+			{
+				title: 'Egg',
+				antall: 3,
+				mengde: 'stk'
+			},
+			{
+				title: 'Helmelk',
+				antall: 2,
+				mengde: 'dl'
+			},
+			{
+				title: 'Hvetemel',
+				antall: 4,
+				mengde: 'dl'
+			}
+		],
+		oppskrift: [
+			{
+				steg: 'Kok opp vann i en stor kjele.'
+			},
+			{
+				steg:
+					'Smelt smør i en middels stor kjele. Hell i fløte, og kok sakte opp. La dette koke på lav temperatur i rundt fem minutter. Rør av og til.'
+			},
+			{
+				steg: 'Ha litt salt i kokevannet, og kok pasta som anvist på pakken. Hell vannet av pastaen.'
+			},
+			{
+				steg:
+					'Ha parmesan i fløtesausen, og smak til med salt og pepper. Bland den nykokte pastaen inn i sausen, og server. Topp gjerne med ekstra parmesan og frisk basilikum.'
+			}
+		],
+		tips: 'Legg gjerne noen skiver spekeskinke på retten rett før servering.',
+		bilde:
+			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/RecipePhotos%2Fgronnsakslasagne.jpg?alt=media&token=6cbfb159-259f-4271-921a-1db0ae9dc78a',
+		html: `
+			<p>Gjør frokosten til en fest med disse deilige muffinsene. Oppskriften er enkel så du trenger ikke å være en proff på kjøkkenet. Disse passer perfekt til en hyggelig morgen for familien.</p>
+		`
+	},
+	{
+		id: '13',
+		title: 'Avocado Toast',
+		slug: 'avocado-toast',
+		kategori: 'Vegetar',
+		lengde: '10 minutter',
+		grad: 'Enkel',
+		type: 'frokost',
+		tid: '21.04.2020',
+		forfatter: 'Ola Nordmann',
+		stikkord: [ 'vegetar', 'frokost', 'niste' ],
+		prdukter: [
+			{
+				title: 'Tinemelk',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Ftinemelk.png?alt=media&token=8059dd39-437e-45c9-bb5d-2b7784dc3a7f'
+			},
+			{
+				title: 'TINE Kremgo ananas',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fkremgo.png?alt=media&token=55f37516-0e7b-4e76-9610-a853c1e9b637'
+			}
+		],
+		ingredienser: [
+			{
+				title: 'Meierismør',
+				antall: 100,
+				mengde: 'g'
+			},
+			{
+				title: 'Egg',
+				antall: 3,
+				mengde: 'stk'
+			},
+			{
+				title: 'Helmelk',
+				antall: 2,
+				mengde: 'dl'
+			},
+			{
+				title: 'Hvetemel',
+				antall: 4,
+				mengde: 'dl'
+			}
+		],
+		oppskrift: [
+			{
+				steg: 'Kok opp vann i en stor kjele.'
+			},
+			{
+				steg:
+					'Smelt smør i en middels stor kjele. Hell i fløte, og kok sakte opp. La dette koke på lav temperatur i rundt fem minutter. Rør av og til.'
+			},
+			{
+				steg: 'Ha litt salt i kokevannet, og kok pasta som anvist på pakken. Hell vannet av pastaen.'
+			},
+			{
+				steg:
+					'Ha parmesan i fløtesausen, og smak til med salt og pepper. Bland den nykokte pastaen inn i sausen, og server. Topp gjerne med ekstra parmesan og frisk basilikum.'
+			}
+		],
+		tips: 'Legg gjerne noen skiver spekeskinke på retten rett før servering.',
+		bilde:
+			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/RecipePhotos%2Favocado-toast.jpg?alt=media&token=acb6128e-4f58-4f5a-9e9d-26bb811c24e9',
+		html: `
+			<p>Gjør frokosten til en fest med disse deilige muffinsene. Oppskriften er enkel så du trenger ikke å være en proff på kjøkkenet. Disse passer perfekt til en hyggelig morgen for familien.</p>
+		`
+	},
+	{
+		id: '14',
+		title: 'Italiensk Pai',
+		slug: 'italiensk-pai',
+		kategori: 'Vegetar',
+		lengde: '75 minutter',
+		grad: 'Medium',
+		type: 'middag',
+		tid: '21.04.2020',
+		forfatter: 'Ola Nordmann',
+		stikkord: [ 'vegetar', 'middag' ],
+		prdukter: [
+			{
+				title: 'Tinemelk',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Ftinemelk.png?alt=media&token=8059dd39-437e-45c9-bb5d-2b7784dc3a7f'
+			},
+			{
+				title: 'TINE Kremgo ananas',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fkremgo.png?alt=media&token=55f37516-0e7b-4e76-9610-a853c1e9b637'
+			}
+		],
+		ingredienser: [
+			{
+				title: 'Meierismør',
+				antall: 100,
+				mengde: 'g'
+			},
+			{
+				title: 'Egg',
+				antall: 3,
+				mengde: 'stk'
+			},
+			{
+				title: 'Helmelk',
+				antall: 2,
+				mengde: 'dl'
+			},
+			{
+				title: 'Hvetemel',
+				antall: 4,
+				mengde: 'dl'
+			}
+		],
+		oppskrift: [
+			{
+				steg: 'Kok opp vann i en stor kjele.'
+			},
+			{
+				steg:
+					'Smelt smør i en middels stor kjele. Hell i fløte, og kok sakte opp. La dette koke på lav temperatur i rundt fem minutter. Rør av og til.'
+			},
+			{
+				steg: 'Ha litt salt i kokevannet, og kok pasta som anvist på pakken. Hell vannet av pastaen.'
+			},
+			{
+				steg:
+					'Ha parmesan i fløtesausen, og smak til med salt og pepper. Bland den nykokte pastaen inn i sausen, og server. Topp gjerne med ekstra parmesan og frisk basilikum.'
+			}
+		],
+		tips: 'Legg gjerne noen skiver spekeskinke på retten rett før servering.',
+		bilde:
+			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/RecipePhotos%2Fitaliensk-pai.jpg?alt=media&token=2cc49520-2656-4261-9bcf-6c661748e145',
+		html: `
+			<p>Gjør frokosten til en fest med disse deilige muffinsene. Oppskriften er enkel så du trenger ikke å være en proff på kjøkkenet. Disse passer perfekt til en hyggelig morgen for familien.</p>
+		`
+	},
+	{
+		id: '15',
+		title: 'Grønnsakssuppe',
+		slug: 'gronnsakssuppe',
+		kategori: 'Vegetar',
+		lengde: '30 minutter',
+		grad: 'Enkel',
+		type: 'smårett',
+		tid: '21.04.2020',
+		forfatter: 'Ola Nordmann',
+		stikkord: [ 'vegetar', 'smårett', 'middag' ],
+		prdukter: [
+			{
+				title: 'Tinemelk',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Ftinemelk.png?alt=media&token=8059dd39-437e-45c9-bb5d-2b7784dc3a7f'
+			},
+			{
+				title: 'TINE Kremgo ananas',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fkremgo.png?alt=media&token=55f37516-0e7b-4e76-9610-a853c1e9b637'
+			}
+		],
+		ingredienser: [
+			{
+				title: 'Meierismør',
+				antall: 100,
+				mengde: 'g'
+			},
+			{
+				title: 'Egg',
+				antall: 3,
+				mengde: 'stk'
+			},
+			{
+				title: 'Helmelk',
+				antall: 2,
+				mengde: 'dl'
+			},
+			{
+				title: 'Hvetemel',
+				antall: 4,
+				mengde: 'dl'
+			}
+		],
+		oppskrift: [
+			{
+				steg: 'Kok opp vann i en stor kjele.'
+			},
+			{
+				steg:
+					'Smelt smør i en middels stor kjele. Hell i fløte, og kok sakte opp. La dette koke på lav temperatur i rundt fem minutter. Rør av og til.'
+			},
+			{
+				steg: 'Ha litt salt i kokevannet, og kok pasta som anvist på pakken. Hell vannet av pastaen.'
+			},
+			{
+				steg:
+					'Ha parmesan i fløtesausen, og smak til med salt og pepper. Bland den nykokte pastaen inn i sausen, og server. Topp gjerne med ekstra parmesan og frisk basilikum.'
+			}
+		],
+		tips: 'Legg gjerne noen skiver spekeskinke på retten rett før servering.',
+		bilde:
+			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/RecipePhotos%2Fgronnsakssuppe.jpg?alt=media&token=7a8ead34-3741-4f88-9909-3d52f27628bf',
+		html: `
+			<p>Gjør frokosten til en fest med disse deilige muffinsene. Oppskriften er enkel så du trenger ikke å være en proff på kjøkkenet. Disse passer perfekt til en hyggelig morgen for familien.</p>
+		`
+	},
+	{
+		id: '16',
+		title: 'Vegetarisk Pastagrateng',
+		slug: 'vegetarisk-pastagrateng',
+		kategori: 'Vegetar',
+		lengde: '45 minutter',
+		grad: 'Enkel',
+		type: 'middag',
+		tid: '21.04.2020',
+		forfatter: 'Ola Nordmann',
+		stikkord: [ 'vegetar', 'middag' ],
+		prdukter: [
+			{
+				title: 'Tinemelk',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Ftinemelk.png?alt=media&token=8059dd39-437e-45c9-bb5d-2b7784dc3a7f'
+			},
+			{
+				title: 'TINE Kremgo ananas',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fkremgo.png?alt=media&token=55f37516-0e7b-4e76-9610-a853c1e9b637'
+			}
+		],
+		ingredienser: [
+			{
+				title: 'Meierismør',
+				antall: 100,
+				mengde: 'g'
+			},
+			{
+				title: 'Egg',
+				antall: 3,
+				mengde: 'stk'
+			},
+			{
+				title: 'Helmelk',
+				antall: 2,
+				mengde: 'dl'
+			},
+			{
+				title: 'Hvetemel',
+				antall: 4,
+				mengde: 'dl'
+			}
+		],
+		oppskrift: [
+			{
+				steg: 'Kok opp vann i en stor kjele.'
+			},
+			{
+				steg:
+					'Smelt smør i en middels stor kjele. Hell i fløte, og kok sakte opp. La dette koke på lav temperatur i rundt fem minutter. Rør av og til.'
+			},
+			{
+				steg: 'Ha litt salt i kokevannet, og kok pasta som anvist på pakken. Hell vannet av pastaen.'
+			},
+			{
+				steg:
+					'Ha parmesan i fløtesausen, og smak til med salt og pepper. Bland den nykokte pastaen inn i sausen, og server. Topp gjerne med ekstra parmesan og frisk basilikum.'
+			}
+		],
+		tips: 'Legg gjerne noen skiver spekeskinke på retten rett før servering.',
+		bilde:
+			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/RecipePhotos%2Fvegetarisk-pastagrateng.jpg?alt=media&token=4085e151-5b2a-4624-a390-0acd6a567324',
+		html: `
+			<p>Gjør frokosten til en fest med disse deilige muffinsene. Oppskriften er enkel så du trenger ikke å være en proff på kjøkkenet. Disse passer perfekt til en hyggelig morgen for familien.</p>
+		`
+	},
+	{
+		id: '17',
+		title: 'Rotgrønnsaksform Med Byggryn',
+		slug: 'rotgrønnsaksform-med-byggryn',
+		kategori: 'Vegan',
+		lengde: '40 minutter',
+		grad: 'Enkel',
+		type: 'middag',
+		tid: '21.04.2020',
+		forfatter: 'Ola Nordmann',
+		stikkord: [ 'vegan', 'middag' ],
+		prdukter: [
+			{
+				title: 'Tinemelk',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Ftinemelk.png?alt=media&token=8059dd39-437e-45c9-bb5d-2b7784dc3a7f'
+			},
+			{
+				title: 'TINE Kremgo ananas',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fkremgo.png?alt=media&token=55f37516-0e7b-4e76-9610-a853c1e9b637'
+			}
+		],
+		ingredienser: [
+			{
+				title: 'Meierismør',
+				antall: 100,
+				mengde: 'g'
+			},
+			{
+				title: 'Egg',
+				antall: 3,
+				mengde: 'stk'
+			},
+			{
+				title: 'Helmelk',
+				antall: 2,
+				mengde: 'dl'
+			},
+			{
+				title: 'Hvetemel',
+				antall: 4,
+				mengde: 'dl'
+			}
+		],
+		oppskrift: [
+			{
+				steg: 'Kok opp vann i en stor kjele.'
+			},
+			{
+				steg:
+					'Smelt smør i en middels stor kjele. Hell i fløte, og kok sakte opp. La dette koke på lav temperatur i rundt fem minutter. Rør av og til.'
+			},
+			{
+				steg: 'Ha litt salt i kokevannet, og kok pasta som anvist på pakken. Hell vannet av pastaen.'
+			},
+			{
+				steg:
+					'Ha parmesan i fløtesausen, og smak til med salt og pepper. Bland den nykokte pastaen inn i sausen, og server. Topp gjerne med ekstra parmesan og frisk basilikum.'
+			}
+		],
+		tips: 'Legg gjerne noen skiver spekeskinke på retten rett før servering.',
+		bilde:
+			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/RecipePhotos%2Fgronnsaksform-med-byggryn.jpg?alt=media&token=54ee6f65-418e-4101-83df-a311a443869b',
+		html: `
+			<p>Gjør frokosten til en fest med disse deilige muffinsene. Oppskriften er enkel så du trenger ikke å være en proff på kjøkkenet. Disse passer perfekt til en hyggelig morgen for familien.</p>
+		`
+	},
+	{
+		id: '18',
+		title: 'Vegetarpizza Med Cottage Cheese',
+		slug: 'vegetarpizza-med-cottage-cheese',
+		kategori: 'Vegetar',
+		lengde: '40 minutter',
+		grad: 'Enkel',
+		type: 'middag',
+		tid: '21.04.2020',
+		forfatter: 'Ola Nordmann',
+		stikkord: [ 'vegetar', 'middag' ],
+		prdukter: [
+			{
+				title: 'Tinemelk',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Ftinemelk.png?alt=media&token=8059dd39-437e-45c9-bb5d-2b7784dc3a7f'
+			},
+			{
+				title: 'TINE Kremgo ananas',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fkremgo.png?alt=media&token=55f37516-0e7b-4e76-9610-a853c1e9b637'
+			}
+		],
+		ingredienser: [
+			{
+				title: 'Meierismør',
+				antall: 100,
+				mengde: 'g'
+			},
+			{
+				title: 'Egg',
+				antall: 3,
+				mengde: 'stk'
+			},
+			{
+				title: 'Helmelk',
+				antall: 2,
+				mengde: 'dl'
+			},
+			{
+				title: 'Hvetemel',
+				antall: 4,
+				mengde: 'dl'
+			}
+		],
+		oppskrift: [
+			{
+				steg: 'Kok opp vann i en stor kjele.'
+			},
+			{
+				steg:
+					'Smelt smør i en middels stor kjele. Hell i fløte, og kok sakte opp. La dette koke på lav temperatur i rundt fem minutter. Rør av og til.'
+			},
+			{
+				steg: 'Ha litt salt i kokevannet, og kok pasta som anvist på pakken. Hell vannet av pastaen.'
+			},
+			{
+				steg:
+					'Ha parmesan i fløtesausen, og smak til med salt og pepper. Bland den nykokte pastaen inn i sausen, og server. Topp gjerne med ekstra parmesan og frisk basilikum.'
+			}
+		],
+		tips: 'Legg gjerne noen skiver spekeskinke på retten rett før servering.',
+		bilde:
+			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/RecipePhotos%2Fvegetarpizza-med-cottage-cheese.jpg?alt=media&token=528d8e1d-04d0-45be-b147-e30cad199a28',
+		html: `
+			<p>Gjør frokosten til en fest med disse deilige muffinsene. Oppskriften er enkel så du trenger ikke å være en proff på kjøkkenet. Disse passer perfekt til en hyggelig morgen for familien.</p>
+		`
+	},
+	{
+		id: '19',
+		title: 'Dal',
+		slug: 'dal',
+		kategori: 'Vegetar',
+		lengde: '90 minutter',
+		grad: 'Medium',
+		type: 'middag',
+		tid: '21.04.2020',
+		forfatter: 'Ola Nordmann',
+		stikkord: [ 'vegetar', 'middag' ],
+		prdukter: [
+			{
+				title: 'Tinemelk',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Ftinemelk.png?alt=media&token=8059dd39-437e-45c9-bb5d-2b7784dc3a7f'
+			},
+			{
+				title: 'TINE Kremgo ananas',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fkremgo.png?alt=media&token=55f37516-0e7b-4e76-9610-a853c1e9b637'
+			}
+		],
+		ingredienser: [
+			{
+				title: 'Meierismør',
+				antall: 100,
+				mengde: 'g'
+			},
+			{
+				title: 'Egg',
+				antall: 3,
+				mengde: 'stk'
+			},
+			{
+				title: 'Helmelk',
+				antall: 2,
+				mengde: 'dl'
+			},
+			{
+				title: 'Hvetemel',
+				antall: 4,
+				mengde: 'dl'
+			}
+		],
+		oppskrift: [
+			{
+				steg: 'Kok opp vann i en stor kjele.'
+			},
+			{
+				steg:
+					'Smelt smør i en middels stor kjele. Hell i fløte, og kok sakte opp. La dette koke på lav temperatur i rundt fem minutter. Rør av og til.'
+			},
+			{
+				steg: 'Ha litt salt i kokevannet, og kok pasta som anvist på pakken. Hell vannet av pastaen.'
+			},
+			{
+				steg:
+					'Ha parmesan i fløtesausen, og smak til med salt og pepper. Bland den nykokte pastaen inn i sausen, og server. Topp gjerne med ekstra parmesan og frisk basilikum.'
+			}
+		],
+		tips: 'Legg gjerne noen skiver spekeskinke på retten rett før servering.',
+		bilde:
+			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/RecipePhotos%2Fdal.jpg?alt=media&token=964852a9-1b7e-4af1-86e5-673c47ffd824',
+		html: `
+			<p>Gjør frokosten til en fest med disse deilige muffinsene. Oppskriften er enkel så du trenger ikke å være en proff på kjøkkenet. Disse passer perfekt til en hyggelig morgen for familien.</p>
+		`
+	},
+	{
+		id: '20',
+		title: 'Blings Med Grillede Grønnsaker',
+		slug: 'blings-med-grillede-grønnsaker',
+		kategori: 'Vegan',
+		lengde: '15 minutter',
+		grad: 'Medium',
+		type: 'smårett',
+		tid: '21.04.2020',
+		forfatter: 'Ola Nordmann',
+		stikkord: [ 'vegan', 'smårett', 'niste', 'frokost' ],
+		prdukter: [
+			{
+				title: 'Tinemelk',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Ftinemelk.png?alt=media&token=8059dd39-437e-45c9-bb5d-2b7784dc3a7f'
+			},
+			{
+				title: 'TINE Kremgo ananas',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fkremgo.png?alt=media&token=55f37516-0e7b-4e76-9610-a853c1e9b637'
+			}
+		],
+		ingredienser: [
+			{
+				title: 'Meierismør',
+				antall: 100,
+				mengde: 'g'
+			},
+			{
+				title: 'Egg',
+				antall: 3,
+				mengde: 'stk'
+			},
+			{
+				title: 'Helmelk',
+				antall: 2,
+				mengde: 'dl'
+			},
+			{
+				title: 'Hvetemel',
+				antall: 4,
+				mengde: 'dl'
+			}
+		],
+		oppskrift: [
+			{
+				steg: 'Kok opp vann i en stor kjele.'
+			},
+			{
+				steg:
+					'Smelt smør i en middels stor kjele. Hell i fløte, og kok sakte opp. La dette koke på lav temperatur i rundt fem minutter. Rør av og til.'
+			},
+			{
+				steg: 'Ha litt salt i kokevannet, og kok pasta som anvist på pakken. Hell vannet av pastaen.'
+			},
+			{
+				steg:
+					'Ha parmesan i fløtesausen, og smak til med salt og pepper. Bland den nykokte pastaen inn i sausen, og server. Topp gjerne med ekstra parmesan og frisk basilikum.'
+			}
+		],
+		tips: 'Legg gjerne noen skiver spekeskinke på retten rett før servering.',
+		bilde:
+			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/RecipePhotos%2Fblings-med-grillede-gronnsaker.jpg?alt=media&token=83980bd4-6a8a-4cc4-99dc-a3a6aea4093f',
+		html: `
+			<p>Gjør frokosten til en fest med disse deilige muffinsene. Oppskriften er enkel så du trenger ikke å være en proff på kjøkkenet. Disse passer perfekt til en hyggelig morgen for familien.</p>
+		`
+	},
+	{
+		id: '21',
+		title: 'Tortilla-Rull Med Kikerter',
+		slug: 'tortilla-rull-med-kikerter',
+		kategori: 'Vegan',
+		lengde: '40 minutter',
+		grad: 'Medium',
+		type: 'smårett',
+		tid: '21.04.2020',
+		forfatter: 'Ola Nordmann',
+		stikkord: [ 'vegan', 'smårett', 'niste' ],
+		prdukter: [
+			{
+				title: 'Tinemelk',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Ftinemelk.png?alt=media&token=8059dd39-437e-45c9-bb5d-2b7784dc3a7f'
+			},
+			{
+				title: 'TINE Kremgo ananas',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fkremgo.png?alt=media&token=55f37516-0e7b-4e76-9610-a853c1e9b637'
+			}
+		],
+		ingredienser: [
+			{
+				title: 'Meierismør',
+				antall: 100,
+				mengde: 'g'
+			},
+			{
+				title: 'Egg',
+				antall: 3,
+				mengde: 'stk'
+			},
+			{
+				title: 'Helmelk',
+				antall: 2,
+				mengde: 'dl'
+			},
+			{
+				title: 'Hvetemel',
+				antall: 4,
+				mengde: 'dl'
+			}
+		],
+		oppskrift: [
+			{
+				steg: 'Kok opp vann i en stor kjele.'
+			},
+			{
+				steg:
+					'Smelt smør i en middels stor kjele. Hell i fløte, og kok sakte opp. La dette koke på lav temperatur i rundt fem minutter. Rør av og til.'
+			},
+			{
+				steg: 'Ha litt salt i kokevannet, og kok pasta som anvist på pakken. Hell vannet av pastaen.'
+			},
+			{
+				steg:
+					'Ha parmesan i fløtesausen, og smak til med salt og pepper. Bland den nykokte pastaen inn i sausen, og server. Topp gjerne med ekstra parmesan og frisk basilikum.'
+			}
+		],
+		tips: 'Legg gjerne noen skiver spekeskinke på retten rett før servering.',
+		bilde:
+			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/RecipePhotos%2Ftortilla-rull-med-kikerter.jpg?alt=media&token=5521bdf1-ac1d-4619-9ea1-d4799cd1be52',
+		html: `
+			<p>Gjør frokosten til en fest med disse deilige muffinsene. Oppskriften er enkel så du trenger ikke å være en proff på kjøkkenet. Disse passer perfekt til en hyggelig morgen for familien.</p>
+		`
+	},
+	{
+		id: '22',
+		title: 'Omelettrull Med Grønnsaker',
+		slug: 'omelettrull-med-grønnsaker',
+		kategori: 'Vegan',
+		lengde: '40 minutter',
+		grad: 'Enkel',
+		type: 'frokost',
+		tid: '21.04.2020',
+		forfatter: 'Ola Nordmann',
+		stikkord: [ 'vegetar', 'frokost', 'smårett' ],
+		prdukter: [
+			{
+				title: 'Tinemelk',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Ftinemelk.png?alt=media&token=8059dd39-437e-45c9-bb5d-2b7784dc3a7f'
+			},
+			{
+				title: 'TINE Kremgo ananas',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fkremgo.png?alt=media&token=55f37516-0e7b-4e76-9610-a853c1e9b637'
+			}
+		],
+		ingredienser: [
+			{
+				title: 'Meierismør',
+				antall: 100,
+				mengde: 'g'
+			},
+			{
+				title: 'Egg',
+				antall: 3,
+				mengde: 'stk'
+			},
+			{
+				title: 'Helmelk',
+				antall: 2,
+				mengde: 'dl'
+			},
+			{
+				title: 'Hvetemel',
+				antall: 4,
+				mengde: 'dl'
+			}
+		],
+		oppskrift: [
+			{
+				steg: 'Kok opp vann i en stor kjele.'
+			},
+			{
+				steg:
+					'Smelt smør i en middels stor kjele. Hell i fløte, og kok sakte opp. La dette koke på lav temperatur i rundt fem minutter. Rør av og til.'
+			},
+			{
+				steg: 'Ha litt salt i kokevannet, og kok pasta som anvist på pakken. Hell vannet av pastaen.'
+			},
+			{
+				steg:
+					'Ha parmesan i fløtesausen, og smak til med salt og pepper. Bland den nykokte pastaen inn i sausen, og server. Topp gjerne med ekstra parmesan og frisk basilikum.'
+			}
+		],
+		tips: 'Legg gjerne noen skiver spekeskinke på retten rett før servering.',
+		bilde:
+			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/RecipePhotos%2Fomelett-med-gronnsaker.jpg?alt=media&token=d629bb4f-0785-4aee-b279-93e917ff3c0a',
+		html: `
+			<p>Gjør frokosten til en fest med disse deilige muffinsene. Oppskriften er enkel så du trenger ikke å være en proff på kjøkkenet. Disse passer perfekt til en hyggelig morgen for familien.</p>
+		`
+	},
+	{
+		id: '23',
+		title: 'Frukt med jordbær',
+		slug: 'frukt-med-jordbør',
+		kategori: 'Vegetar',
+		lengde: '5 minutter',
+		grad: 'Enkel',
+		type: 'dessert',
+		tid: '21.04.2020',
+		forfatter: 'Ola Nordmann',
+		stikkord: [ 'vegetar', 'dessert' ],
+		prdukter: [
+			{
+				title: 'Tinemelk',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Ftinemelk.png?alt=media&token=8059dd39-437e-45c9-bb5d-2b7784dc3a7f'
+			},
+			{
+				title: 'TINE Kremgo ananas',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fkremgo.png?alt=media&token=55f37516-0e7b-4e76-9610-a853c1e9b637'
+			}
+		],
+		ingredienser: [
+			{
+				title: 'Meierismør',
+				antall: 100,
+				mengde: 'g'
+			},
+			{
+				title: 'Egg',
+				antall: 3,
+				mengde: 'stk'
+			},
+			{
+				title: 'Helmelk',
+				antall: 2,
+				mengde: 'dl'
+			},
+			{
+				title: 'Hvetemel',
+				antall: 4,
+				mengde: 'dl'
+			}
+		],
+		oppskrift: [
+			{
+				steg: 'Kok opp vann i en stor kjele.'
+			},
+			{
+				steg:
+					'Smelt smør i en middels stor kjele. Hell i fløte, og kok sakte opp. La dette koke på lav temperatur i rundt fem minutter. Rør av og til.'
+			},
+			{
+				steg: 'Ha litt salt i kokevannet, og kok pasta som anvist på pakken. Hell vannet av pastaen.'
+			},
+			{
+				steg:
+					'Ha parmesan i fløtesausen, og smak til med salt og pepper. Bland den nykokte pastaen inn i sausen, og server. Topp gjerne med ekstra parmesan og frisk basilikum.'
+			}
+		],
+		tips: 'Legg gjerne noen skiver spekeskinke på retten rett før servering.',
+		bilde:
+			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/RecipePhotos%2Fenkel-bakst-kake-og-dessert.jpg?alt=media&token=8737c559-d445-4002-8aa6-d72bd1b9e03c',
+		html: `
+			<p>Gjør frokosten til en fest med disse deilige muffinsene. Oppskriften er enkel så du trenger ikke å være en proff på kjøkkenet. Disse passer perfekt til en hyggelig morgen for familien.</p>
+		`
+	},
+	{
+		id: '24',
+		title: 'Dessert Med Basilikumjordbær',
+		slug: 'dessert-med-basilikumjordbær',
+		kategori: 'Vegetar',
+		lengde: '20 minutter',
+		grad: 'Enkel',
+		type: 'dessert',
+		tid: '21.04.2020',
+		forfatter: 'Ola Nordmann',
+		stikkord: [ 'vegetar', 'dessert' ],
+		prdukter: [
+			{
+				title: 'Tinemelk',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Ftinemelk.png?alt=media&token=8059dd39-437e-45c9-bb5d-2b7784dc3a7f'
+			},
+			{
+				title: 'TINE Kremgo ananas',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fkremgo.png?alt=media&token=55f37516-0e7b-4e76-9610-a853c1e9b637'
+			}
+		],
+		ingredienser: [
+			{
+				title: 'Meierismør',
+				antall: 100,
+				mengde: 'g'
+			},
+			{
+				title: 'Egg',
+				antall: 3,
+				mengde: 'stk'
+			},
+			{
+				title: 'Helmelk',
+				antall: 2,
+				mengde: 'dl'
+			},
+			{
+				title: 'Hvetemel',
+				antall: 4,
+				mengde: 'dl'
+			}
+		],
+		oppskrift: [
+			{
+				steg: 'Kok opp vann i en stor kjele.'
+			},
+			{
+				steg:
+					'Smelt smør i en middels stor kjele. Hell i fløte, og kok sakte opp. La dette koke på lav temperatur i rundt fem minutter. Rør av og til.'
+			},
+			{
+				steg: 'Ha litt salt i kokevannet, og kok pasta som anvist på pakken. Hell vannet av pastaen.'
+			},
+			{
+				steg:
+					'Ha parmesan i fløtesausen, og smak til med salt og pepper. Bland den nykokte pastaen inn i sausen, og server. Topp gjerne med ekstra parmesan og frisk basilikum.'
+			}
+		],
+		tips: 'Legg gjerne noen skiver spekeskinke på retten rett før servering.',
+		bilde:
+			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/RecipePhotos%2Fdessert-med-bassilikum-jordb%C3%A6r.jpg?alt=media&token=46e1ef90-3a07-44ba-95a0-b58e9687c308',
 		html: `
 			<p>Gjør frokosten til en fest med disse deilige muffinsene. Oppskriften er enkel så du trenger ikke å være en proff på kjøkkenet. Disse passer perfekt til en hyggelig morgen for familien.</p>
 		`

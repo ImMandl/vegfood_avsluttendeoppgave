@@ -25,7 +25,7 @@
   // pagination
   let items = [...recipes];
   let currentPage = 1;
-  let pageSize = 8;
+  let pageSize = 12;
   $: paginatedItems = paginate({ items, pageSize, currentPage });
 
   /* filter */

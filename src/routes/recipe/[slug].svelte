@@ -167,9 +167,6 @@
   }
 
   /* ingredienser */
-  span {
-    cursor: pointer;
-  }
   .number {
     margin: 4px 0 24px;
     display: inline-block;
@@ -177,19 +174,16 @@
     border-radius: 26px;
     padding: 4px;
   }
-  .minus,
-  .plus {
-    width: 24px;
-    height: 24px;
+
+  .number button {
+    width: 42px;
+    height: 42px;
     background: #f2f2f2;
-    padding: 5px 5px 5px 5px;
     border: 1px solid #d1d1d1;
     border-radius: 50%;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
     font-size: 16px;
   }
+
   .value {
     height: 16px;
     width: 100px;
@@ -200,12 +194,13 @@
     border: none;
   }
 
-  .ingrediens-title {
-    margin-top: 32px;
+  .title {
+    margin-top: 24px;
   }
 
   .ingredients {
-    width: 200px;
+    width: auto;
+    max-width: 300px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     border-bottom: 1px solid #d1d1d1;
@@ -244,7 +239,7 @@
   .sidebar-grid-produkter {
     display: grid;
     grid-template-columns: auto auto;
-    gap: 4px;
+    gap: 8px;
     margin-bottom: 48px;
   }
 
@@ -252,10 +247,12 @@
     text-align: center;
     min-width: 100px;
     max-width: 165px;
+    margin-bottom: 16px;
   }
 
   .sidebar-item img {
     width: 80%;
+    height: 100px;
     padding: 8px;
     object-fit: contain;
   }
@@ -297,6 +294,11 @@
     .sidebar-grid-produkter {
       grid-template-columns: 1fr;
       justify-items: center;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
     }
   }
 </style>
@@ -363,12 +365,13 @@
       <div class="content">
         <hr />
         {@html recipe.html}
-        <h3 class="ingrediens-title">Ingredienser</h3>
+        <h3 class="title">Porsjoner</h3>
         <div class="number">
-          <span class="minus" on:click={decrement}>-</span>
-          <input class="value" type="number" bind:value={count_value} />
-          <span class="plus" on:click={increment}>+</span>
+          <button class="minus" on:click={decrement}>-</button>
+          <input class="value" type="text" bind:value={count_value} />
+          <button class="plus" on:click={increment}>+</button>
         </div>
+        <h3 class="title">Ingredienser</h3>
         {#each recipe.ingredienser as ingrediens}
           <div class="row ingredients">
             <p>{ingrediens.title}</p>
