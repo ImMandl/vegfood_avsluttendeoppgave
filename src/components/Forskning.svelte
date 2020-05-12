@@ -1,7 +1,3 @@
-<script>
-
-</script>
-
 <style>
   li {
     padding: 4px 0;

@@ -24,35 +24,53 @@ const recipes = [
 		],
 		ingredienser: [
 			{
+				title: 'Meierismør',
+				antall: 100,
+				mengde: 'g'
+			},
+			{
 				title: 'Egg',
-				antall: 2,
+				antall: 3,
 				mengde: 'stk'
 			},
 			{
-				title: 'Sukker',
+				title: 'Helmelk',
 				antall: 2,
+				mengde: 'dl'
+			},
+			{
+				title: 'Hvetemel',
+				antall: 4,
+				mengde: 'dl'
+			},
+			{
+				title: 'Bakepulver',
+				antall: 2,
+				mengde: 'ts'
+			},
+			{
+				title: 'Vaniljekrem',
+				antall: 5,
 				mengde: 'dl'
 			}
 		],
 		oppskrift: [
 			{
-				steg: 'Du trenger 12 vanlige muffinsformer. Sett stekeovnen på 190 °C.'
+				steg: 'Sett stekeovnen på 225 °C, og finn frem muffinsformer og eventuelt muffinsbrett.'
 			},
 			{
 				steg:
-					'Vips egg og sukker til lett og porøs eggedosis. Smelt smøret og bland det med melken. Ha det i eggedosisen. Bland det tørre og ha det i deigen til slutt.'
+					'Smelt smøret. Visp egg og sukker luftig. Rør i melk og smeltet smør. Bland i mel og bakepulver og rør om.'
+			},
+			{
+				steg: 'Fyll muffinsformene 3/4 fulle. Stek midt i ovnen i ca 15 minutter.'
 			},
 			{
 				steg:
-					'Tilsett smak etter eget ønske (bærsmak, sjokoladesmak eller gulrotkakesmak). Fordel røren i muffinsformene og stek dem i 20 - 25 minutter.'
-			},
-			{
-				steg:
-					'Pynt muffinsene med melisglasur, gjerne farget med konditorfarge, og pynt med nøtter, kakepynt eller godteri som for eksempel Nonstop.'
+					'Avkjøl. Skjær toppen av hver muffins, og lag en grop som fylles med vaniljekrem. Pynt med noe godt.'
 			}
 		],
-		tips:
-			'Lag en stor porsjon med deig som du deler og tilsetter ulike smaksvarianter. Så får barna litt av hvert å velge mellom.',
+		tips: 'Klipp av et hjørne på pakken, og fyll vaniljekrem rett i muffinsene.',
 		bilde:
 			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/RecipePhotos%2Fmuffins.jpg?alt=media&token=3b3e886b-9820-45b9-84c8-99fb4ce68ad4',
 		html: `
@@ -84,35 +102,28 @@ const recipes = [
 		],
 		ingredienser: [
 			{
-				title: 'Egg',
+				title: 'Søtpotet',
 				antall: 2,
 				mengde: 'stk'
 			},
 			{
-				title: 'Sukker',
-				antall: 2,
-				mengde: 'dl'
+				title: 'Olivenolje',
+				antall: 1,
+				mengde: 'ss'
 			}
 		],
 		oppskrift: [
 			{
-				steg: 'Du trenger 12 vanlige muffinsformer. Sett stekeovnen på 190 °C.'
+				steg: 'Sett ovnen på 220 °C. Del potet i båter, vend med paprikapulver, salt, pepper og olje.'
 			},
 			{
-				steg:
-					'Vips egg og sukker til lett og porøs eggedosis. Smelt smøret og bland det med melken. Ha det i eggedosisen. Bland det tørre og ha det i deigen til slutt.'
+				steg: 'Fordel potetbåtene i en langpanne og legg noe biter med smør utover.'
 			},
 			{
-				steg:
-					'Tilsett smak etter eget ønske (bærsmak, sjokoladesmak eller gulrotkakesmak). Fordel røren i muffinsformene og stek dem i 20 - 25 minutter.'
-			},
-			{
-				steg:
-					'Pynt muffinsene med melisglasur, gjerne farget med konditorfarge, og pynt med nøtter, kakepynt eller godteri som for eksempel Nonstop.'
+				steg: 'Stek i ovnen i ca. 25 minutter eller til potetbåtene er møre og gylne.'
 			}
 		],
-		tips:
-			'Lag en stor porsjon med deig som du deler og tilsetter ulike smaksvarianter. Så får barna litt av hvert å velge mellom.',
+		tips: 'Krydre til med det du er glad i for å få den smaken du liker.',
 		bilde:
 			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/RecipePhotos%2Fsotpotet-fries.jpg?alt=media&token=2305e4e6-f431-4986-9771-974f11aef033',
 		html: `
@@ -144,13 +155,33 @@ const recipes = [
 		],
 		ingredienser: [
 			{
+				title: 'Meierismør',
+				antall: 100,
+				mengde: 'g'
+			},
+			{
 				title: 'Egg',
-				antall: 2,
+				antall: 3,
 				mengde: 'stk'
 			},
 			{
-				title: 'Sukker',
+				title: 'Helmelk',
 				antall: 2,
+				mengde: 'dl'
+			},
+			{
+				title: 'Hvetemel',
+				antall: 4,
+				mengde: 'dl'
+			},
+			{
+				title: 'Bakepulver',
+				antall: 2,
+				mengde: 'ts'
+			},
+			{
+				title: 'Vaniljekrem',
+				antall: 5,
 				mengde: 'dl'
 			}
 		],
@@ -264,13 +295,33 @@ const recipes = [
 		],
 		ingredienser: [
 			{
+				title: 'Meierismør',
+				antall: 100,
+				mengde: 'g'
+			},
+			{
 				title: 'Egg',
-				antall: 2,
+				antall: 3,
 				mengde: 'stk'
 			},
 			{
-				title: 'Sukker',
+				title: 'Helmelk',
 				antall: 2,
+				mengde: 'dl'
+			},
+			{
+				title: 'Hvetemel',
+				antall: 4,
+				mengde: 'dl'
+			},
+			{
+				title: 'Bakepulver',
+				antall: 2,
+				mengde: 'ts'
+			},
+			{
+				title: 'Vaniljekrem',
+				antall: 5,
 				mengde: 'dl'
 			}
 		],
@@ -330,7 +381,7 @@ const recipes = [
 			},
 			{
 				title: 'Sukker',
-				antall: 2,
+				antall: 1,
 				mengde: 'dl'
 			}
 		],
@@ -384,13 +435,33 @@ const recipes = [
 		],
 		ingredienser: [
 			{
+				title: 'Meierismør',
+				antall: 100,
+				mengde: 'g'
+			},
+			{
 				title: 'Egg',
-				antall: 2,
+				antall: 3,
 				mengde: 'stk'
 			},
 			{
-				title: 'Sukker',
+				title: 'Helmelk',
 				antall: 2,
+				mengde: 'dl'
+			},
+			{
+				title: 'Hvetemel',
+				antall: 4,
+				mengde: 'dl'
+			},
+			{
+				title: 'Bakepulver',
+				antall: 2,
+				mengde: 'ts'
+			},
+			{
+				title: 'Vaniljekrem',
+				antall: 5,
 				mengde: 'dl'
 			}
 		],
@@ -450,7 +521,7 @@ const recipes = [
 			},
 			{
 				title: 'Sukker',
-				antall: 2,
+				antall: 1,
 				mengde: 'dl'
 			}
 		],
@@ -564,13 +635,33 @@ const recipes = [
 		],
 		ingredienser: [
 			{
+				title: 'Meierismør',
+				antall: 100,
+				mengde: 'g'
+			},
+			{
 				title: 'Egg',
-				antall: 2,
+				antall: 3,
 				mengde: 'stk'
 			},
 			{
-				title: 'Sukker',
+				title: 'Helmelk',
 				antall: 2,
+				mengde: 'dl'
+			},
+			{
+				title: 'Hvetemel',
+				antall: 4,
+				mengde: 'dl'
+			},
+			{
+				title: 'Bakepulver',
+				antall: 2,
+				mengde: 'ts'
+			},
+			{
+				title: 'Vaniljekrem',
+				antall: 5,
 				mengde: 'dl'
 			}
 		],

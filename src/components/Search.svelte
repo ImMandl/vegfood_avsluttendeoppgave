@@ -25,7 +25,7 @@
 
   .search-container {
     background-image: url("images/searchbackground.jpg");
-    background-color: #d1d1d1; /* used if the image does not show */
+    background-color: #d1d1d1; /* bakgrunnsfarge hvis bakgrunnsbilde ikke vises */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

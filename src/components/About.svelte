@@ -8,7 +8,6 @@
     font-size: 32px;
   }
 
-  /* ABOUT */
   .about {
     margin-bottom: 48px;
   }

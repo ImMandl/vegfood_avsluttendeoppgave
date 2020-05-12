@@ -66,13 +66,13 @@
   let isFavorited = undefined;
   $: isFavorited;
 
-  // Ganging for ingredienser
-  const decrement = () => {
-    count.update(n => n - 1);
-  };
-
+  // Ganger ingredienser opp og ned
   const increment = () => {
     count.update(n => n + 1);
+  };
+
+  const decrement = () => {
+    count.update(n => n - 1);
   };
 
   const unsubscribeCount = count.subscribe(value => {
@@ -104,7 +104,7 @@
     gap: 24px;
   }
 
-  /* content on left / main content */
+  /* hovedinnhold */
   .main-content img {
     width: 100%;
     max-height: 400px;
@@ -166,7 +166,7 @@
     cursor: pointer;
   }
 
-  /* ingredients */
+  /* ingredienser */
   span {
     cursor: pointer;
   }
@@ -236,7 +236,7 @@
     font-size: 16px;
   }
 
-  /* content on right / side content */
+  /* sideinnhold */
   .sidebar {
     width: 100%;
   }
@@ -250,6 +250,8 @@
 
   .sidebar-item {
     text-align: center;
+    min-width: 100px;
+    max-width: 165px;
   }
 
   .sidebar-item img {
@@ -258,7 +260,7 @@
     object-fit: contain;
   }
 
-  /* .breadcrumb */
+  /* breadcrumb */
   .breadcrumb {
     display: flex;
     flex-direction: row;
@@ -277,6 +279,25 @@
 
   .breadcrumb a:hover {
     color: #1d4374;
+  }
+
+  /* responsivt */
+  @media only screen and (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .sidebar-grid-produkter {
+      grid-template-columns: repeat(auto-fit, minmax(80px, 165px));
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    .sidebar-grid-produkter {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
   }
 </style>
 
@@ -385,8 +406,6 @@
           </div>
         {/each}
       </div>
-      <h3>Lignende oppskrifter</h3>
-      <div class="sidebar-oppskrifter" />
     </div>
   </div>
 </div>

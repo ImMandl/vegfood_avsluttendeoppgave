@@ -44,7 +44,7 @@
   }
 </style>
 
-<!-- For big screens (over 1024px) -->
+<!-- stor skjerm over 1024px -->
 <div class="wrapper big-screen">
   <div class="kategori">
     <a aria-current={segment === 'frokost' ? 'page' : undefined} href="frokost">
@@ -80,7 +80,7 @@
   </div>
 </div>
 
-<!-- For screens under 1024px -->
+<!-- skjerm under 1024px -->
 <div class="wrapper small-screen">
   <Carousel
     draggable={true}

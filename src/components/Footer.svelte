@@ -11,7 +11,7 @@
 
   let db; // ref til firestore
   let auth; // authentication
-  let mail = ""; // mail adresse for
+  let mail = ""; // mail adresse
   let nyhetsbrev; // ref til collection i firestore
 
   onMount(() => {
@@ -64,7 +64,7 @@
     padding-inline-end: 0;
   }
 
-  /* top part of footer */
+  /* øvre del av footer */
 
   .footer-top {
     display: grid;
@@ -86,6 +86,16 @@
     flex-direction: row;
   }
 
+  .main-input-container {
+    position: relative;
+  }
+
+  .main-input-container img {
+    position: absolute;
+    left: 0;
+    padding: 9px 8px 9px 16px;
+  }
+
   .nyhetsbrev-form input {
     padding: 8px 20px 8px 42px;
     margin: 0px 8px;
@@ -104,13 +114,12 @@
     padding: 8px 20px;
     box-sizing: border-box;
     font-size: 14px;
-    font-family: "Montserrat", sans-serif;
     width: 100%;
   }
 
   button:hover {
     cursor: pointer;
-    background-color: #c5c5c5;
+    background-color: #9e9e9e;
   }
 
   .social {
@@ -164,6 +173,10 @@
     .nyhetsbrev-form input {
       margin-left: 0;
     }
+
+    .nyhetsbrev-form input {
+      padding: 8px 24px 8px 50px;
+    }
   }
 
   @media only screen and (max-width: 768px) {
@@ -193,7 +206,7 @@
     }
   }
 
-  /* bottom part of fotter */
+  /* nedre del av footer */
   .footer-bottom {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -224,16 +237,6 @@
     align-self: flex-start;
     margin-top: 8px;
     height: 34px;
-  }
-
-  .main-input-container {
-    position: relative;
-  }
-
-  .main-input-container img {
-    position: absolute;
-    left: 0;
-    padding: 9px 8px 9px 16px;
   }
 </style>
 
@@ -295,6 +298,11 @@
           aria-current={segment === 'favoritter' ? 'page' : undefined}
           href="favoritter">
           Mine favoritter
+        </a>
+        <a
+          aria-current={segment === 'recipe' ? 'page' : undefined}
+          href="recipe">
+          Oppskrifter
         </a>
       </div>
       <div class="info column">

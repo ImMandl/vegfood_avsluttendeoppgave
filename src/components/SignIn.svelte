@@ -44,7 +44,7 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  /* image on left */
+  /* bilde på venstre */
   .sign-in-image {
     width: 100%;
     max-height: 600px;
@@ -57,7 +57,7 @@
     height: 100%;
   }
 
-  /* regular sign in form */
+  /* høyre side */
   .logginn-grid {
     display: flex;
     flex-direction: column;
@@ -70,7 +70,7 @@
     text-align: center;
   }
 
-  /* google sign in button */
+  /* google logg inn btn */
   .google-btn {
     width: 184px;
     height: 42px;

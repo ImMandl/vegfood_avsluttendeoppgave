@@ -13,12 +13,14 @@
   let unsubscribe;
   let nyhetsbrev; // ref til collection i firestore
   let slettNyhetsbrev; // avmelder bruker fra nyhetsbrev / sletter brukerens mail fra nyhetsbrev databsen
+  let nyhetsbrevArray = []; // inneholder mail fra nyhetsbrev
 
   onMount(() => {
     db = firebase.firestore();
+    nyhetsbrev = db.collection("nyhetsbrev");
+
     auth = firebase.auth();
     googleProvider = new firebase.auth.GoogleAuthProvider();
-    nyhetsbrev = db.collection("nyhetsbrev");
 
     login = () => {
       auth.signInWithPopup(googleProvider);
@@ -35,6 +37,11 @@
       nyhetsbrev.doc(user.email).delete();
       alert("Du er nå avmeldt vårt ukentlige nyhetsbrev");
     };
+
+    nyhetsbrev.onSnapshot(snap => {
+      nyhetsbrevArray = snap.docs;
+      nyhetsbrevArray.includes(user.email);
+    });
   });
 </script>
 
@@ -66,6 +73,21 @@
 
   .right {
     margin-left: auto;
+  }
+
+  button {
+    background-color: #d1d1d1;
+    border: none;
+    border-radius: 18px;
+    padding: 6px 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  button:hover {
+    cursor: pointer;
+    background-color: #9e9e9e;
   }
 
   @media only screen and (max-width: 1024px) {
@@ -100,12 +122,14 @@
       <div class="divider" />
       <div class="section">
         <h3>Nyhetsbrev</h3>
-        {#if nyhetsbrev.id === user.email}
-          <p>Du er meldt på vårt ukentlige nyhetsbrev</p>
-          <button on:click={slettNyhetsbrev}>Meld meg av</button>
+        {#each nyhetsbrevArray as nyhetsbrev}
+          {#if nyhetsbrev.data().mail === user.email}
+            <p>Du er meldt på vårt ukentlige nyhetsbrev</p>
+            <button on:click={slettNyhetsbrev}>Meld meg av</button>
+          {/if}
         {:else}
           <p>Du har ikke abonnert på et nyhetsbrev enda</p>
-        {/if}
+        {/each}
       </div>
     </div>
   {:else}

@@ -1,7 +1,3 @@
-<script>
-
-</script>
-
 <style>
   h1 {
     color: #3da839;
