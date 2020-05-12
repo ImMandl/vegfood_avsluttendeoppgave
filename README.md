@@ -9,7 +9,7 @@ VegFood is a website with vegeterian and vegan recipes. It's  built using <a hre
 ### Demo
 Go to <a href="#">demo</a>
 
-N.B. If you are having trouble with firestore authentication when viewing the page try refreshing the it.
+N.B. If you are having trouble with firestore authentication when viewing the page try to refresh the site.
 
 
 ### Download
