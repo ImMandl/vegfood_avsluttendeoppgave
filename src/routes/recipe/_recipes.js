@@ -1462,7 +1462,7 @@ const recipes = [
 		id: '22',
 		title: 'Omelettrull Med Grønnsaker',
 		slug: 'omelettrull-med-grønnsaker',
-		kategori: 'Vegan',
+		kategori: 'Vegetar',
 		lengde: '40 minutter',
 		grad: 'Enkel',
 		type: 'frokost',

@@ -12,7 +12,6 @@
   export let recipes;
   export let segment;
 
-  import { Circle } from "svelte-loading-spinners";
   import { paginate, LightPaginationNav } from "svelte-paginate";
 
   let dropdownArrow = "graphics/icons-dropdown-arrow.svg";
@@ -23,9 +22,9 @@
   let group = undefined; // group binded checkboxes
   let current = ""; // current active for filter buttons
   // pagination
-  let items = [...recipes];
-  let currentPage = 1;
-  let pageSize = 12;
+  let items = [...recipes]; // sender oppskrift array inn i items som vises i pagination
+  let currentPage = 1; // strter på side 1
+  let pageSize = 12; // hvor mange oppskrifter maks per side
   $: paginatedItems = paginate({ items, pageSize, currentPage });
 
   /* filter */
@@ -44,41 +43,49 @@
   const oppskriftToggle = () => {
     current = "alle";
     notFiltered();
+    currentPage = 1;
   };
 
   const vegetarToggle = () => {
     current = "vegetar";
     filteredVegetar();
+    currentPage = 1;
   };
 
   const veganToggle = () => {
     current = "vegan";
     filteredVegan();
+    currentPage = 1;
   };
 
   const frokostToggle = () => {
     current = "frokost";
     filteredFrokost();
+    currentPage = 1;
   };
 
   const nisteToggle = () => {
     current = "niste";
     filteredNiste();
+    currentPage = 1;
   };
 
   const middagToggle = () => {
     current = "middag";
     filteredMiddag();
+    currentPage = 1;
   };
 
   const dessertToggle = () => {
     current = "dessert";
     filteredDessert();
+    currentPage = 1;
   };
 
   const smaarettToggle = () => {
     current = "smaarett";
     filteredSmaaretter();
+    currentPage = 1;
   };
 
   let notFiltered = () => {
@@ -173,14 +180,6 @@
   }
 
   /* pagination */
-  /*   .your-nav :global(.pagination-nav): The navigation container element.
-.your-nav :global(.option): Each option in the navigation (including ellipsis, next and prev buttons).
-.your-nav :global(.option.active): The currently active page number.
-.your-nav :global(.option.ellipsis): The ellipsis option.
-.your-nav :global(.option.number): Only page numbers.
-.your-nav :global(.option.prev): The prev option.
-.your-nav :global(.option.next): The next option.
-.your-nav :global(.option.disabled): Targets the prev and next options when they are disabled (when you're on the first or last page). */
   .your-nav :global(.pagination-nav) {
     background-color: transparent;
     box-shadow: none;
@@ -272,7 +271,6 @@
     {:else}
       <div class="loading-message">
         <p>henter oppskrifter...</p>
-        {Circle}
       </div>
     {/each}
   </div>
