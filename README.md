@@ -15,7 +15,7 @@ N.B. If you are having trouble with firestore authentication when viewing the pa
 ### Download
 Clone or download the file, then run:
 ```bash
-npm run dev
+npm start
 ```
 
 
