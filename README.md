@@ -7,7 +7,7 @@ VegFood is a website with vegeterian and vegan recipes. It's  built using <a hre
 ## Setup
 
 ### Demo
-Go to <a href="https://immandl.github.io/vegfood_avsluttendeoppgave/">demo</a>
+Go to <a href="https://vegfood-avsluttendeoppgave-igzcrzh01.now.sh/">demo</a>
 
 N.B. If you are having trouble with firestore authentication when viewing the page try to refresh the site.
 
