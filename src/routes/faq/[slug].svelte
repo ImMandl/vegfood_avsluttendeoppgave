@@ -49,7 +49,7 @@
     Spørsmål og svar
   </a>
   <img src="https://image.flaticon.com/icons/svg/271/271228.svg" alt="" />
-  <p>{faq.title}</p>
+  <p>Svar</p>
 </div>
 
 <div class="container">

@@ -7,8 +7,9 @@ VegFood is a website with vegeterian and vegan recipes. It's  built using <a hre
 ## Setup
 
 ### Demo
-Go to <a href="https://vegfood-avsluttendeoppgave-igzcrzh01.now.sh/">demo</a>
+Go to <a href="https://vegfood-avsluttendeoppgave-mytvpxkgh.now.sh/">demo</a>
 
+N.B Might have to wait a bit before moving around the page or you can get error 500
 N.B. If you are having trouble with firestore authentication when viewing the page try to refresh the site.
 
 

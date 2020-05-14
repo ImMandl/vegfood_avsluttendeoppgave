@@ -258,27 +258,6 @@
     object-fit: contain;
   }
 
-  /* breadcrumb */
-  .breadcrumb {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 24px;
-  }
-
-  .breadcrumb img {
-    height: 12px;
-    margin: 0 8px;
-  }
-
-  .breadcrumb a {
-    color: #333;
-  }
-
-  .breadcrumb a:hover {
-    color: #1d4374;
-  }
-
   /* responsivt */
   @media only screen and (max-width: 768px) {
     .grid {
@@ -312,10 +291,10 @@
   <a aria-current={segment === undefined ? 'page' : undefined} href=".">Hjem</a>
   <img src="https://image.flaticon.com/icons/svg/271/271228.svg" alt="" />
   <a aria-current={segment === 'recipe' ? 'page' : undefined} href="recipe">
-    Oppskrifter
+    Oppskriftliste
   </a>
   <img src="https://image.flaticon.com/icons/svg/271/271228.svg" alt="" />
-  <p>{recipe.title}</p>
+  <p>Oppskrift</p>
 </div>
 
 <div class="container">

@@ -197,8 +197,8 @@ button:focus {
 
 /* .breadcrumb */
 .breadcrumb {
-	display: flex;
-	flex-direction: row;
+	display: inline-grid;
+	grid-template-columns: repeat(5, auto);
 	align-items: center;
 	margin-bottom: 24px;
 }

@@ -72,7 +72,8 @@
     margin: 0 16px;
     padding: 16px 16px 16px 24px;
     z-index: 100;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 
   .results-bilde {
