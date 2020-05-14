@@ -2,12 +2,11 @@
   import Categories from "./Categories.svelte";
   import Search from "./Search.svelte";
   import RecipeTileNewest from "../components/RecipeTileNewest.svelte";
+  import { onMount } from "svelte";
+  import { authState } from "rxfire/auth";
   export let segment;
 
   let SignInImage = "images/signinimage.jpg";
-
-  import { onMount } from "svelte";
-  import { authState } from "rxfire/auth";
   let db; // ref til firestore
   let auth; // authentication
   let googleProvider; // Google innlogging

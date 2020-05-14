@@ -1,14 +1,13 @@
 <script>
   import Carousel from "@beyonk/svelte-carousel";
   import { ChevronLeftIcon, ChevronRightIcon } from "svelte-feather-icons";
+  export let segment;
 
   let frokost = "graphics/coffee.svg";
   let niste = "graphics/diet.svg";
   let middag = "graphics/spaghetti.svg";
   let dessert = "graphics/ice-cream.svg";
   let smaaretter = "graphics/pancake.svg";
-
-  export let segment;
 </script>
 
 <style>

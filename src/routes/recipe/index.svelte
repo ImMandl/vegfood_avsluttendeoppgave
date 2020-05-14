@@ -9,10 +9,10 @@
 </script>
 
 <script>
+  import { paginate, LightPaginationNav } from "svelte-paginate";
+
   export let recipes;
   export let segment;
-
-  import { paginate, LightPaginationNav } from "svelte-paginate";
 
   let dropdownArrow = "graphics/icons-dropdown-arrow.svg";
   let dropdownRightArrow = "graphics/icons-dropdown-right-arrow.svg";

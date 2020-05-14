@@ -1,5 +1,9 @@
 <script>
+  import { onMount } from "svelte";
+  import { authState } from "rxfire/auth";
+  import recipes from "../routes/recipe/_recipes.js";
   export let segment;
+
   let logo = "graphics/horizontal-logo.svg";
   let logoIcon = "graphics/logo-icon.svg";
   let searchIcon = "graphics/icons-search.svg";
@@ -8,9 +12,6 @@
   let recipeIcon = "graphics/recipe.svg";
   let newsIcon = "graphics/newspaper.svg";
 
-  import { onMount } from "svelte";
-  import { authState } from "rxfire/auth";
-  import recipes from "../routes/recipe/_recipes.js";
   let db; // ref til firestore
   let auth; // authentication
   let logout; // logg ut

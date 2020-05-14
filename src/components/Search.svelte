@@ -1,6 +1,6 @@
 <script>
-  let searchIcon = "graphics/icons-search.svg";
   import recipes from "../routes/recipe/_recipes.js";
+  let searchIcon = "graphics/icons-search.svg";
 
   let searchQuery = "";
 

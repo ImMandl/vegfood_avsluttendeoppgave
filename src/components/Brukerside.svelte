@@ -1,7 +1,8 @@
 <script>
-  export let segment;
   import { onMount } from "svelte";
   import { authState } from "rxfire/auth";
+  export let segment;
+
   let db; // ref til firestore
   let auth; // authentication
   let googleProvider; // Google innlogging

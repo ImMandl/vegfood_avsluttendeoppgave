@@ -15,6 +15,7 @@
   import { onMount } from "svelte";
   import { authState } from "rxfire/auth";
   import { favorittArray, count, favorites } from "../../store.js";
+
   export let recipe;
   export let segment;
 

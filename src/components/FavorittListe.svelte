@@ -1,7 +1,8 @@
 <script>
-  export let segment;
   import { onMount } from "svelte";
   import { authState } from "rxfire/auth";
+  export let segment;
+
   let db; // ref til firestore
   let auth; // authentication
   let googleProvider; // Google innlogging
@@ -105,7 +106,6 @@
     font-size: 12px;
     color: #333;
     padding: 4px 16px;
-    font-family: "Montserrat", sans-serif;
   }
   .handlinger a:hover,
   .handlinger button:hover {
@@ -114,6 +114,74 @@
 
   .row {
     align-items: center;
+  }
+
+  @media only screen and (max-width: 760px) {
+    /* Tvinge table til å ikke se ut som en table lenger*/
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+
+    /* Fjerner table header */
+    thead tr {
+      display: none;
+    }
+
+    .favoritt-table tr {
+      margin-bottom: 32px;
+      border-bottom: 1px solid #d1d1d1;
+    }
+
+    .favoritt-table td {
+      /* Oppfører seg som en "row" */
+      border: none;
+      position: relative;
+      padding-left: 50%;
+      padding-top: 16px;
+    }
+
+    .favoritt-table td:before {
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+    }
+
+    .favoritt-table td {
+      padding: 42px 8px 12px;
+      border-bottom: none;
+    }
+
+    /* Nye labels */
+    td:nth-of-type(1):before {
+      content: "Oppskrift";
+      font-weight: 600;
+    }
+    td:nth-of-type(2):before {
+      content: "Kategori";
+      font-weight: 600;
+    }
+    td:nth-of-type(3):before {
+      content: "Grad";
+      font-weight: 600;
+    }
+    td:nth-of-type(4):before {
+      content: "Forfatter";
+      font-weight: 600;
+    }
+    td:nth-of-type(5):before {
+      content: "Handlinger";
+      font-weight: 600;
+    }
   }
 </style>
 
@@ -156,24 +224,28 @@
           </th>
         </tr>
       {:else}
-        <tr>
-          <th>Oppskrift</th>
-          <th>Kategori</th>
-          <th>Grad</th>
-          <th>Forfatter</th>
-          <th>Handlinger</th>
-        </tr>
-        {#each favorittListe.slice(0, value) as favoritt}
+        <thead>
           <tr>
-            <td>{favoritt.title}</td>
-            <td>{favoritt.kategori}</td>
-            <td>{favoritt.grad}</td>
-            <td>{favoritt.forfatter}</td>
-            <td class="handlinger">
-              <a rel="prefetch" href="recipe/{favoritt.slug}">Gå til</a>
-              <button on:click={fjernFavoritt}>Slett</button>
-            </td>
+            <th>Oppskrift</th>
+            <th>Kategori</th>
+            <th>Grad</th>
+            <th>Forfatter</th>
+            <th>Handlinger</th>
           </tr>
+        </thead>
+        {#each favorittListe.slice(0, value) as favoritt}
+          <tbody>
+            <tr>
+              <td>{favoritt.title}</td>
+              <td>{favoritt.kategori}</td>
+              <td>{favoritt.grad}</td>
+              <td>{favoritt.forfatter}</td>
+              <td class="handlinger">
+                <a rel="prefetch" href="recipe/{favoritt.slug}">Gå til</a>
+                <button on:click={fjernFavoritt}>Slett</button>
+              </td>
+            </tr>
+          </tbody>
         {/each}
       {/if}
     {:else}

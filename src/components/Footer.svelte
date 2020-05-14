@@ -1,13 +1,13 @@
 <script>
+  import { onMount } from "svelte";
+  export let segment;
+
   let logo = "graphics/horizontal-logo.svg";
   let fb = "graphics/fb-icon.svg";
   let instagram = "graphics/instagram-icon.svg";
   let twitter = "graphics/twitter-icon.svg";
   let yt = "graphics/yt-icon.svg";
   let mailIcon = "graphics/icons-email.svg";
-
-  export let segment;
-  import { onMount } from "svelte";
 
   let db; // ref til firestore
   let auth; // authentication
