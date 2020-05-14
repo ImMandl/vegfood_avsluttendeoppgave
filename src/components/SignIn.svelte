@@ -1,6 +1,6 @@
 <script>
   import Categories from "./Categories.svelte";
-  import Search from "./search.svelte";
+  import Search from "./Search.svelte";
   import RecipeTileNewest from "../components/RecipeTileNewest.svelte";
   export let segment;
 
