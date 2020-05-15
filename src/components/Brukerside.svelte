@@ -13,7 +13,8 @@
   let user; // bruker
   let unsubscribe;
   let nyhetsbrev; // ref til collection i firestore
-  let slettNyhetsbrev; // avmelder bruker fra nyhetsbrev / sletter brukerens mail fra nyhetsbrev databsen
+  let slettNyhetsbrev; // avmelder bruker fra nyhetsbrev / sletter brukerens mail fra nyhetsbrev databasen
+  let registrerEpost; // melder bruker på nyhetsbrev / legger brukerens mail til i nyhetsbrev databasen
   let nyhetsbrevArray = []; // inneholder mail fra nyhetsbrev
 
   onMount(() => {

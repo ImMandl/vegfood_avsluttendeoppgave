@@ -31,12 +31,27 @@
   li:before {
     content: "";
     display: inline-block;
-    height: 32px;
-    width: 32px;
+    min-height: 32px;
+    min-width: 32px;
     background-image: url(https://image.flaticon.com/icons/svg/1621/1621609.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    padding-right: 8px;
+    margin-right: 8px;
+  }
+
+  a {
+    word-wrap: break-word;
+  }
+
+  @media only screen and (max-width: 540px) {
+    ul {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+
+    li {
+      padding: 16px 0;
+      margin-left: 8px;
+    }
   }
 </style>
 

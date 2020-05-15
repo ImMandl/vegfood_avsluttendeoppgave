@@ -7,7 +7,7 @@
 
 <style>
   .wrapper {
-    /* keeps the footer at the bottom of the screen despite the amount of content */
+    /* Holder footer nederst på siden selv om det er lite innhold*/
     min-height: 71vh;
     background-color: #fafafa;
   }

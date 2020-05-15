@@ -72,18 +72,18 @@
     width: 100%;
   }
 
-  .favoritt-table td,
-  .favoritt-table th {
+  td,
+  th {
     border: none;
     text-align: left;
   }
 
-  .favoritt-table td {
+  td {
     border-bottom: 1px solid #d1d1d1;
     padding: 16px 8px;
   }
 
-  .favoritt-table th {
+  th {
     padding: 0 8px 16px;
     background-color: transparent;
   }
@@ -132,12 +132,12 @@
       display: none;
     }
 
-    .favoritt-table tr {
+    tr {
       margin-bottom: 32px;
       border-bottom: 1px solid #d1d1d1;
     }
 
-    .favoritt-table td {
+    td {
       /* Oppfører seg som en "row" */
       border: none;
       position: relative;
@@ -145,7 +145,7 @@
       padding-top: 16px;
     }
 
-    .favoritt-table td:before {
+    td:before {
       /* Now like a table header */
       position: absolute;
       /* Top/left values mimic padding */
@@ -156,7 +156,7 @@
       white-space: nowrap;
     }
 
-    .favoritt-table td {
+    td {
       padding: 42px 8px 12px;
       border-bottom: none;
     }

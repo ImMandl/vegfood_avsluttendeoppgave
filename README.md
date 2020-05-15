@@ -4,12 +4,14 @@ VegFood is a website with vegeterian and vegan recipes. It's  built using <a hre
 
 **All recipes are placeholders. This website is made for my finishing exam at Fagskolen Kristiania. The most filled out recipe is "Muffin frokokst". All recipes are in Norwegian.
 
+Project has been tested on the newest versions of chrome, firefox, opera and edge
+
 ## Setup
 
 ### Demo
-Go to <a href="https://vegfood-avsluttendeoppgave-mytvpxkgh.now.sh/">demo</a>
+Go to <a href="https://vegfood-avsluttendeoppgave.immandl.now.sh/">demo</a>
 
-N.B Might have to wait a bit before moving around the page or you can get error 500
+N.B You might have to wait a bit before moving around the page or you can get error 500 or that nothing happens
 N.B. If you are having trouble with firestore authentication when viewing the page try to refresh the site.
 
 
@@ -32,7 +34,7 @@ This site...
 - uses <a href="https://svelte.dev/docs#svelte_store">Svelte store</a> to keep favorited recipes and multiply ingredients on the detail page for recipes. Favorited recipes will reset if you refresh the page.
 - uses <a href="https://github.com/Schum123/svelte-loading-spinners#svelte-loading-spinners">Svelte-loading-spinners</a> to show when items is loading.
 - uses <a href="https://github.com/beyonk-adventures/svelte-carousel#svelte-carousel">Svelte Carousel</a>. Is used for categories on frontpage to help make the site easily responive.
-- uses <a href="https://github.com/TahaSh/svelte-paginate">Svelte-paginate</a> to limit the amount of recipes shown per page.
+- uses <a href="https://www.npmjs.com/package/svelte-scrollto">Svelte-scrollto</a> to scroll to top after pressed previous or next on recipe list page.
 
 ### Styling
 

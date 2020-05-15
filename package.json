@@ -34,6 +34,7 @@
 		"svelte-loading-spinners": "0.0.17",
 		"svelte-paginate": "0.0.0",
 		"svelte-preprocess": "^3.7.4",
+		"svelte-scrollto": "^0.1.1",
 		"webpack": "^4.7.0"
 	}
 }

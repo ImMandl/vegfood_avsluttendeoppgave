@@ -154,13 +154,13 @@ const recipes = [
 		id: '3',
 		title: 'Honning, banan og blåbær smørbrød',
 		slug: 'honning-banan-og-blaabaer-smorbrod',
-		kategori: 'Vegan',
+		kategori: 'Vegetar',
 		lengde: '20 minutter',
 		grad: 'Enkel',
 		type: 'frokost',
 		tid: '18.04.2020',
 		forfatter: 'Ola Nordmann',
-		stikkord: [ 'vegan', 'frokost' ],
+		stikkord: [ 'vegetar', 'frokost' ],
 		prdukter: [
 			{
 				title: 'Tinemelk',

@@ -9,23 +9,50 @@
 </script>
 
 <script>
-  import { paginate, LightPaginationNav } from "svelte-paginate";
+  import * as animateScroll from "svelte-scrollto";
 
   export let recipes;
   export let segment;
 
   let dropdownArrow = "graphics/icons-dropdown-arrow.svg";
   let dropdownRightArrow = "graphics/icons-dropdown-right-arrow.svg";
+  let arrowLeft = "graphics/arrow-left.svg";
+  let arrowRight = "graphics/arrow-right.svg";
   let showKategori = false; // starter som lukket
   let showMåltid = false; // starter som lukket
   let yes = false; // starter ikke på
   let group = undefined; // group binded checkboxes
   let current = ""; // current active for filter buttons
+
   // pagination
   let items = [...recipes]; // sender oppskrift array inn i items som vises i pagination
-  let currentPage = 1; // strter på side 1
-  let pageSize = 12; // hvor mange oppskrifter maks per side
-  $: paginatedItems = paginate({ items, pageSize, currentPage });
+  $: numItems = items.length;
+
+  let startPosition = 0;
+  let itemsPerPage = 12;
+
+  $: numPages = Math.ceil(numItems / itemsPerPage);
+  $: endPosition = startPosition + itemsPerPage;
+  $: currentItems = items.filter(
+    (item, i) => i >= startPosition && i < endPosition
+  );
+
+  $: disabledPrev = startPosition - itemsPerPage < 0;
+  $: disabledNext = startPosition + itemsPerPage >= numItems;
+
+  $: currentPage = 1 + startPosition / itemsPerPage;
+
+  $: pageArray = items.filter((item, i) => i % itemsPerPage === 0);
+
+  const next = () => {
+    startPosition += itemsPerPage;
+    animateScroll.scrollToTop();
+  };
+
+  const prev = () => {
+    startPosition -= itemsPerPage;
+    animateScroll.scrollToTop();
+  };
 
   /* filter */
   const toggleKategori = () => {
@@ -43,49 +70,41 @@
   const oppskriftToggle = () => {
     current = "alle";
     notFiltered();
-    currentPage = 1;
   };
 
   const vegetarToggle = () => {
     current = "vegetar";
     filteredVegetar();
-    currentPage = 1;
   };
 
   const veganToggle = () => {
     current = "vegan";
     filteredVegan();
-    currentPage = 1;
   };
 
   const frokostToggle = () => {
     current = "frokost";
     filteredFrokost();
-    currentPage = 1;
   };
 
   const nisteToggle = () => {
     current = "niste";
     filteredNiste();
-    currentPage = 1;
   };
 
   const middagToggle = () => {
     current = "middag";
     filteredMiddag();
-    currentPage = 1;
   };
 
   const dessertToggle = () => {
     current = "dessert";
     filteredDessert();
-    currentPage = 1;
   };
 
   const smaarettToggle = () => {
     current = "smaarett";
     filteredSmaaretter();
-    currentPage = 1;
   };
 
   let notFiltered = () => {
@@ -180,10 +199,37 @@
   }
 
   /* pagination */
-  .your-nav :global(.pagination-nav) {
+  .pagination {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    gap: 16px;
+    margin: 8px 0 0 100px;
+  }
+
+  .pagination button {
+    border: none;
     background-color: transparent;
-    box-shadow: none;
-    margin-top: 16px;
+  }
+
+  .pagination-btn {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+  }
+
+  .pagination .arrow {
+    height: 16px;
+    width: 6px;
+    padding: 0 6px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .pagination {
+      margin-left: 0;
+    }
   }
 </style>
 
@@ -253,7 +299,7 @@
     {/if}
   </div>
   <div class="oppskrift-grid">
-    {#each paginatedItems as recipe}
+    {#each currentItems as recipe, i}
       <a rel="prefetch" href="recipe/{recipe.slug}">
         <div class="oppskrift-tile">
           <img src={recipe.bilde} alt="bilde" />
@@ -275,13 +321,14 @@
     {/each}
   </div>
 </div>
-
-<div class="your-nav">
-  <LightPaginationNav
-    totalItems={items.length}
-    {pageSize}
-    {currentPage}
-    limit={1}
-    showStepOptions={true}
-    on:setPage={e => (currentPage = e.detail.page)} />
+<div class="pagination">
+  <button class="pagination-btn" on:click={prev} disabled={disabledPrev}>
+    <img class="arrow" src={arrowLeft} alt="arrow icon" />
+    Forrige
+  </button>
+  <label>{currentPage} / {numPages}</label>
+  <button class="pagination-btn" on:click={next} disabled={disabledNext}>
+    Neste
+    <img class="arrow" src={arrowRight} alt="arrow icon" />
+  </button>
 </div>
