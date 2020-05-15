@@ -11,7 +11,7 @@ Project has been tested on the newest versions of chrome, firefox, opera and edg
 ### Demo
 Go to <a href="https://vegfood-avsluttendeoppgave.immandl.now.sh/">demo</a>
 
-N.B You might have to wait a bit before moving around the page or you can get error 500 or that nothing happens
+N.B You might have to wait a bit before moving around the page or you can get error 500 or that nothing happens because it loads a bit slow the first time.
 N.B. If you are having trouble with firestore authentication when viewing the page try to refresh the site.
 
 

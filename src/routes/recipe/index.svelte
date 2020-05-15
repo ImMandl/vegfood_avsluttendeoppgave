@@ -183,7 +183,7 @@
     justify-content: center;
     width: 100%;
     gap: 16px;
-    margin: 8px 0 0 100px;
+    margin: 16px 0 0 100px;
   }
 
   .pagination button {
