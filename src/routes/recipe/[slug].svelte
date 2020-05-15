@@ -76,6 +76,10 @@
     count.update(n => n - 1);
   };
 
+  $: disableDecrement = count_value <= 1; // antall porsjoner kan ikke være lavere enn 1, slår av knappen
+
+  $: disableIncrement = count_value >= 16; // antall porsjoner kan ikke være høyere enn 16, slår av knappen
+
   const unsubscribeCount = count.subscribe(value => {
     count_value = value;
   });
@@ -347,9 +351,21 @@
         {@html recipe.html}
         <h3 class="title">Porsjoner</h3>
         <div class="number">
-          <button class="minus" on:click={decrement}>-</button>
-          <input class="value" type="text" bind:value={count_value} />
-          <button class="plus" on:click={increment}>+</button>
+          <button
+            class="minus"
+            disabled={disableDecrement}
+            on:click={decrement}>
+            -
+          </button>
+          <input
+            class="value"
+            type="text"
+            bind:value={count_value}
+            min="1"
+            max="16" />
+          <button class="plus" disabled={disableIncrement} on:click={increment}>
+            +
+          </button>
         </div>
         <h3 class="title">Ingredienser</h3>
         {#each recipe.ingredienser as ingrediens}

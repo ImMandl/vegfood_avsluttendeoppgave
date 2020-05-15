@@ -28,10 +28,10 @@
   let items = [...recipes]; // sender oppskrift array inn i items som vises i pagination
   $: numItems = items.length;
 
-  let startPosition = 0;
-  let itemsPerPage = 12;
+  let startPosition = 0; // siden man starter på
+  let itemsPerPage = 12; // hvor mange oppskrifter per side
 
-  $: numPages = Math.ceil(numItems / itemsPerPage);
+  $: numPages = Math.ceil(numItems / itemsPerPage); // runner til helt tall
   $: endPosition = startPosition + itemsPerPage;
   $: currentItems = items.filter(
     (item, i) => i >= startPosition && i < endPosition
@@ -40,7 +40,7 @@
   $: disabledPrev = startPosition - itemsPerPage < 0;
   $: disabledNext = startPosition + itemsPerPage >= numItems;
 
-  $: currentPage = 1 + startPosition / itemsPerPage;
+  $: currentPage = 1 + startPosition / itemsPerPage; // siden man er på (+1 for at side 1 ikke skal være 0)
 
   $: pageArray = items.filter((item, i) => i % itemsPerPage === 0);
 
