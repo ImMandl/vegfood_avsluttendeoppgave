@@ -183,6 +183,10 @@
     .wrapper {
       padding: 0 16px;
     }
+
+    footer {
+      padding-top: 48px;
+    }
   }
 
   @media only screen and (max-width: 650px) {

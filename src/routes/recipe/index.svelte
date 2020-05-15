@@ -31,7 +31,7 @@
   let startPosition = 0; // siden man starter på
   let itemsPerPage = 12; // hvor mange oppskrifter per side
 
-  $: numPages = Math.ceil(numItems / itemsPerPage); // runner til helt tall
+  $: numPages = Math.ceil(numItems / itemsPerPage); // antall sider / rundes til helt tall
   $: endPosition = startPosition + itemsPerPage;
   $: currentItems = items.filter(
     (item, i) => i >= startPosition && i < endPosition
@@ -70,74 +70,50 @@
 
   const oppskriftToggle = () => {
     current = "alle";
-    notFiltered();
+    items = [...recipes];
+    startPosition = 0; // setter siden tilbake til første
   };
 
   const vegetarToggle = () => {
     current = "vegetar";
-    filteredVegetar();
+    items = recipes.filter(recipe => recipe.stikkord.includes("vegetar"));
+    startPosition = 0;
   };
 
   const veganToggle = () => {
     current = "vegan";
-    filteredVegan();
+    items = recipes.filter(recipe => recipe.stikkord.includes("vegan"));
+    startPosition = 0;
   };
 
   const frokostToggle = () => {
     current = "frokost";
-    filteredFrokost();
+    items = recipes.filter(recipe => recipe.stikkord.includes("frokost"));
+    startPosition = 0;
   };
 
   const nisteToggle = () => {
     current = "niste";
-    filteredNiste();
+    items = recipes.filter(recipe => recipe.stikkord.includes("niste"));
+    startPosition = 0;
   };
 
   const middagToggle = () => {
     current = "middag";
-    filteredMiddag();
+    items = recipes.filter(recipe => recipe.stikkord.includes("middag"));
+    startPosition = 0;
   };
 
   const dessertToggle = () => {
     current = "dessert";
-    filteredDessert();
+    items = recipes.filter(recipe => recipe.stikkord.includes("dessert"));
+    startPosition = 0;
   };
 
   const smaarettToggle = () => {
     current = "smaarett";
-    filteredSmaaretter();
-  };
-
-  let notFiltered = () => {
-    items = [...recipes];
-  };
-
-  let filteredVegetar = () => {
-    items = recipes.filter(recipe => recipe.stikkord.includes("vegetar"));
-  };
-
-  const filteredVegan = () => {
-    items = recipes.filter(recipe => recipe.stikkord.includes("vegan"));
-  };
-
-  const filteredFrokost = () => {
-    items = recipes.filter(recipe => recipe.stikkord.includes("frokost"));
-  };
-
-  const filteredNiste = () => {
-    items = recipes.filter(recipe => recipe.stikkord.includes("niste"));
-  };
-
-  const filteredMiddag = () => {
-    items = recipes.filter(recipe => recipe.stikkord.includes("middag"));
-  };
-
-  const filteredDessert = () => {
-    items = recipes.filter(recipe => recipe.stikkord.includes("dessert"));
-  };
-
-  const filteredSmaaretter = () => {
     items = recipes.filter(recipe => recipe.stikkord.includes("smårett"));
+    startPosition = 0;
   };
 </script>
 
@@ -219,12 +195,13 @@
     display: flex;
     align-items: center;
     font-size: 16px;
+    font-weight: 500;
   }
 
   .pagination .arrow {
     height: 16px;
     width: 6px;
-    padding: 0 6px;
+    padding: 2px 6px 0;
   }
 
   @media only screen and (max-width: 768px) {
