@@ -37,13 +37,14 @@
     (item, i) => i >= startPosition && i < endPosition
   );
 
-  $: disabledPrev = startPosition - itemsPerPage < 0;
-  $: disabledNext = startPosition + itemsPerPage >= numItems;
+  $: disabledPrev = startPosition - itemsPerPage < 0; // disabled forrige når man er på side 1
+  $: disabledNext = startPosition + itemsPerPage >= numItems; // disabled neste når man er på siste side
 
   $: currentPage = 1 + startPosition / itemsPerPage; // siden man er på (+1 for at side 1 ikke skal være 0)
 
   $: pageArray = items.filter((item, i) => i % itemsPerPage === 0);
 
+  // neste og forrige knapper som blar gjennom oppskriftsider/pagination
   const next = () => {
     startPosition += itemsPerPage;
     animateScroll.scrollToTop();
