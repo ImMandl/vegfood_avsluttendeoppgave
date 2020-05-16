@@ -23,7 +23,7 @@
   li {
     list-style: none;
     font-size: 18px;
-    padding: 8px 0;
+    padding: 16px 0;
     margin-left: 24px;
     display: flex;
   }
@@ -46,11 +46,6 @@
   @media only screen and (max-width: 540px) {
     ul {
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    }
-
-    li {
-      padding: 16px 0;
-      margin-left: 8px;
     }
   }
 </style>

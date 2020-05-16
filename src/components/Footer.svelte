@@ -259,7 +259,7 @@
               bind:value={mail}
               placeholder="Din mail adresse her" />
           </div>
-          <button type="submit">Ja, meld meg på nyhetsbrevet</button>
+          <button type="submit">Ja, meld meg på</button>
         </form>
       </div>
       <div class="social row">

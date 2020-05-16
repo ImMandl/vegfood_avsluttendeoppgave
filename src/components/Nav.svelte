@@ -199,7 +199,7 @@
     padding: 8px 32px;
     color: #fff;
     font-size: 16px;
-    margin-left: 8px;
+    margin-left: 16px;
   }
 
   .logginn:hover {
@@ -214,6 +214,7 @@
     font-size: 16px;
     display: flex;
     align-items: center;
+    font-weight: 500;
   }
 
   .loggut:hover {
