@@ -172,6 +172,15 @@
   }
 
   /* ingredienser */
+  .value {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 0;
+  }
+
   .number {
     margin: 4px 0 24px;
     display: inline-block;

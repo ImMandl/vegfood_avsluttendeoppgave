@@ -4,15 +4,11 @@ VegFood is a website with vegeterian and vegan recipes. It's  built using <a hre
 
 **All recipes are placeholders. This website is made for my finishing exam at Fagskolen Kristiania. The most filled out recipe is "Muffin frokokst". All recipes are in Norwegian.
 
-Project has been tested on the newest versions of chrome, firefox, opera and edge
 
 ## Setup
 
 ### Demo
 Go to <a href="https://vegfood-avsluttendeoppgave.immandl.now.sh/">demo</a>
-
-N.B You might have to wait a bit before moving around the page or you can get error 500 or that nothing happens because it loads a bit slow the first time.
-N.B. If you are having trouble with firestore authentication when viewing the page try to refresh the site.
 
 
 ### Download
@@ -39,6 +35,16 @@ This site...
 ### Styling
 
 In ./static there is a global css file. If important css is used in several places it will be placed here.
+
+
+## Know issues
+
+Project has been tested on the newest versions of chrome, firefox, opera, edge and safari.
+
+- On safari the number of portions on the ingredients detail page is not be shown properly
+- If you are on a slow internet you might have to wait a bit before moving around the page or you can get error 500 or that nothing happens the first time you enter the page.
+- If you are having trouble with firestore authentication when viewing the page try to refresh the site.
+
 
 ## Tip for sapper
 
