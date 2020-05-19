@@ -55,8 +55,8 @@
 
   // legg til og fjerning av favoritter
   const leggTilFavoritt = () => {
-    $favorittArray.push(recipe);
-    favorites.toggleFavorite(recipe.id);
+    $favorittArray.push(recipe); // dutter oppskrift inn i favoriteArray
+    favorites.toggleFavorite(recipe.id); // toggler favorited av og på, baserer seg på id for å ikke påvirke alle oppskriftene
   };
 
   const fjernFavoritt = () => {
