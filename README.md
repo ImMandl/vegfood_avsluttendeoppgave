@@ -2,7 +2,7 @@
  
 VegFood is a website with vegeterian and vegan recipes. It's  built using <a href="https://sapper.svelte.dev/">sapper</a>. Sapper is a framework for building extremely high-performance web apps based on <a href="https://svelte.dev//">svelte</a>. Svelte is a compiler that takes your declarative components and converts them into efficient JavaScript that surgically updates the DOM.
 
-**All recipes are placeholders. This website is made for my finishing exam at Fagskolen Kristiania. The most filled out recipe is "Muffin frokokst". All recipes are in Norwegian.
+**All recipes are placeholders. This website is made for my exam at Fagskolen Kristiania. The most filled out recipe is "Muffin frokokst". All recipes are in Norwegian.
 
 
 ## Setup
@@ -24,6 +24,8 @@ Files in ./src/route uses component from ./src/components to hold their content.
 
 Images, graphics, fonts and other such items are kept in their own folders inside ./static. Exception is the favicon wish is based in at the top level of ./static. A few images are fetched by url. All images for recipes are fetched with url from firestore.
 
+In ./static there is a global css file. If important css is used in several places it will be placed here.
+
 This site...
 - uses <a href="https://firebase.google.com/docs/auth">Firebase Authentication</a> for log in.
 - uses <a href="https://svelte.dev/docs#onMount">OnMount</a> when fetching data from firebase and weather api.
@@ -31,10 +33,6 @@ This site...
 - uses <a href="https://github.com/Schum123/svelte-loading-spinners#svelte-loading-spinners">Svelte-loading-spinners</a> to show when items is loading.
 - uses <a href="https://github.com/beyonk-adventures/svelte-carousel#svelte-carousel">Svelte Carousel</a>. Is used for categories on frontpage to help make the site easily responive.
 - uses <a href="https://www.npmjs.com/package/svelte-scrollto">Svelte-scrollto</a> to scroll to top after pressed previous or next on recipe list page.
-
-### Styling
-
-In ./static there is a global css file. If important css is used in several places it will be placed here.
 
 
 ## Know issues
