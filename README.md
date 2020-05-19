@@ -28,7 +28,7 @@ In ./static there is a global css file. If important css is used in several plac
 
 This site...
 - uses <a href="https://firebase.google.com/docs/auth">Firebase Authentication</a> for log in.
-- uses <a href="https://svelte.dev/docs#onMount">OnMount</a> when fetching data from firebase and weather api.
+- uses <a href="https://svelte.dev/docs#onMount">OnMount</a> when fetching data from firebase.
 - uses <a href="https://svelte.dev/docs#svelte_store">Svelte store</a> to keep favorited recipes and multiply ingredients on the detail page for recipes. Favorited recipes will reset if you refresh the page.
 - uses <a href="https://github.com/Schum123/svelte-loading-spinners#svelte-loading-spinners">Svelte-loading-spinners</a> to show when items is loading.
 - uses <a href="https://github.com/beyonk-adventures/svelte-carousel#svelte-carousel">Svelte Carousel</a>. Is used for categories on frontpage to help make the site easily responive.
