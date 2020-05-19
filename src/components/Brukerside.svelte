@@ -128,9 +128,9 @@
           {#if nyhetsbrev.data().mail === user.email}
             <p>Du er meldt på vårt ukentlige nyhetsbrev</p>
             <button on:click={slettNyhetsbrev}>Meld meg av</button>
-          {:else}
-            <p>Du har ikke abonnert på et nyhetsbrev enda</p>
           {/if}
+        {:else}
+          <p>Du har ikke abonnert på et nyhetsbrev enda</p>
         {/each}
       </div>
     </div>
