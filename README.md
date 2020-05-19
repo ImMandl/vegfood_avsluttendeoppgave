@@ -37,8 +37,6 @@ This site...
 
 ## Know issues
 
-Project has been tested on the newest versions of chrome, firefox, opera, edge and safari.
-
 - If you are on a slow internet you might have to wait a bit before moving around the page or you can get error 500 or that nothing happens the first time you enter the page.
 - If you are having trouble with firestore authentication when viewing the page try to refresh the site. Mostly a problem when viewing the page on localhost.
 
