@@ -8,7 +8,7 @@ VegFood is a website with vegeterian and vegan recipes. It's  built using <a hre
 ## Setup
 
 ### Demo
-Go to <a href="https://vegfood-avsluttendeoppgave.immandl.now.sh/">demo</a> or <a href="https://vegfood-avsluttendeoppgave.now.sh/">this other demo</a>
+Go to <a href="https://vegfood-avsluttendeoppgave.now.sh/">demo</a> or <a href="https://vegfood-avsluttendeoppgave.now.sh/">this other demo</a>
 
 
 ### Download
