@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import { authState } from "rxfire/auth";
+  import { favorites } from "../store.js";
   export let segment;
 
   let db; // ref til firestore
@@ -30,10 +31,6 @@
 
   let favorittListe = [...$favorittArray];
   $: favorittListe;
-
-  const fjernFavoritt = () => {
-    favorittListe = $favorittArray.splice(favorittArray.id, 1);
-  };
 
   /* bestemmer hvor mange favoritter som vises på en gang */
   let valueList;
@@ -97,8 +94,7 @@
     margin-right: 8px;
   }
 
-  .handlinger a,
-  .handlinger button {
+  .handlinger a {
     font-weight: 400;
     background-color: #d1d1d1;
     border: none;
@@ -107,8 +103,7 @@
     color: #333;
     padding: 4px 16px;
   }
-  .handlinger a:hover,
-  .handlinger button:hover {
+  .handlinger a:hover {
     background-color: #b8b8b8;
   }
 
@@ -242,7 +237,6 @@
               <td>{favoritt.forfatter}</td>
               <td class="handlinger">
                 <a rel="prefetch" href="recipe/{favoritt.slug}">Gå til</a>
-                <button on:click={fjernFavoritt}>Slett</button>
               </td>
             </tr>
           </tbody>
