@@ -1657,7 +1657,7 @@ const recipes = [
 		],
 		tips: 'Legg gjerne noen skiver spekeskinke på retten rett før servering.',
 		bilde:
-			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/RecipePhotos%2Fdessert-med-bassilikum-jordb%C3%A6r.jpg?alt=media&token=46e1ef90-3a07-44ba-95a0-b58e9687c308',
+			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/RecipePhotos%2Fdessert-med-bassilikum-jordb%C3%A6r.jpg?alt=media&token=d9f3e500-7250-4898-a447-758af1d0a620',
 		html: `
 			<p>Gjør frokosten til en fest med disse deilige muffinsene. Oppskriften er enkel så du trenger ikke å være en proff på kjøkkenet. Disse passer perfekt til en hyggelig morgen for familien.</p>
 		`
