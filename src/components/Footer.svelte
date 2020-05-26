@@ -24,6 +24,14 @@
     nyhetsbrev.doc(mail).set({ mail });
     mail = "";
     alert("Du er nå meldt på vårt ukentlige nyhetsbrev!");
+    /*     admin.nyhetsbrev.add({
+      to: mail,
+      message: {
+        subject: "Hei fra Vegfood!",
+        html:
+          "Du har nå meldt deg på vårt nyhetsbrev! Du vil motta spennende oppskrifter hver uke. Håper det smaker!"
+      }
+    }); */
   };
 </script>
 

@@ -92,7 +92,7 @@ const recipes = [
 		],
 		tips: 'Klipp av et hjørne på pakken, og fyll vaniljekrem rett i muffinsene.',
 		bilde:
-			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/RecipePhotos%2Fmuffins.jpg?alt=media&token=3b3e886b-9820-45b9-84c8-99fb4ce68ad4',
+			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/RecipePhotos%2Fmuffins.jpg?alt=media&token=5da63d86-7ce3-49d0-a005-77d79088ceb2',
 		html: `
 			<p>Gjør frokosten til en fest med disse deilige muffinsene. Oppskriften er enkel så du trenger ikke å være en proff på kjøkkenet. Disse passer perfekt til en hyggelig morgen for familien.</p>
 		`
