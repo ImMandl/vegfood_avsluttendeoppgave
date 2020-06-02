@@ -24,14 +24,6 @@
     nyhetsbrev.doc(mail).set({ mail });
     mail = "";
     alert("Du er nå meldt på vårt ukentlige nyhetsbrev!");
-    /*     admin.nyhetsbrev.add({
-      to: mail,
-      message: {
-        subject: "Hei fra Vegfood!",
-        html:
-          "Du har nå meldt deg på vårt nyhetsbrev! Du vil motta spennende oppskrifter hver uke. Håper det smaker!"
-      }
-    }); */
   };
 </script>
 
@@ -263,7 +255,8 @@
           <div class="main-input-container">
             <img src={mailIcon} alt="mail icon" />
             <input
-              type="text"
+              type="email"
+              id="email"
               bind:value={mail}
               placeholder="Din mail adresse her" />
           </div>

@@ -16,6 +16,7 @@
   let slettNyhetsbrev; // avmelder bruker fra nyhetsbrev / sletter brukerens mail fra nyhetsbrev databasen
   let registrerEpost; // melder bruker på nyhetsbrev / legger brukerens mail til i nyhetsbrev databasen
   let nyhetsbrevArray = []; // inneholder mail fra nyhetsbrev
+  let erMeldtPå = false;
 
   onMount(() => {
     db = firebase.firestore();
@@ -38,11 +39,17 @@
     slettNyhetsbrev = () => {
       nyhetsbrev.doc(user.email).delete();
       alert("Du er nå avmeldt vårt ukentlige nyhetsbrev");
+      erMeldtPå = false;
     };
 
     nyhetsbrev.onSnapshot(snap => {
       nyhetsbrevArray = snap.docs;
-      nyhetsbrevArray.includes(user.email);
+      nyhetsbrevArray.forEach(nyhet => {
+        console.log(nyhet.data());
+        if (user.email === nyhet.data().mail) {
+          erMeldtPå = true;
+        }
+      });
     });
   });
 </script>
@@ -124,14 +131,13 @@
       <div class="divider" />
       <div class="section">
         <h3>Nyhetsbrev</h3>
-        {#each nyhetsbrevArray as nyhetsbrev}
-          {#if nyhetsbrev.data().mail === user.email}
-            <p>Du er meldt på vårt ukentlige nyhetsbrev</p>
-            <button on:click={slettNyhetsbrev}>Meld meg av</button>
-          {/if}
+
+        {#if erMeldtPå}
+          <p>Du er meldt på vårt ukentlige nyhetsbrev</p>
+          <button on:click={slettNyhetsbrev}>Meld meg av</button>
         {:else}
           <p>Du har ikke abonnert på et nyhetsbrev enda</p>
-        {/each}
+        {/if}
       </div>
     </div>
   {:else}
