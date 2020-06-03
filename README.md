@@ -15,7 +15,9 @@ Go to <a href="https://vegfood-avsluttendeoppgave.now.sh/">demo</a> or <a href="
 Clone or download the file, then run:
 ```bash
 npm i
+
 #then
+
 npm start
 ```
 
