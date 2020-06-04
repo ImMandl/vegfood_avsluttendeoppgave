@@ -2,7 +2,7 @@
  
 VegFood is a website with vegeterian and vegan recipes. It's  built using <a href="https://sapper.svelte.dev/">sapper</a>. Sapper is a framework for building extremely high-performance web apps based on <a href="https://svelte.dev//">svelte</a>. Svelte is a compiler that takes your declarative components and converts them into efficient JavaScript that surgically updates the DOM.
 
-**All recipes are placeholders. This website is made for my exam at Fagskolen Kristiania. The most filled out recipe is "Muffin frokokst". All recipes are in Norwegian.
+**All recipes are placeholders. This website is made for my exam at Fagskolen Kristiania. The most filled out recipe is "Muffin frokokst". Website is in norwegian.
 
 
 ## Setup
