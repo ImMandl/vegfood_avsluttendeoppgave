@@ -206,16 +206,16 @@
 
   .ingredients {
     width: auto;
-    max-width: 300px;
+    max-width: 400px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 22% 78%;
     border-bottom: 1px solid #d1d1d1;
     padding-bottom: 4px;
     margin-top: 8px;
   }
 
   .ingredients-amount {
-    justify-self: end;
+    justify-self: start;
   }
 
   /* steg */
@@ -371,13 +371,13 @@
         <h3 class="title">Ingredienser</h3>
         {#each recipe.ingredienser as ingrediens}
           <div class="row ingredients">
-            <p>{ingrediens.title}</p>
             <div class="row ingredients-amount">
               <p style="margin-right: 8px;">
                 {ingrediens.antall * count_value}
               </p>
               <p>{ingrediens.mengde}</p>
             </div>
+            <p>{ingrediens.title}</p>
           </div>
         {/each}
         <div class="steg-container">

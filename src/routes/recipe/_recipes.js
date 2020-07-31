@@ -1,98 +1,191 @@
 const recipes = [
 	{
 		id: '1',
-		title: 'Muffin frokokst',
-		slug: 'muffin-frokost',
-		kategori: 'Vegetar',
+		title: 'Kikertsuppe med poteter',
+		slug: 'kikertsuppe-med-poteter',
+		kategori: 'Vegan',
 		lengde: '45 minutter',
-		grad: 'Medium',
-		type: 'frokost',
+		grad: 'Enkel',
+		type: 'middag',
 		tid: '21.04.2020',
 		forfatter: 'Amund Bjørnstad',
-		stikkord: [ 'vegetar', 'frokost' ],
+		stikkord: [ 'vegan', 'middag' ],
 		prdukter: [
 			{
-				title: 'TINE Meierismør',
+				title: 'Løk',
 				bilde:
-					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fmeierism%C3%B8r.jpeg?alt=media&token=9f1b220f-5d41-47b8-87aa-4e8b0088ced5'
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fgullok.jpg?alt=media&token=471a3188-be80-432c-b8b6-3bd07a0ac9d4'
 			},
 			{
-				title: 'Prior frokostegg',
+				title: 'Ingefær',
 				bilde:
-					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fegg.jpeg?alt=media&token=0fb650ee-c70f-4879-8640-80a675eb884e'
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fingefaer.jpg?alt=media&token=645c062b-813f-4ee4-ab6d-ff7ca26dac4a'
 			},
 			{
-				title: 'TINE Helmelk',
+				title: 'Hvitløk',
 				bilde:
-					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fhelmelk.jpeg?alt=media&token=1aaf6942-833e-4470-8d7b-09c16751fc89'
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fhvitlok.jpg?alt=media&token=3995b7a5-a7e5-48bc-8ac8-3201bfe9eafd'
 			},
 			{
-				title: 'Siktet hvetemel',
+				title: 'Kokosmelk',
 				bilde:
-					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fhvetemel.jpeg?alt=media&token=63df36d4-b0cf-496d-8399-fdd1478ad09d'
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fkokosmelk.jpeg?alt=media&token=37567c82-0c0e-4ee1-b592-0d9287ddfab7'
 			},
 			{
-				title: 'Bakepulver',
+				title: 'Poteter',
 				bilde:
-					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fbakepulver.jpeg?alt=media&token=4e0b8be6-20f2-456d-98bc-fb410d46f78a'
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fpoteter.jpg?alt=media&token=f5df7437-1efa-4971-b565-0540d108346d'
 			},
 			{
-				title: 'Vaniljekrem',
+				title: 'TINE revet ost',
 				bilde:
-					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fvaniljekrem.jpeg?alt=media&token=ad9eeccb-3a54-4738-8816-fe9bda283312'
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Ftine-revet-ost.jpeg?alt=media&token=7ed29543-ae3c-45f0-a3b4-a07ba22948f3'
+			},
+			{
+				title: 'Spisskummen',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fspisskummen.jpeg?alt=media&token=8814c1de-ac4e-49c1-b7ac-3cb36b7a2c68'
+			},
+			{
+				title: 'Paprikapulver',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fpaprikapulver.jpeg?alt=media&token=524a4c79-c90d-4ca1-b857-01be0857acbd'
+			},
+			{
+				title: 'Gurkemeie',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fgurkemeie.jpeg?alt=media&token=90756def-7398-420d-bbbc-04fc4ff49060'
+			},
+			{
+				title: 'Chilipulver',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fchilipulver.jpeg?alt=media&token=f0dc96dd-4eeb-48d5-9f88-5c4f2cf86bd2'
+			},
+			{
+				title: 'Salt',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fhavsalt.jpeg?alt=media&token=1b088998-bf28-4374-a94d-e1af48bb5ddb'
+			},
+			{
+				title: 'Vegansk grønnsaks- buljong',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fgronnsaksbuljong.jpeg?alt=media&token=c5d3b485-30f7-4f4f-b052-8902dca337c3'
+			},
+			{
+				title: 'Lime',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Flime.jpg?alt=media&token=e5e581b0-b9e0-4565-9643-c03d98780829'
+			},
+			{
+				title: 'Lime',
+				bilde:
+					'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/Produkter%2Fpersille.jpg?alt=media&token=d326d6e9-7677-4a0f-8e28-c7996a94490c'
 			}
 		],
 		ingredienser: [
 			{
-				title: 'Meierismør',
-				antall: 100,
-				mengde: 'g'
-			},
-			{
-				title: 'Egg',
-				antall: 3,
+				title: 'Medium gul løk',
+				antall: 1,
 				mengde: 'stk'
 			},
 			{
-				title: 'Helmelk',
-				antall: 2,
-				mengde: 'dl'
+				title: 'Stor bit fersk ingefær',
+				antall: 1,
+				mengde: 'stk'
 			},
 			{
-				title: 'Hvetemel',
+				title: 'Hvitløk',
+				antall: 3,
+				mengde: 'fedd'
+			},
+			{
+				title: 'Kokosmelk',
+				antall: 1,
+				mengde: 'boks'
+			},
+			{
+				title: 'Kikerter',
+				antall: 1,
+				mengde: 'boks'
+			},
+			{
+				title: 'Poteter',
 				antall: 4,
-				mengde: 'dl'
+				mengde: 'stk'
 			},
 			{
-				title: 'Bakepulver',
-				antall: 2,
+				title: 'TINE revet ost',
+				antall: 1,
+				mengde: 'stk'
+			},
+			{
+				title: 'Spisskummen',
+				antall: 1,
 				mengde: 'ts'
 			},
 			{
-				title: 'Vaniljekrem',
-				antall: 5,
-				mengde: 'dl'
+				title: 'Paprikapulver',
+				antall: 1,
+				mengde: 'ts'
+			},
+			{
+				title: 'Gurkemeie',
+				antall: 1 / 2,
+				mengde: 'ts'
+			},
+			{
+				title: 'Chilipulver',
+				antall: 1 / 4,
+				mengde: 'ts'
+			},
+			{
+				title: 'Salt',
+				antall: 1 / 2,
+				mengde: 'ts'
+			},
+			{
+				title: 'Vegansk grønnsaksbuljong',
+				antall: 1,
+				mengde: 'ss'
+			},
+			{
+				title: 'Lime',
+				antall: 1,
+				mengde: 'stk'
+			},
+			{
+				title: 'Persille',
+				antall: 1,
+				mengde: 'stk'
 			}
 		],
 		oppskrift: [
 			{
-				steg: 'Sett stekeovnen på 225 °C, og finn frem muffinsformer og eventuelt muffinsbrett.'
+				steg: 'Sett ovnen på 225 °C.'
+			},
+			{
+				steg: 'Stek løken myk i litt olje. Sleng oppi ingefær, hvitløk og la det steke et minutts tid.'
 			},
 			{
 				steg:
-					'Smelt smøret. Visp egg og sukker luftig. Rør i melk og smeltet smør. Bland i mel og bakepulver og rør om.'
-			},
-			{
-				steg: 'Fyll muffinsformene 3/4 fulle. Stek midt i ovnen i ca 15 minutter.'
+					'Tilsett kokosmelk, tomater, poteter og kikerter. Smak til med krydderne og limesaft og ha i persillen til slutt.'
 			},
 			{
 				steg:
-					'Avkjøl. Skjær toppen av hver muffins, og lag en grop som fylles med vaniljekrem. Pynt med noe godt.'
+					'La det hele småkoke i ca 15 min (se ann potetene). Om du synes suppa blir for tykk, ha i litt vann.'
+			},
+			{
+				steg:
+					'For ostechips legg ost i litt avlange hauger (pas på at du ikke legger for tykt lag) på et brett med bakepapir. Dryss over paprikapulver'
+			},
+			{
+				steg:
+					'Stek osten midt i ovnen i ca. 5 minutter, til den er gyllen og sprø.Server ved siden av suppen sammen med epleterninger.'
 			}
 		],
-		tips: 'Klipp av et hjørne på pakken, og fyll vaniljekrem rett i muffinsene.',
+		tips: 'Kok potete nesten ferdig før du lager suppa for å spare tid',
 		bilde:
-			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/RecipePhotos%2Fmuffins.jpg?alt=media&token=5da63d86-7ce3-49d0-a005-77d79088ceb2',
+			'https://firebasestorage.googleapis.com/v0/b/vegfood-database.appspot.com/o/RecipePhotos%2Fsotpotet_kikert_suppe.jpg?alt=media&token=ea70ff98-7e99-4740-9c8d-ae0db43b7cb2',
 		html: `
 			<p>Gjør frokosten til en fest med disse deilige muffinsene. Oppskriften er enkel så du trenger ikke å være en proff på kjøkkenet. Disse passer perfekt til en hyggelig morgen for familien.</p>
 		`
